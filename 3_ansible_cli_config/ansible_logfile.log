@@ -1033,3 +1033,295 @@ See the timeout setting options in the Network Debug and Troubleshooting Guide.
 2023-11-01 14:23:59,591 p=87666 u=stephenamaki n=ansible | shutdown complete
 2023-11-01 14:23:59,592 p=87667 u=stephenamaki n=ansible | shutdown complete
 2023-11-01 14:23:59,594 p=87668 u=stephenamaki n=ansible | shutdown complete
+2023-11-02 09:39:02,234 p=53509 u=stephenamaki n=ansible | PLAY [PLAY 1: Manage VPNs with jos_config and jinja2] ********************************************************************************************************************************************
+2023-11-02 09:39:02,300 p=53509 u=stephenamaki n=ansible | TASK [TASK 1: Store platform-specific template path] *********************************************************************************************************************************************
+2023-11-02 09:39:03,798 p=53509 u=stephenamaki n=ansible | network_os is set to eos
+2023-11-02 09:39:03,799 p=53509 u=stephenamaki n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2023-11-02 09:39:03,803 p=53509 u=stephenamaki n=ansible | network_os is set to ios
+2023-11-02 09:39:03,803 p=53509 u=stephenamaki n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2023-11-02 09:39:03,808 p=53509 u=stephenamaki n=ansible | network_os is set to ios
+2023-11-02 09:39:03,808 p=53509 u=stephenamaki n=ansible | network_os is set to ios
+2023-11-02 09:39:03,808 p=53509 u=stephenamaki n=ansible | network_os is set to ios
+2023-11-02 09:39:03,808 p=53509 u=stephenamaki n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2023-11-02 09:39:03,809 p=53509 u=stephenamaki n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2023-11-02 09:39:03,809 p=53509 u=stephenamaki n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2023-11-02 09:39:03,828 p=53509 u=stephenamaki n=ansible | ok: [10.255.255.72]
+2023-11-02 09:39:03,837 p=53509 u=stephenamaki n=ansible | ok: [10.255.255.85]
+2023-11-02 09:39:03,846 p=53509 u=stephenamaki n=ansible | ok: [10.255.255.71]
+2023-11-02 09:39:03,847 p=53509 u=stephenamaki n=ansible | ok: [10.255.255.73]
+2023-11-02 09:39:03,847 p=53509 u=stephenamaki n=ansible | ok: [10.255.255.74]
+2023-11-02 09:39:05,107 p=53509 u=stephenamaki n=ansible | network_os is set to eos
+2023-11-02 09:39:05,107 p=53509 u=stephenamaki n=ansible | network_os is set to eos
+2023-11-02 09:39:05,108 p=53509 u=stephenamaki n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2023-11-02 09:39:05,108 p=53509 u=stephenamaki n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2023-11-02 09:39:05,112 p=53509 u=stephenamaki n=ansible | ok: [10.255.255.87]
+2023-11-02 09:39:05,112 p=53509 u=stephenamaki n=ansible | ok: [10.255.255.86]
+2023-11-02 09:39:05,115 p=53509 u=stephenamaki n=ansible | network_os is set to eos
+2023-11-02 09:39:05,115 p=53509 u=stephenamaki n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2023-11-02 09:39:05,119 p=53509 u=stephenamaki n=ansible | ok: [10.255.255.88]
+2023-11-02 09:39:05,136 p=53509 u=stephenamaki n=ansible | TASK [TASK 2: Apply Generic VRF config via SSH/CLI] **********************************************************************************************************************************************
+2023-11-02 09:39:06,358 p=53542 u=stephenamaki n=p=53542 u=stephenamaki | paramiko [10.255.255.72] | Connected (version 1.99, client Cisco-1.25)
+2023-11-02 09:39:06,361 p=53541 u=stephenamaki n=p=53541 u=stephenamaki | paramiko [10.255.255.73] | Connected (version 1.99, client Cisco-1.25)
+2023-11-02 09:39:06,368 p=53540 u=stephenamaki n=p=53540 u=stephenamaki | paramiko [10.255.255.71] | Connected (version 1.99, client Cisco-1.25)
+2023-11-02 09:39:06,368 p=53539 u=stephenamaki n=p=53539 u=stephenamaki | paramiko [10.255.255.74] | Connected (version 1.99, client Cisco-1.25)
+2023-11-02 09:39:06,480 p=53538 u=stephenamaki n=p=53538 u=stephenamaki | paramiko [10.255.255.85] | Connected (version 2.0, client OpenSSH_6.6.1)
+2023-11-02 09:39:06,631 p=53538 u=stephenamaki n=p=53538 u=stephenamaki | paramiko [10.255.255.85] | Authentication (keyboard-interactive) successful!
+2023-11-02 09:39:06,761 p=53540 u=stephenamaki n=p=53540 u=stephenamaki | paramiko [10.255.255.71] | Auth banner: b"\r\n**************************************************************************\r\n* IOSv is strictly limited to use for evaluation, demonstration and IOS  *\r\n* education. IOSv is provided as-is and is not supported by Cisco's      *\r\n* Technical Advisory Center. Any use or disclosure, in whole or in part, *\r\n* of the IOSv Software or Documentation to any third party for any       *\r\n* purposes is expressly prohibited except as otherwise authorized by     *\r\n* Cisco in writing.                                                      *\r\n**************************************************************************"
+2023-11-02 09:39:06,765 p=53540 u=stephenamaki n=p=53540 u=stephenamaki | paramiko [10.255.255.71] | Authentication (password) successful!
+2023-11-02 09:39:07,216 p=53542 u=stephenamaki n=p=53542 u=stephenamaki | paramiko [10.255.255.72] | Auth banner: b"\r\n**************************************************************************\r\n* IOSv is strictly limited to use for evaluation, demonstration and IOS  *\r\n* education. IOSv is provided as-is and is not supported by Cisco's      *\r\n* Technical Advisory Center. Any use or disclosure, in whole or in part, *\r\n* of the IOSv Software or Documentation to any third party for any       *\r\n* purposes is expressly prohibited except as otherwise authorized by     *\r\n* Cisco in writing.                                                      *\r\n**************************************************************************"
+2023-11-02 09:39:07,216 p=53541 u=stephenamaki n=p=53541 u=stephenamaki | paramiko [10.255.255.73] | Auth banner: b"\r\n**************************************************************************\r\n* IOSv is strictly limited to use for evaluation, demonstration and IOS  *\r\n* education. IOSv is provided as-is and is not supported by Cisco's      *\r\n* Technical Advisory Center. Any use or disclosure, in whole or in part, *\r\n* of the IOSv Software or Documentation to any third party for any       *\r\n* purposes is expressly prohibited except as otherwise authorized by     *\r\n* Cisco in writing.                                                      *\r\n**************************************************************************"
+2023-11-02 09:39:07,220 p=53542 u=stephenamaki n=p=53542 u=stephenamaki | paramiko [10.255.255.72] | Authentication (password) successful!
+2023-11-02 09:39:07,220 p=53541 u=stephenamaki n=p=53541 u=stephenamaki | paramiko [10.255.255.73] | Authentication (password) successful!
+2023-11-02 09:39:07,222 p=53539 u=stephenamaki n=p=53539 u=stephenamaki | paramiko [10.255.255.74] | Auth banner: b"\r\n**************************************************************************\r\n* IOSv is strictly limited to use for evaluation, demonstration and IOS  *\r\n* education. IOSv is provided as-is and is not supported by Cisco's      *\r\n* Technical Advisory Center. Any use or disclosure, in whole or in part, *\r\n* of the IOSv Software or Documentation to any third party for any       *\r\n* purposes is expressly prohibited except as otherwise authorized by     *\r\n* Cisco in writing.                                                      *\r\n**************************************************************************"
+2023-11-02 09:39:07,226 p=53539 u=stephenamaki n=p=53539 u=stephenamaki | paramiko [10.255.255.74] | Authentication (password) successful!
+2023-11-02 09:39:08,261 p=53509 u=stephenamaki n=ansible | ok: [10.255.255.72]
+2023-11-02 09:39:08,283 p=53509 u=stephenamaki n=ansible | ok: [10.255.255.74]
+2023-11-02 09:39:08,310 p=53509 u=stephenamaki n=ansible | ok: [10.255.255.73]
+2023-11-02 09:39:09,547 p=53566 u=stephenamaki n=p=53566 u=stephenamaki | paramiko [10.255.255.86] | Connected (version 2.0, client OpenSSH_6.6.1)
+2023-11-02 09:39:09,587 p=53565 u=stephenamaki n=p=53565 u=stephenamaki | paramiko [10.255.255.87] | Connected (version 2.0, client OpenSSH_6.6.1)
+2023-11-02 09:39:09,617 p=53569 u=stephenamaki n=p=53569 u=stephenamaki | paramiko [10.255.255.88] | Connected (version 2.0, client OpenSSH_6.6.1)
+2023-11-02 09:39:09,653 p=53566 u=stephenamaki n=p=53566 u=stephenamaki | paramiko [10.255.255.86] | Authentication (keyboard-interactive) successful!
+2023-11-02 09:39:09,704 p=53565 u=stephenamaki n=p=53565 u=stephenamaki | paramiko [10.255.255.87] | Authentication (keyboard-interactive) successful!
+2023-11-02 09:39:09,723 p=53569 u=stephenamaki n=p=53569 u=stephenamaki | paramiko [10.255.255.88] | Authentication (keyboard-interactive) successful!
+2023-11-02 09:39:14,039 p=53509 u=stephenamaki n=ansible | ok: [10.255.255.85]
+2023-11-02 09:39:14,785 p=53509 u=stephenamaki n=ansible | [WARNING]: To ensure idempotency and correct diff the input configuration lines should be similar to how they appear if present in the running configuration on device including the indentation
+
+2023-11-02 09:39:14,785 p=53509 u=stephenamaki n=ansible | changed: [10.255.255.71]
+2023-11-02 09:39:17,268 p=53509 u=stephenamaki n=ansible | ok: [10.255.255.86]
+2023-11-02 09:39:17,320 p=53509 u=stephenamaki n=ansible | ok: [10.255.255.88]
+2023-11-02 09:39:17,327 p=53509 u=stephenamaki n=ansible | ok: [10.255.255.87]
+2023-11-02 09:39:17,382 p=53509 u=stephenamaki n=ansible | RUNNING HANDLER [HANDLER 1: Display relevant changes] ********************************************************************************************************************************************
+2023-11-02 09:39:18,519 p=53509 u=stephenamaki n=ansible | ok: [10.255.255.71] => {
+    "msg": {
+        "changed": true,
+        "commands": [
+            "vrf definition VRF_1",
+            "address-family ipv4",
+            "route-target export 65000:1",
+            "address-family ipv6",
+            "route-target export 65000:1",
+            "address-family ipv4",
+            "route-target export 713:713",
+            "address-family ipv6",
+            "route-target export 713:713",
+            "address-family ipv4",
+            "route-target export 714:714",
+            "address-family ipv6",
+            "route-target export 714:714",
+            "address-family ipv4",
+            "route-target import 65000:1",
+            "address-family ipv6",
+            "route-target import 65000:1",
+            "address-family ipv4",
+            "route-target import 711:711",
+            "address-family ipv6",
+            "route-target import 711:711",
+            "address-family ipv4",
+            "route-target import 712:712",
+            "address-family ipv6",
+            "route-target import 712:712",
+            "vrf definition VRF_2",
+            "address-family ipv4",
+            "route-target export 65000:2",
+            "address-family ipv6",
+            "route-target export 65000:2",
+            "address-family ipv4",
+            "route-target export 717:717",
+            "address-family ipv6",
+            "route-target export 717:717",
+            "address-family ipv4",
+            "route-target export 718:718",
+            "address-family ipv6",
+            "route-target export 718:718",
+            "address-family ipv4",
+            "route-target import 65000:2",
+            "address-family ipv6",
+            "route-target import 65000:2",
+            "address-family ipv4",
+            "route-target import 715:715",
+            "address-family ipv6",
+            "route-target import 715:715",
+            "address-family ipv4",
+            "route-target import 716:716",
+            "address-family ipv6",
+            "route-target import 716:716"
+        ],
+        "failed": false,
+        "warnings": [
+            "To ensure idempotency and correct diff the input configuration lines should be similar to how they appear if present in the running configuration on device including the indentation"
+        ]
+    }
+}
+2023-11-02 09:39:18,533 p=53509 u=stephenamaki n=ansible | PLAY RECAP ***************************************************************************************************************************************************************************************
+2023-11-02 09:39:18,533 p=53509 u=stephenamaki n=ansible | 10.255.255.71              : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-11-02 09:39:18,533 p=53509 u=stephenamaki n=ansible | 10.255.255.72              : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-11-02 09:39:18,533 p=53509 u=stephenamaki n=ansible | 10.255.255.73              : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-11-02 09:39:18,533 p=53509 u=stephenamaki n=ansible | 10.255.255.74              : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-11-02 09:39:18,533 p=53509 u=stephenamaki n=ansible | 10.255.255.85              : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-11-02 09:39:18,533 p=53509 u=stephenamaki n=ansible | 10.255.255.86              : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-11-02 09:39:18,533 p=53509 u=stephenamaki n=ansible | 10.255.255.87              : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-11-02 09:39:18,533 p=53509 u=stephenamaki n=ansible | 10.255.255.88              : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-11-02 09:39:18,630 p=53539 u=stephenamaki n=ansible | shutdown complete
+2023-11-02 09:39:18,630 p=53542 u=stephenamaki n=ansible | shutdown complete
+2023-11-02 09:39:18,630 p=53541 u=stephenamaki n=ansible | shutdown complete
+2023-11-02 09:39:18,630 p=53538 u=stephenamaki n=ansible | shutdown complete
+2023-11-02 09:39:18,632 p=53540 u=stephenamaki n=ansible | shutdown complete
+2023-11-02 09:39:18,632 p=53566 u=stephenamaki n=ansible | shutdown complete
+2023-11-02 09:39:18,636 p=53565 u=stephenamaki n=ansible | shutdown complete
+2023-11-02 09:39:18,635 p=53569 u=stephenamaki n=ansible | shutdown complete
+2023-11-02 09:40:20,722 p=54079 u=stephenamaki n=ansible | PLAY [PLAY 1: Manage VPNs with jos_config and jinja2] ********************************************************************************************************************************************
+2023-11-02 09:40:20,782 p=54079 u=stephenamaki n=ansible | TASK [TASK 1: Store platform-specific template path] *********************************************************************************************************************************************
+2023-11-02 09:40:22,191 p=54079 u=stephenamaki n=ansible | network_os is set to ios
+2023-11-02 09:40:22,192 p=54079 u=stephenamaki n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2023-11-02 09:40:22,192 p=54079 u=stephenamaki n=ansible | network_os is set to ios
+2023-11-02 09:40:22,192 p=54079 u=stephenamaki n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2023-11-02 09:40:22,196 p=54079 u=stephenamaki n=ansible | network_os is set to ios
+2023-11-02 09:40:22,198 p=54079 u=stephenamaki n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2023-11-02 09:40:22,203 p=54079 u=stephenamaki n=ansible | ok: [10.255.255.73]
+2023-11-02 09:40:22,214 p=54079 u=stephenamaki n=ansible | network_os is set to ios
+2023-11-02 09:40:22,215 p=54079 u=stephenamaki n=ansible | ok: [10.255.255.71]
+2023-11-02 09:40:22,215 p=54079 u=stephenamaki n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2023-11-02 09:40:22,220 p=54079 u=stephenamaki n=ansible | network_os is set to eos
+2023-11-02 09:40:22,220 p=54079 u=stephenamaki n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2023-11-02 09:40:22,229 p=54079 u=stephenamaki n=ansible | ok: [10.255.255.72]
+2023-11-02 09:40:22,230 p=54079 u=stephenamaki n=ansible | ok: [10.255.255.74]
+2023-11-02 09:40:22,230 p=54079 u=stephenamaki n=ansible | ok: [10.255.255.85]
+2023-11-02 09:40:23,495 p=54079 u=stephenamaki n=ansible | network_os is set to eos
+2023-11-02 09:40:23,495 p=54079 u=stephenamaki n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2023-11-02 09:40:23,499 p=54079 u=stephenamaki n=ansible | ok: [10.255.255.86]
+2023-11-02 09:40:23,500 p=54079 u=stephenamaki n=ansible | network_os is set to eos
+2023-11-02 09:40:23,501 p=54079 u=stephenamaki n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2023-11-02 09:40:23,506 p=54079 u=stephenamaki n=ansible | ok: [10.255.255.87]
+2023-11-02 09:40:23,514 p=54079 u=stephenamaki n=ansible | network_os is set to eos
+2023-11-02 09:40:23,515 p=54079 u=stephenamaki n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2023-11-02 09:40:23,519 p=54079 u=stephenamaki n=ansible | ok: [10.255.255.88]
+2023-11-02 09:40:23,529 p=54079 u=stephenamaki n=ansible | TASK [TASK 2: Apply Generic VRF config via SSH/CLI] **********************************************************************************************************************************************
+2023-11-02 09:40:24,877 p=54107 u=stephenamaki n=p=54107 u=stephenamaki | paramiko [10.255.255.71] | Connected (version 1.99, client Cisco-1.25)
+2023-11-02 09:40:24,903 p=54102 u=stephenamaki n=p=54102 u=stephenamaki | paramiko [10.255.255.72] | Connected (version 1.99, client Cisco-1.25)
+2023-11-02 09:40:24,911 p=54104 u=stephenamaki n=p=54104 u=stephenamaki | paramiko [10.255.255.73] | Connected (version 1.99, client Cisco-1.25)
+2023-11-02 09:40:24,921 p=54110 u=stephenamaki n=p=54110 u=stephenamaki | paramiko [10.255.255.74] | Connected (version 1.99, client Cisco-1.25)
+2023-11-02 09:40:25,023 p=54113 u=stephenamaki n=p=54113 u=stephenamaki | paramiko [10.255.255.85] | Connected (version 2.0, client OpenSSH_6.6.1)
+2023-11-02 09:40:25,129 p=54113 u=stephenamaki n=p=54113 u=stephenamaki | paramiko [10.255.255.85] | Authentication (keyboard-interactive) successful!
+2023-11-02 09:40:25,259 p=54107 u=stephenamaki n=p=54107 u=stephenamaki | paramiko [10.255.255.71] | Auth banner: b"\r\n**************************************************************************\r\n* IOSv is strictly limited to use for evaluation, demonstration and IOS  *\r\n* education. IOSv is provided as-is and is not supported by Cisco's      *\r\n* Technical Advisory Center. Any use or disclosure, in whole or in part, *\r\n* of the IOSv Software or Documentation to any third party for any       *\r\n* purposes is expressly prohibited except as otherwise authorized by     *\r\n* Cisco in writing.                                                      *\r\n**************************************************************************"
+2023-11-02 09:40:25,262 p=54107 u=stephenamaki n=p=54107 u=stephenamaki | paramiko [10.255.255.71] | Authentication (password) successful!
+2023-11-02 09:40:25,754 p=54102 u=stephenamaki n=p=54102 u=stephenamaki | paramiko [10.255.255.72] | Auth banner: b"\r\n**************************************************************************\r\n* IOSv is strictly limited to use for evaluation, demonstration and IOS  *\r\n* education. IOSv is provided as-is and is not supported by Cisco's      *\r\n* Technical Advisory Center. Any use or disclosure, in whole or in part, *\r\n* of the IOSv Software or Documentation to any third party for any       *\r\n* purposes is expressly prohibited except as otherwise authorized by     *\r\n* Cisco in writing.                                                      *\r\n**************************************************************************"
+2023-11-02 09:40:25,763 p=54102 u=stephenamaki n=p=54102 u=stephenamaki | paramiko [10.255.255.72] | Authentication (password) successful!
+2023-11-02 09:40:25,773 p=54110 u=stephenamaki n=p=54110 u=stephenamaki | paramiko [10.255.255.74] | Auth banner: b"\r\n**************************************************************************\r\n* IOSv is strictly limited to use for evaluation, demonstration and IOS  *\r\n* education. IOSv is provided as-is and is not supported by Cisco's      *\r\n* Technical Advisory Center. Any use or disclosure, in whole or in part, *\r\n* of the IOSv Software or Documentation to any third party for any       *\r\n* purposes is expressly prohibited except as otherwise authorized by     *\r\n* Cisco in writing.                                                      *\r\n**************************************************************************"
+2023-11-02 09:40:25,784 p=54110 u=stephenamaki n=p=54110 u=stephenamaki | paramiko [10.255.255.74] | Authentication (password) successful!
+2023-11-02 09:40:25,786 p=54104 u=stephenamaki n=p=54104 u=stephenamaki | paramiko [10.255.255.73] | Auth banner: b"\r\n**************************************************************************\r\n* IOSv is strictly limited to use for evaluation, demonstration and IOS  *\r\n* education. IOSv is provided as-is and is not supported by Cisco's      *\r\n* Technical Advisory Center. Any use or disclosure, in whole or in part, *\r\n* of the IOSv Software or Documentation to any third party for any       *\r\n* purposes is expressly prohibited except as otherwise authorized by     *\r\n* Cisco in writing.                                                      *\r\n**************************************************************************"
+2023-11-02 09:40:25,797 p=54104 u=stephenamaki n=p=54104 u=stephenamaki | paramiko [10.255.255.73] | Authentication (password) successful!
+2023-11-02 09:40:26,771 p=54079 u=stephenamaki n=ansible | ok: [10.255.255.72]
+2023-11-02 09:40:26,815 p=54079 u=stephenamaki n=ansible | ok: [10.255.255.74]
+2023-11-02 09:40:26,825 p=54079 u=stephenamaki n=ansible | ok: [10.255.255.73]
+2023-11-02 09:40:28,100 p=54129 u=stephenamaki n=p=54129 u=stephenamaki | paramiko [10.255.255.86] | Connected (version 2.0, client OpenSSH_6.6.1)
+2023-11-02 09:40:28,128 p=54132 u=stephenamaki n=p=54132 u=stephenamaki | paramiko [10.255.255.87] | Connected (version 2.0, client OpenSSH_6.6.1)
+2023-11-02 09:40:28,130 p=54135 u=stephenamaki n=p=54135 u=stephenamaki | paramiko [10.255.255.88] | Connected (version 2.0, client OpenSSH_6.6.1)
+2023-11-02 09:40:28,212 p=54129 u=stephenamaki n=p=54129 u=stephenamaki | paramiko [10.255.255.86] | Authentication (keyboard-interactive) successful!
+2023-11-02 09:40:28,236 p=54132 u=stephenamaki n=p=54132 u=stephenamaki | paramiko [10.255.255.87] | Authentication (keyboard-interactive) successful!
+2023-11-02 09:40:28,242 p=54135 u=stephenamaki n=p=54135 u=stephenamaki | paramiko [10.255.255.88] | Authentication (keyboard-interactive) successful!
+2023-11-02 09:40:32,737 p=54079 u=stephenamaki n=ansible | ok: [10.255.255.85]
+2023-11-02 09:40:33,686 p=54079 u=stephenamaki n=ansible | [WARNING]: To ensure idempotency and correct diff the input configuration lines should be similar to how they appear if present in the running configuration on device including the indentation
+
+2023-11-02 09:40:33,686 p=54079 u=stephenamaki n=ansible | changed: [10.255.255.71]
+2023-11-02 09:40:35,692 p=54079 u=stephenamaki n=ansible | ok: [10.255.255.86]
+2023-11-02 09:40:35,951 p=54079 u=stephenamaki n=ansible | ok: [10.255.255.88]
+2023-11-02 09:40:35,981 p=54079 u=stephenamaki n=ansible | ok: [10.255.255.87]
+2023-11-02 09:40:36,038 p=54079 u=stephenamaki n=ansible | RUNNING HANDLER [HANDLER 1: Display relevant changes] ********************************************************************************************************************************************
+2023-11-02 09:40:37,193 p=54079 u=stephenamaki n=ansible | ok: [10.255.255.71] => {
+    "msg": {
+        "changed": true,
+        "commands": [
+            "vrf definition VRF_1",
+            "rd 65000:1",
+            "description VRF_1 EXAMPLE",
+            "address-family ipv4",
+            "route-target export 65000:1",
+            "address-family ipv6",
+            "route-target export 65000:1",
+            "address-family ipv4",
+            "route-target export 713:713",
+            "address-family ipv6",
+            "route-target export 713:713",
+            "address-family ipv4",
+            "route-target export 714:714",
+            "address-family ipv6",
+            "route-target export 714:714",
+            "address-family ipv4",
+            "route-target import 65000:1",
+            "address-family ipv6",
+            "route-target import 65000:1",
+            "address-family ipv4",
+            "route-target import 711:711",
+            "address-family ipv6",
+            "route-target import 711:711",
+            "address-family ipv4",
+            "route-target import 712:712",
+            "address-family ipv6",
+            "route-target import 712:712",
+            "vrf definition VRF_2",
+            "rd 65000:2",
+            "description VRF_2 EXAMPLE",
+            "address-family ipv4",
+            "route-target export 65000:2",
+            "address-family ipv6",
+            "route-target export 65000:2",
+            "address-family ipv4",
+            "route-target export 717:717",
+            "address-family ipv6",
+            "route-target export 717:717",
+            "address-family ipv4",
+            "route-target export 718:718",
+            "address-family ipv6",
+            "route-target export 718:718",
+            "address-family ipv4",
+            "route-target import 65000:2",
+            "address-family ipv6",
+            "route-target import 65000:2",
+            "address-family ipv4",
+            "route-target import 715:715",
+            "address-family ipv6",
+            "route-target import 715:715",
+            "address-family ipv4",
+            "route-target import 716:716",
+            "address-family ipv6",
+            "route-target import 716:716"
+        ],
+        "failed": false,
+        "warnings": [
+            "To ensure idempotency and correct diff the input configuration lines should be similar to how they appear if present in the running configuration on device including the indentation"
+        ]
+    }
+}
+2023-11-02 09:40:37,208 p=54079 u=stephenamaki n=ansible | PLAY RECAP ***************************************************************************************************************************************************************************************
+2023-11-02 09:40:37,208 p=54079 u=stephenamaki n=ansible | 10.255.255.71              : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-11-02 09:40:37,208 p=54079 u=stephenamaki n=ansible | 10.255.255.72              : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-11-02 09:40:37,208 p=54079 u=stephenamaki n=ansible | 10.255.255.73              : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-11-02 09:40:37,208 p=54079 u=stephenamaki n=ansible | 10.255.255.74              : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-11-02 09:40:37,208 p=54079 u=stephenamaki n=ansible | 10.255.255.85              : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-11-02 09:40:37,208 p=54079 u=stephenamaki n=ansible | 10.255.255.86              : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-11-02 09:40:37,208 p=54079 u=stephenamaki n=ansible | 10.255.255.87              : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-11-02 09:40:37,208 p=54079 u=stephenamaki n=ansible | 10.255.255.88              : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-11-02 09:40:37,303 p=54102 u=stephenamaki n=ansible | shutdown complete
+2023-11-02 09:40:37,304 p=54110 u=stephenamaki n=ansible | shutdown complete
+2023-11-02 09:40:37,304 p=54104 u=stephenamaki n=ansible | shutdown complete
+2023-11-02 09:40:37,306 p=54113 u=stephenamaki n=ansible | shutdown complete
+2023-11-02 09:40:37,306 p=54107 u=stephenamaki n=ansible | shutdown complete
+2023-11-02 09:40:37,306 p=54129 u=stephenamaki n=ansible | shutdown complete
+2023-11-02 09:40:37,308 p=54135 u=stephenamaki n=ansible | shutdown complete
+2023-11-02 09:40:37,315 p=54132 u=stephenamaki n=ansible | shutdown complete

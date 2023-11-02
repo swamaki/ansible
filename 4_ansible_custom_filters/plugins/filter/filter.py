@@ -21,6 +21,7 @@ class FilterModule:
     @staticmethod
     def ios_vrf_rt(text):
         vrf_list = ["vrf" + s for s in text.split("vrf") if s]
+        print(vrf_list)
         return_dict = {}
         for vrf in vrf_list:
             # Parse the VRF name from the definition line
@@ -32,12 +33,16 @@ class FilterModule:
             # Parse the RT imports into a list of strings
             rti_regex = re.compile(r"route-target\s+import\s+(?P<rti>\d+:\d+)")
             rti_matches = rti_regex.findall(vrf)
-            sub_dict.update({"route import": rti_matches})
+            rti_matches = list(set(rti_matches))  # remove duplicate RTs
+            rti_matches.sort()
+            sub_dict.update({"route_import": rti_matches})
 
             # Parse the RT exports into a list of strings
             rte_regex = re.compile(r"route-target\s+export\s+(?P<rte>\d+:\d+)")
             rte_matches = rte_regex.findall(vrf)
-            sub_dict.update({"route export": rte_matches})
+            rte_matches = list(set(rte_matches))  # remove duplicate RTs
+            rte_matches.sort()
+            sub_dict.update({"route_export": rte_matches})
 
             # Append dictionary to return list
             return_dict.update(vrf_dict)

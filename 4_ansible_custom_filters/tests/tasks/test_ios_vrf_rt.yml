@@ -1,0 +1,79 @@
+---
+- name: "Store IOS VRF text"
+  set_fact: 
+    text: |-
+      vrf definition VRF_1
+        description VRF_1 EXAMPLE
+        rd 65000:1
+        !
+        address-family ipv4
+          route-target export 65000:1
+          route-target export 723:723
+          route-target export 724:724
+          route-target import 65000:1
+          route-target import 721:721
+          route-target import 722:722
+        exit-address-family
+        !
+        address-family ipv6
+          route-target export 65000:1
+          route-target export 723:723
+          route-target export 724:724
+          route-target import 65000:1
+          route-target import 721:721
+          route-target import 722:722
+        exit-address-family
+      vrf definition VRF_2
+        description VRF_2 EXAMPLE
+        rd 65000:2
+        !
+        address-family ipv4
+          route-target export 65000:2
+          route-target export 727:727
+          route-target export 728:728
+          route-target import 65000:2
+          route-target import 725:725
+          route-target import 726:726
+        exit-address-family
+        !
+        address-family ipv6
+          route-target export 65000:2
+          route-target export 727:727
+          route-target export 728:728
+          route-target import 65000:2
+          route-target import 725:725
+          route-target import 726:726
+        exit-address-family
+
+- name: "Perform parsing" 
+  set_fact:
+    vrf_data: "{{ text | ios_vrf_rt }}"
+
+- name: "Print structured vrf_data" 
+  debug:
+    msg: "{{ vrf_data }}"
+
+- name: "ASSERT >> Ensure VRF_1 parsing succeeded"
+  assert:
+    that:
+      - "vrf_data['VRF_1']['route_export'] | length == 3"
+      - "vrf_data['VRF_1']['route_export'][0] == '65000:1'"
+      - "vrf_data['VRF_1']['route_export'][1] == '723:723'"
+      - "vrf_data['VRF_1']['route_export'][2] == '724:724'"
+      - "vrf_data['VRF_1']['route_import'] | length == 3"
+      - "vrf_data['VRF_1']['route_import'][0] == '65000:1'"
+      - "vrf_data['VRF_1']['route_import'][1] == '721:721'"
+      - "vrf_data['VRF_1']['route_import'][2] == '722:722'"
+
+- name: "ASSERT >> Ensure VRF_2 parsing succeeded"
+  assert:
+    that:
+      - "vrf_data['VRF_2']['route_export'] | length == 3"
+      - "vrf_data['VRF_2']['route_export'][0] == '65000:2'"
+      - "vrf_data['VRF_2']['route_export'][1] == '727:727'"
+      - "vrf_data['VRF_2']['route_export'][2] == '728:728'"
+      - "vrf_data['VRF_2']['route_import'] | length == 3"
+      - "vrf_data['VRF_2']['route_import'][0] == '65000:2'"
+      - "vrf_data['VRF_2']['route_import'][1] == '725:725'"
+      - "vrf_data['VRF_2']['route_import'][2] == '726:726'"
+

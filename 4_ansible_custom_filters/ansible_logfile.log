@@ -294,3 +294,774 @@ dict key (msg). Using last defined value only.
 2023-11-02 06:06:20,443 p=81693 u=stephenamaki n=ansible | PLAY RECAP ***************************************************************************************************************************************************************************************
 2023-11-02 06:06:20,443 p=81693 u=stephenamaki n=ansible | 10.255.255.71              : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
 2023-11-02 06:06:20,543 p=81712 u=stephenamaki n=ansible | shutdown complete
+2023-11-02 09:41:09,137 p=54599 u=stephenamaki n=ansible | PLAY [PLAY 1: Testing our route-target AS getter] ************************************************************************************************************************************************
+2023-11-02 09:41:09,154 p=54599 u=stephenamaki n=ansible | TASK [TASK 1: Get router configuration] **********************************************************************************************************************************************************
+2023-11-02 09:41:10,362 p=54599 u=stephenamaki n=ansible | network_os is set to ios
+2023-11-02 09:41:10,364 p=54599 u=stephenamaki n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2023-11-02 09:41:10,400 p=54613 u=stephenamaki n=p=54613 u=stephenamaki | paramiko [10.255.255.71] | Connected (version 1.99, client Cisco-1.25)
+2023-11-02 09:41:10,780 p=54613 u=stephenamaki n=p=54613 u=stephenamaki | paramiko [10.255.255.71] | Auth banner: b"\r\n**************************************************************************\r\n* IOSv is strictly limited to use for evaluation, demonstration and IOS  *\r\n* education. IOSv is provided as-is and is not supported by Cisco's      *\r\n* Technical Advisory Center. Any use or disclosure, in whole or in part, *\r\n* of the IOSv Software or Documentation to any third party for any       *\r\n* purposes is expressly prohibited except as otherwise authorized by     *\r\n* Cisco in writing.                                                      *\r\n**************************************************************************"
+2023-11-02 09:41:10,783 p=54613 u=stephenamaki n=p=54613 u=stephenamaki | paramiko [10.255.255.71] | Authentication (password) successful!
+2023-11-02 09:41:11,821 p=54599 u=stephenamaki n=ansible | ok: [10.255.255.71]
+2023-11-02 09:41:11,826 p=54599 u=stephenamaki n=ansible | TASK [TASK2: Parse the RT import and export data] ************************************************************************************************************************************************
+2023-11-02 09:41:13,012 p=54599 u=stephenamaki n=ansible | ok: [10.255.255.71]
+2023-11-02 09:41:13,018 p=54599 u=stephenamaki n=ansible | TASK [TASK 3: Print results] *********************************************************************************************************************************************************************
+2023-11-02 09:41:14,172 p=54599 u=stephenamaki n=ansible | ok: [10.255.255.71] => {
+    "msg": {
+        "VRF_1": {
+            "route export": [
+                "65000:1",
+                "713:713",
+                "714:714",
+                "65000:1",
+                "713:713",
+                "714:714"
+            ],
+            "route import": [
+                "65000:1",
+                "711:711",
+                "712:712",
+                "65000:1",
+                "711:711",
+                "712:712"
+            ]
+        },
+        "VRF_2": {
+            "route export": [
+                "65000:2",
+                "717:717",
+                "718:718",
+                "65000:2",
+                "717:717",
+                "718:718"
+            ],
+            "route import": [
+                "65000:2",
+                "715:715",
+                "716:716",
+                "65000:2",
+                "715:715",
+                "716:716"
+            ]
+        }
+    }
+}
+2023-11-02 09:41:14,187 p=54599 u=stephenamaki n=ansible | PLAY RECAP ***************************************************************************************************************************************************************************************
+2023-11-02 09:41:14,187 p=54599 u=stephenamaki n=ansible | 10.255.255.71              : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-11-02 09:41:14,287 p=54613 u=stephenamaki n=ansible | shutdown complete
+2023-11-02 09:46:20,754 p=56352 u=stephenamaki n=ansible | PLAY [PLAY 1: Testing our route-target AS getter] ************************************************************************************************************************************************
+2023-11-02 09:46:20,769 p=56352 u=stephenamaki n=ansible | TASK [TASK 1: Get router configuration] **********************************************************************************************************************************************************
+2023-11-02 09:46:21,931 p=56352 u=stephenamaki n=ansible | network_os is set to ios
+2023-11-02 09:46:21,933 p=56352 u=stephenamaki n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2023-11-02 09:46:21,957 p=56364 u=stephenamaki n=p=56364 u=stephenamaki | paramiko [10.255.255.71] | Connected (version 1.99, client Cisco-1.25)
+2023-11-02 09:46:22,334 p=56364 u=stephenamaki n=p=56364 u=stephenamaki | paramiko [10.255.255.71] | Auth banner: b"\r\n**************************************************************************\r\n* IOSv is strictly limited to use for evaluation, demonstration and IOS  *\r\n* education. IOSv is provided as-is and is not supported by Cisco's      *\r\n* Technical Advisory Center. Any use or disclosure, in whole or in part, *\r\n* of the IOSv Software or Documentation to any third party for any       *\r\n* purposes is expressly prohibited except as otherwise authorized by     *\r\n* Cisco in writing.                                                      *\r\n**************************************************************************"
+2023-11-02 09:46:22,339 p=56364 u=stephenamaki n=p=56364 u=stephenamaki | paramiko [10.255.255.71] | Authentication (password) successful!
+2023-11-02 09:46:23,385 p=56352 u=stephenamaki n=ansible | ok: [10.255.255.71]
+2023-11-02 09:46:23,389 p=56352 u=stephenamaki n=ansible | TASK [TASK2: Parse the RT import and export data] ************************************************************************************************************************************************
+2023-11-02 09:46:24,495 p=56352 u=stephenamaki n=ansible | ok: [10.255.255.71]
+2023-11-02 09:46:24,500 p=56352 u=stephenamaki n=ansible | TASK [TASK 3: Print results] *********************************************************************************************************************************************************************
+2023-11-02 09:46:25,618 p=56352 u=stephenamaki n=ansible | ok: [10.255.255.71] => {
+    "msg": {
+        "VRF_1": {
+            "route export": [
+                "65000:1",
+                "713:713",
+                "714:714",
+                "65000:1",
+                "713:713",
+                "714:714"
+            ],
+            "route import": [
+                "65000:1",
+                "711:711",
+                "712:712"
+            ]
+        },
+        "VRF_2": {
+            "route export": [
+                "65000:2",
+                "717:717",
+                "718:718",
+                "65000:2",
+                "717:717",
+                "718:718"
+            ],
+            "route import": [
+                "715:715",
+                "65000:2",
+                "716:716"
+            ]
+        }
+    }
+}
+2023-11-02 09:46:25,632 p=56352 u=stephenamaki n=ansible | PLAY RECAP ***************************************************************************************************************************************************************************************
+2023-11-02 09:46:25,632 p=56352 u=stephenamaki n=ansible | 10.255.255.71              : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-11-02 09:46:25,732 p=56364 u=stephenamaki n=ansible | shutdown complete
+2023-11-02 09:47:20,232 p=56750 u=stephenamaki n=ansible | PLAY [PLAY 1: Testing our route-target AS getter] ************************************************************************************************************************************************
+2023-11-02 09:47:20,247 p=56750 u=stephenamaki n=ansible | TASK [TASK 1: Get router configuration] **********************************************************************************************************************************************************
+2023-11-02 09:47:21,423 p=56750 u=stephenamaki n=ansible | network_os is set to ios
+2023-11-02 09:47:21,424 p=56750 u=stephenamaki n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2023-11-02 09:47:21,452 p=56775 u=stephenamaki n=p=56775 u=stephenamaki | paramiko [10.255.255.71] | Connected (version 1.99, client Cisco-1.25)
+2023-11-02 09:47:21,831 p=56775 u=stephenamaki n=p=56775 u=stephenamaki | paramiko [10.255.255.71] | Auth banner: b"\r\n**************************************************************************\r\n* IOSv is strictly limited to use for evaluation, demonstration and IOS  *\r\n* education. IOSv is provided as-is and is not supported by Cisco's      *\r\n* Technical Advisory Center. Any use or disclosure, in whole or in part, *\r\n* of the IOSv Software or Documentation to any third party for any       *\r\n* purposes is expressly prohibited except as otherwise authorized by     *\r\n* Cisco in writing.                                                      *\r\n**************************************************************************"
+2023-11-02 09:47:21,839 p=56775 u=stephenamaki n=p=56775 u=stephenamaki | paramiko [10.255.255.71] | Authentication (password) successful!
+2023-11-02 09:47:22,863 p=56750 u=stephenamaki n=ansible | ok: [10.255.255.71]
+2023-11-02 09:47:22,868 p=56750 u=stephenamaki n=ansible | TASK [TASK2: Parse the RT import and export data] ************************************************************************************************************************************************
+2023-11-02 09:47:23,973 p=56750 u=stephenamaki n=ansible | ok: [10.255.255.71]
+2023-11-02 09:47:23,978 p=56750 u=stephenamaki n=ansible | TASK [TASK 3: Print results] *********************************************************************************************************************************************************************
+2023-11-02 09:47:25,077 p=56750 u=stephenamaki n=ansible | ok: [10.255.255.71] => {
+    "msg": {
+        "VRF_1": {
+            "route export": [
+                "713:713",
+                "714:714",
+                "65000:1"
+            ],
+            "route import": [
+                "712:712",
+                "65000:1",
+                "711:711"
+            ]
+        },
+        "VRF_2": {
+            "route export": [
+                "718:718",
+                "65000:2",
+                "717:717"
+            ],
+            "route import": [
+                "65000:2",
+                "715:715",
+                "716:716"
+            ]
+        }
+    }
+}
+2023-11-02 09:47:25,090 p=56750 u=stephenamaki n=ansible | PLAY RECAP ***************************************************************************************************************************************************************************************
+2023-11-02 09:47:25,091 p=56750 u=stephenamaki n=ansible | 10.255.255.71              : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-11-02 09:47:25,191 p=56775 u=stephenamaki n=ansible | shutdown complete
+2023-11-02 09:52:14,337 p=58375 u=stephenamaki n=ansible | PLAY [PLAY 1: Perform automated Python filter (unit) testing] ************************************************************************************************************************************
+2023-11-02 09:52:14,351 p=58375 u=stephenamaki n=ansible | TASK [TASK 1: Find all of the 'tasks/test_' cases] ***********************************************************************************************************************************************
+2023-11-02 09:52:14,783 p=58375 u=stephenamaki n=ansible | ok: [localhost]
+2023-11-02 09:52:14,786 p=58375 u=stephenamaki n=ansible | TASK [TASK2: Assemble the 'path' field from each entry into a list] ******************************************************************************************************************************
+2023-11-02 09:52:14,820 p=58375 u=stephenamaki n=ansible | fatal: [localhost]: FAILED! => {"msg": "template error while templating string: expected token 'end of print statement', got 'cases'. String:  {{ test_ cases.files | map(attribute='path') | list }}. expected token 'end of print statement', got 'cases'"}
+2023-11-02 09:52:14,821 p=58375 u=stephenamaki n=ansible | PLAY RECAP ***************************************************************************************************************************************************************************************
+2023-11-02 09:52:14,821 p=58375 u=stephenamaki n=ansible | localhost                  : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-11-02 10:14:12,301 p=65241 u=stephenamaki n=ansible | PLAY [PLAY 1: Perform automated Python filter (unit) testing] ************************************************************************************************************************************
+2023-11-02 10:14:12,316 p=65241 u=stephenamaki n=ansible | TASK [TASK 1: Find all of the 'tasks/test_' cases] ***********************************************************************************************************************************************
+2023-11-02 10:14:12,723 p=65241 u=stephenamaki n=ansible | ok: [localhost]
+2023-11-02 10:14:12,727 p=65241 u=stephenamaki n=ansible | TASK [TASK2: Assemble the 'path' field from each entry into a list] ******************************************************************************************************************************
+2023-11-02 10:14:12,761 p=65241 u=stephenamaki n=ansible | fatal: [localhost]: FAILED! => {"msg": "template error while templating string: expected token 'end of print statement', got 'cases'. String: {{ test_ cases.files | map(attribute='path') | list }}. expected token 'end of print statement', got 'cases'"}
+2023-11-02 10:14:12,762 p=65241 u=stephenamaki n=ansible | PLAY RECAP ***************************************************************************************************************************************************************************************
+2023-11-02 10:14:12,762 p=65241 u=stephenamaki n=ansible | localhost                  : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-11-02 10:14:51,439 p=65498 u=stephenamaki n=ansible | PLAY [PLAY 1: Perform automated Python filter (unit) testing] ************************************************************************************************************************************
+2023-11-02 10:14:51,470 p=65498 u=stephenamaki n=ansible | TASK [TASK 1: Find all of the 'tasks/test_' cases] ***********************************************************************************************************************************************
+2023-11-02 10:14:51,882 p=65498 u=stephenamaki n=ansible | ok: [localhost]
+2023-11-02 10:14:51,887 p=65498 u=stephenamaki n=ansible | TASK [TASK2: Assemble the 'path' field from each entry into a list] ******************************************************************************************************************************
+2023-11-02 10:14:51,937 p=65498 u=stephenamaki n=ansible | ok: [localhost]
+2023-11-02 10:14:51,941 p=65498 u=stephenamaki n=ansible | TASK [TASK 3: Include all of the test cases] *****************************************************************************************************************************************************
+2023-11-02 10:14:51,972 p=65498 u=stephenamaki n=ansible | ERROR! couldn't resolve module/action 'set fact'. This often indicates a misspelling, missing collection, or incorrect module path.
+
+The error appears to be in '/Users/stephenamaki/Dropbox/netdevops/ansible/myscripts_ansible/4_ansible_custom_filters/tests/tasks/test_ios_vrf_rt.yml': line 48, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+- name: "Perform parsing"
+  ^ here
+
+2023-11-02 10:15:44,592 p=65840 u=stephenamaki n=ansible | PLAY [PLAY 1: Perform automated Python filter (unit) testing] ************************************************************************************************************************************
+2023-11-02 10:15:44,605 p=65840 u=stephenamaki n=ansible | TASK [TASK 1: Find all of the 'tasks/test_' cases] ***********************************************************************************************************************************************
+2023-11-02 10:15:44,978 p=65840 u=stephenamaki n=ansible | ok: [localhost]
+2023-11-02 10:15:44,982 p=65840 u=stephenamaki n=ansible | TASK [TASK2: Assemble the 'path' field from each entry into a list] ******************************************************************************************************************************
+2023-11-02 10:15:45,026 p=65840 u=stephenamaki n=ansible | ok: [localhost]
+2023-11-02 10:15:45,030 p=65840 u=stephenamaki n=ansible | TASK [TASK 3: Include all of the test cases] *****************************************************************************************************************************************************
+2023-11-02 10:15:45,054 p=65840 u=stephenamaki n=ansible | included: /Users/stephenamaki/Dropbox/netdevops/ansible/myscripts_ansible/4_ansible_custom_filters/tests/tasks/test_ios_vrf_rt.yml for localhost => (item=/Users/stephenamaki/Dropbox/netdevops/ansible/myscripts_ansible/4_ansible_custom_filters/tests/tasks/test_ios_vrf_rt.yml)
+2023-11-02 10:15:45,058 p=65840 u=stephenamaki n=ansible | TASK [Store IOS VRF text] ************************************************************************************************************************************************************************
+2023-11-02 10:15:45,075 p=65840 u=stephenamaki n=ansible | ok: [localhost]
+2023-11-02 10:15:45,079 p=65840 u=stephenamaki n=ansible | TASK [Perform parsing] ***************************************************************************************************************************************************************************
+2023-11-02 10:15:45,109 p=65840 u=stephenamaki n=ansible | ok: [localhost]
+2023-11-02 10:15:45,119 p=65840 u=stephenamaki n=ansible | TASK [Print structured vrf_data] *****************************************************************************************************************************************************************
+2023-11-02 10:15:45,142 p=65840 u=stephenamaki n=ansible | ok: [localhost] => {
+    "msg": {
+        "VRF_1": {
+            "route export": [
+                "723:723",
+                "65000:1",
+                "724:724"
+            ],
+            "route import": [
+                "722:722",
+                "65000:1",
+                "721:721"
+            ]
+        },
+        "VRF_2": {
+            "route export": [
+                "65000:2",
+                "728:728",
+                "727:727"
+            ],
+            "route import": [
+                "65000:2",
+                "725:725",
+                "726:726"
+            ]
+        }
+    }
+}
+2023-11-02 10:15:45,158 p=65840 u=stephenamaki n=ansible | TASK [ASSERT >> Ensure VRF_1 parsing succeeded] **************************************************************************************************************************************************
+2023-11-02 10:15:45,196 p=65840 u=stephenamaki n=ansible | fatal: [localhost]: FAILED! => {"msg": "The conditional check 'vrf_data['VRF_1']['route_export'] | length == 3' failed. The error was: error while evaluating conditional (vrf_data['VRF_1']['route_export'] | length == 3): 'dict object' has no attribute 'route_export'. 'dict object' has no attribute 'route_export'"}
+2023-11-02 10:15:45,197 p=65840 u=stephenamaki n=ansible | PLAY RECAP ***************************************************************************************************************************************************************************************
+2023-11-02 10:15:45,197 p=65840 u=stephenamaki n=ansible | localhost                  : ok=6    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-11-02 10:21:38,239 p=67800 u=stephenamaki n=ansible | PLAY [PLAY 1: Perform automated Python filter (unit) testing] ************************************************************************************************************************************
+2023-11-02 10:21:38,254 p=67800 u=stephenamaki n=ansible | TASK [TASK 1: Find all of the 'tasks/test_' cases] ***********************************************************************************************************************************************
+2023-11-02 10:21:38,648 p=67800 u=stephenamaki n=ansible | ok: [localhost]
+2023-11-02 10:21:38,652 p=67800 u=stephenamaki n=ansible | TASK [TASK2: Assemble the 'path' field from each entry into a list] ******************************************************************************************************************************
+2023-11-02 10:21:38,701 p=67800 u=stephenamaki n=ansible | ok: [localhost]
+2023-11-02 10:21:38,705 p=67800 u=stephenamaki n=ansible | TASK [TASK 3: Include all of the test cases] *****************************************************************************************************************************************************
+2023-11-02 10:21:38,758 p=67800 u=stephenamaki n=ansible | included: /Users/stephenamaki/Dropbox/netdevops/ansible/myscripts_ansible/4_ansible_custom_filters/tests/tasks/test_ios_vrf_rt.yml for localhost => (item=/Users/stephenamaki/Dropbox/netdevops/ansible/myscripts_ansible/4_ansible_custom_filters/tests/tasks/test_ios_vrf_rt.yml)
+2023-11-02 10:21:38,764 p=67800 u=stephenamaki n=ansible | TASK [Store IOS VRF text] ************************************************************************************************************************************************************************
+2023-11-02 10:21:38,780 p=67800 u=stephenamaki n=ansible | ok: [localhost]
+2023-11-02 10:21:38,783 p=67800 u=stephenamaki n=ansible | TASK [Perform parsing] ***************************************************************************************************************************************************************************
+2023-11-02 10:21:38,811 p=67800 u=stephenamaki n=ansible | ok: [localhost]
+2023-11-02 10:21:38,815 p=67800 u=stephenamaki n=ansible | TASK [Print structured vrf_data] *****************************************************************************************************************************************************************
+2023-11-02 10:21:38,836 p=67800 u=stephenamaki n=ansible | ok: [localhost] => {
+    "msg": {
+        "VRF_1": {
+            "route_export": [
+                "65000:1",
+                "723:723",
+                "724:724"
+            ],
+            "route_import": [
+                "65000:1",
+                "721:721",
+                "722:722"
+            ]
+        },
+        "VRF_2": {
+            "route_export": [
+                "65000:2",
+                "727:727",
+                "728:728"
+            ],
+            "route_import": [
+                "725:725",
+                "65000:2",
+                "726:726"
+            ]
+        }
+    }
+}
+2023-11-02 10:21:38,849 p=67800 u=stephenamaki n=ansible | TASK [ASSERT >> Ensure VRF_1 parsing succeeded] **************************************************************************************************************************************************
+2023-11-02 10:21:38,903 p=67800 u=stephenamaki n=ansible | ok: [localhost] => {
+    "changed": false,
+    "msg": "All assertions passed"
+}
+2023-11-02 10:21:38,907 p=67800 u=stephenamaki n=ansible | TASK [ASSERT >> Ensure VRF_2 parsing succeeded] **************************************************************************************************************************************************
+2023-11-02 10:21:38,957 p=67800 u=stephenamaki n=ansible | fatal: [localhost]: FAILED! => {
+    "assertion": "vrf_data['VRF_2']['route_import'][0] == '65000:2'",
+    "changed": false,
+    "evaluated_to": false,
+    "msg": "Assertion failed"
+}
+2023-11-02 10:21:38,959 p=67800 u=stephenamaki n=ansible | PLAY RECAP ***************************************************************************************************************************************************************************************
+2023-11-02 10:21:38,959 p=67800 u=stephenamaki n=ansible | localhost                  : ok=7    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-11-02 10:23:14,589 p=68396 u=stephenamaki n=ansible | PLAY [PLAY 1: Perform automated Python filter (unit) testing] ************************************************************************************************************************************
+2023-11-02 10:23:14,605 p=68396 u=stephenamaki n=ansible | TASK [TASK 1: Find all of the 'tasks/test_' cases] ***********************************************************************************************************************************************
+2023-11-02 10:23:15,028 p=68396 u=stephenamaki n=ansible | ok: [localhost]
+2023-11-02 10:23:15,032 p=68396 u=stephenamaki n=ansible | TASK [TASK2: Assemble the 'path' field from each entry into a list] ******************************************************************************************************************************
+2023-11-02 10:23:15,080 p=68396 u=stephenamaki n=ansible | ok: [localhost]
+2023-11-02 10:23:15,084 p=68396 u=stephenamaki n=ansible | TASK [TASK 3: Include all of the test cases] *****************************************************************************************************************************************************
+2023-11-02 10:23:15,108 p=68396 u=stephenamaki n=ansible | included: /Users/stephenamaki/Dropbox/netdevops/ansible/myscripts_ansible/4_ansible_custom_filters/tests/tasks/test_ios_vrf_rt.yml for localhost => (item=/Users/stephenamaki/Dropbox/netdevops/ansible/myscripts_ansible/4_ansible_custom_filters/tests/tasks/test_ios_vrf_rt.yml)
+2023-11-02 10:23:15,111 p=68396 u=stephenamaki n=ansible | TASK [Store IOS VRF text] ************************************************************************************************************************************************************************
+2023-11-02 10:23:15,126 p=68396 u=stephenamaki n=ansible | ok: [localhost]
+2023-11-02 10:23:15,130 p=68396 u=stephenamaki n=ansible | TASK [Perform parsing] ***************************************************************************************************************************************************************************
+2023-11-02 10:23:15,158 p=68396 u=stephenamaki n=ansible | ok: [localhost]
+2023-11-02 10:23:15,162 p=68396 u=stephenamaki n=ansible | TASK [Print structured vrf_data] *****************************************************************************************************************************************************************
+2023-11-02 10:23:15,182 p=68396 u=stephenamaki n=ansible | ok: [localhost] => {
+    "msg": {
+        "VRF_1": {
+            "route_export": [
+                "724:724",
+                "723:723",
+                "65000:1"
+            ],
+            "route_import": [
+                "722:722",
+                "721:721",
+                "65000:1"
+            ]
+        },
+        "VRF_2": {
+            "route_export": [
+                "727:727",
+                "728:728",
+                "65000:2"
+            ],
+            "route_import": [
+                "726:726",
+                "725:725",
+                "65000:2"
+            ]
+        }
+    }
+}
+2023-11-02 10:23:15,198 p=68396 u=stephenamaki n=ansible | TASK [ASSERT >> Ensure VRF_1 parsing succeeded] **************************************************************************************************************************************************
+2023-11-02 10:23:15,239 p=68396 u=stephenamaki n=ansible | fatal: [localhost]: FAILED! => {
+    "assertion": "vrf_data['VRF_1']['route_export'][0] == '65000:1'",
+    "changed": false,
+    "evaluated_to": false,
+    "msg": "Assertion failed"
+}
+2023-11-02 10:23:15,241 p=68396 u=stephenamaki n=ansible | PLAY RECAP ***************************************************************************************************************************************************************************************
+2023-11-02 10:23:15,241 p=68396 u=stephenamaki n=ansible | localhost                  : ok=6    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-11-02 10:24:22,665 p=68869 u=stephenamaki n=ansible | PLAY [PLAY 1: Perform automated Python filter (unit) testing] ************************************************************************************************************************************
+2023-11-02 10:24:22,678 p=68869 u=stephenamaki n=ansible | TASK [TASK 1: Find all of the 'tasks/test_' cases] ***********************************************************************************************************************************************
+2023-11-02 10:24:23,051 p=68869 u=stephenamaki n=ansible | ok: [localhost]
+2023-11-02 10:24:23,055 p=68869 u=stephenamaki n=ansible | TASK [TASK2: Assemble the 'path' field from each entry into a list] ******************************************************************************************************************************
+2023-11-02 10:24:23,098 p=68869 u=stephenamaki n=ansible | ok: [localhost]
+2023-11-02 10:24:23,102 p=68869 u=stephenamaki n=ansible | TASK [TASK 3: Include all of the test cases] *****************************************************************************************************************************************************
+2023-11-02 10:24:23,126 p=68869 u=stephenamaki n=ansible | included: /Users/stephenamaki/Dropbox/netdevops/ansible/myscripts_ansible/4_ansible_custom_filters/tests/tasks/test_ios_vrf_rt.yml for localhost => (item=/Users/stephenamaki/Dropbox/netdevops/ansible/myscripts_ansible/4_ansible_custom_filters/tests/tasks/test_ios_vrf_rt.yml)
+2023-11-02 10:24:23,129 p=68869 u=stephenamaki n=ansible | TASK [Store IOS VRF text] ************************************************************************************************************************************************************************
+2023-11-02 10:24:23,145 p=68869 u=stephenamaki n=ansible | ok: [localhost]
+2023-11-02 10:24:23,149 p=68869 u=stephenamaki n=ansible | TASK [Perform parsing] ***************************************************************************************************************************************************************************
+2023-11-02 10:24:23,177 p=68869 u=stephenamaki n=ansible | ok: [localhost]
+2023-11-02 10:24:23,181 p=68869 u=stephenamaki n=ansible | TASK [Print structured vrf_data] *****************************************************************************************************************************************************************
+2023-11-02 10:24:23,202 p=68869 u=stephenamaki n=ansible | ok: [localhost] => {
+    "msg": {
+        "VRF_1": {
+            "route_export": [
+                "724:724",
+                "723:723",
+                "65000:1"
+            ],
+            "route_import": [
+                "721:721",
+                "722:722",
+                "65000:1"
+            ]
+        },
+        "VRF_2": {
+            "route_export": [
+                "65000:2",
+                "727:727",
+                "728:728"
+            ],
+            "route_import": [
+                "65000:2",
+                "726:726",
+                "725:725"
+            ]
+        }
+    }
+}
+2023-11-02 10:24:23,207 p=68869 u=stephenamaki n=ansible | TASK [ASSERT >> Ensure VRF_1 parsing succeeded] **************************************************************************************************************************************************
+2023-11-02 10:24:23,246 p=68869 u=stephenamaki n=ansible | fatal: [localhost]: FAILED! => {
+    "assertion": "vrf_data['VRF_1']['route_export'][0] == '65000:1'",
+    "changed": false,
+    "evaluated_to": false,
+    "msg": "Assertion failed"
+}
+2023-11-02 10:24:23,247 p=68869 u=stephenamaki n=ansible | PLAY RECAP ***************************************************************************************************************************************************************************************
+2023-11-02 10:24:23,247 p=68869 u=stephenamaki n=ansible | localhost                  : ok=6    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-11-02 10:29:36,469 p=70616 u=stephenamaki n=ansible | PLAY [PLAY 1: Perform automated Python filter (unit) testing] ************************************************************************************************************************************
+2023-11-02 10:29:36,482 p=70616 u=stephenamaki n=ansible | TASK [TASK 1: Find all of the 'tasks/test_' cases] ***********************************************************************************************************************************************
+2023-11-02 10:29:36,845 p=70616 u=stephenamaki n=ansible | ok: [localhost]
+2023-11-02 10:29:36,850 p=70616 u=stephenamaki n=ansible | TASK [TASK2: Assemble the 'path' field from each entry into a list] ******************************************************************************************************************************
+2023-11-02 10:29:36,891 p=70616 u=stephenamaki n=ansible | ok: [localhost]
+2023-11-02 10:29:36,895 p=70616 u=stephenamaki n=ansible | TASK [TASK 3: Include all of the test cases] *****************************************************************************************************************************************************
+2023-11-02 10:29:36,919 p=70616 u=stephenamaki n=ansible | included: /Users/stephenamaki/Dropbox/netdevops/ansible/myscripts_ansible/4_ansible_custom_filters/tests/tasks/test_ios_vrf_rt.yml for localhost => (item=/Users/stephenamaki/Dropbox/netdevops/ansible/myscripts_ansible/4_ansible_custom_filters/tests/tasks/test_ios_vrf_rt.yml)
+2023-11-02 10:29:36,922 p=70616 u=stephenamaki n=ansible | TASK [Store IOS VRF text] ************************************************************************************************************************************************************************
+2023-11-02 10:29:36,937 p=70616 u=stephenamaki n=ansible | ok: [localhost]
+2023-11-02 10:29:36,941 p=70616 u=stephenamaki n=ansible | TASK [Perform parsing] ***************************************************************************************************************************************************************************
+2023-11-02 10:29:36,968 p=70616 u=stephenamaki n=ansible | ok: [localhost]
+2023-11-02 10:29:36,972 p=70616 u=stephenamaki n=ansible | TASK [Print structured vrf_data] *****************************************************************************************************************************************************************
+2023-11-02 10:29:36,992 p=70616 u=stephenamaki n=ansible | ok: [localhost] => {
+    "msg": {
+        "VRF_1": {
+            "route_export": [
+                "65000:1",
+                "724:724",
+                "723:723"
+            ],
+            "route_import": [
+                "65000:1",
+                "722:722",
+                "721:721"
+            ]
+        },
+        "VRF_2": {
+            "route_export": [
+                "65000:2",
+                "728:728",
+                "727:727"
+            ],
+            "route_import": [
+                "65000:2",
+                "726:726",
+                "725:725"
+            ]
+        }
+    }
+}
+2023-11-02 10:29:36,996 p=70616 u=stephenamaki n=ansible | TASK [ASSERT >> Ensure VRF_1 parsing succeeded] **************************************************************************************************************************************************
+2023-11-02 10:29:37,038 p=70616 u=stephenamaki n=ansible | fatal: [localhost]: FAILED! => {
+    "assertion": "vrf_data['VRF_1']['route_export'][1] == '723:723'",
+    "changed": false,
+    "evaluated_to": false,
+    "msg": "Assertion failed"
+}
+2023-11-02 10:29:37,040 p=70616 u=stephenamaki n=ansible | PLAY RECAP ***************************************************************************************************************************************************************************************
+2023-11-02 10:29:37,040 p=70616 u=stephenamaki n=ansible | localhost                  : ok=6    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-11-02 10:32:21,716 p=71610 u=stephenamaki n=ansible | PLAY [PLAY 1: Perform automated Python filter (unit) testing] ************************************************************************************************************************************
+2023-11-02 10:32:21,730 p=71610 u=stephenamaki n=ansible | TASK [TASK 1: Find all of the 'tasks/test_' cases] ***********************************************************************************************************************************************
+2023-11-02 10:32:22,122 p=71610 u=stephenamaki n=ansible | ok: [localhost]
+2023-11-02 10:32:22,127 p=71610 u=stephenamaki n=ansible | TASK [TASK2: Assemble the 'path' field from each entry into a list] ******************************************************************************************************************************
+2023-11-02 10:32:22,173 p=71610 u=stephenamaki n=ansible | ok: [localhost]
+2023-11-02 10:32:22,177 p=71610 u=stephenamaki n=ansible | TASK [TASK 3: Include all of the test cases] *****************************************************************************************************************************************************
+2023-11-02 10:32:22,209 p=71610 u=stephenamaki n=ansible | included: /Users/stephenamaki/Dropbox/netdevops/ansible/myscripts_ansible/4_ansible_custom_filters/tests/tasks/test_ios_vrf_rt.yml for localhost => (item=/Users/stephenamaki/Dropbox/netdevops/ansible/myscripts_ansible/4_ansible_custom_filters/tests/tasks/test_ios_vrf_rt.yml)
+2023-11-02 10:32:22,213 p=71610 u=stephenamaki n=ansible | TASK [Store IOS VRF text] ************************************************************************************************************************************************************************
+2023-11-02 10:32:22,230 p=71610 u=stephenamaki n=ansible | ok: [localhost]
+2023-11-02 10:32:22,234 p=71610 u=stephenamaki n=ansible | TASK [Perform parsing] ***************************************************************************************************************************************************************************
+2023-11-02 10:32:22,264 p=71610 u=stephenamaki n=ansible | ok: [localhost]
+2023-11-02 10:32:22,269 p=71610 u=stephenamaki n=ansible | TASK [Print structured vrf_data] *****************************************************************************************************************************************************************
+2023-11-02 10:32:22,292 p=71610 u=stephenamaki n=ansible | ok: [localhost] => {
+    "msg": {
+        "VRF_1": {
+            "route_export": null,
+            "route_import": null
+        },
+        "VRF_2": {
+            "route_export": null,
+            "route_import": null
+        }
+    }
+}
+2023-11-02 10:32:22,296 p=71610 u=stephenamaki n=ansible | TASK [ASSERT >> Ensure VRF_1 parsing succeeded] **************************************************************************************************************************************************
+2023-11-02 10:32:22,334 p=71610 u=stephenamaki n=ansible | fatal: [localhost]: FAILED! => {"msg": "The conditional check 'vrf_data['VRF_1']['route_export'] | length == 3' failed. The error was: Unexpected templating type error occurred on ({% if vrf_data['VRF_1']['route_export'] | length == 3 %} True {% else %} False {% endif %}): object of type 'NoneType' has no len(). object of type 'NoneType' has no len()"}
+2023-11-02 10:32:22,335 p=71610 u=stephenamaki n=ansible | PLAY RECAP ***************************************************************************************************************************************************************************************
+2023-11-02 10:32:22,335 p=71610 u=stephenamaki n=ansible | localhost                  : ok=6    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-11-02 10:34:32,442 p=72577 u=stephenamaki n=ansible | PLAY [PLAY 1: Testing our route-target AS getter] *****************************************************************************************************************************************************************************
+2023-11-02 10:34:32,460 p=72577 u=stephenamaki n=ansible | TASK [TASK 1: Get router configuration] ***************************************************************************************************************************************************************************************
+2023-11-02 10:34:33,708 p=72577 u=stephenamaki n=ansible | network_os is set to ios
+2023-11-02 10:34:33,709 p=72577 u=stephenamaki n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2023-11-02 10:34:33,737 p=72589 u=stephenamaki n=p=72589 u=stephenamaki | paramiko [10.255.255.71] | Connected (version 1.99, client Cisco-1.25)
+2023-11-02 10:34:34,114 p=72589 u=stephenamaki n=p=72589 u=stephenamaki | paramiko [10.255.255.71] | Auth banner: b"\r\n**************************************************************************\r\n* IOSv is strictly limited to use for evaluation, demonstration and IOS  *\r\n* education. IOSv is provided as-is and is not supported by Cisco's      *\r\n* Technical Advisory Center. Any use or disclosure, in whole or in part, *\r\n* of the IOSv Software or Documentation to any third party for any       *\r\n* purposes is expressly prohibited except as otherwise authorized by     *\r\n* Cisco in writing.                                                      *\r\n**************************************************************************"
+2023-11-02 10:34:34,120 p=72589 u=stephenamaki n=p=72589 u=stephenamaki | paramiko [10.255.255.71] | Authentication (password) successful!
+2023-11-02 10:34:35,200 p=72577 u=stephenamaki n=ansible | ok: [10.255.255.71]
+2023-11-02 10:34:35,211 p=72577 u=stephenamaki n=ansible | TASK [TASK2: Parse the RT import and export data] *****************************************************************************************************************************************************************************
+2023-11-02 10:34:36,319 p=72577 u=stephenamaki n=ansible | ok: [10.255.255.71]
+2023-11-02 10:34:36,326 p=72577 u=stephenamaki n=ansible | TASK [TASK 3: Print results] **************************************************************************************************************************************************************************************************
+2023-11-02 10:34:37,415 p=72577 u=stephenamaki n=ansible | ok: [10.255.255.71] => {
+    "msg": {
+        "VRF_1": {
+            "route_export": null,
+            "route_import": null
+        },
+        "VRF_2": {
+            "route_export": null,
+            "route_import": null
+        }
+    }
+}
+2023-11-02 10:34:37,428 p=72577 u=stephenamaki n=ansible | PLAY RECAP ********************************************************************************************************************************************************************************************************************
+2023-11-02 10:34:37,429 p=72577 u=stephenamaki n=ansible | 10.255.255.71              : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-11-02 10:34:37,529 p=72589 u=stephenamaki n=ansible | shutdown complete
+2023-11-02 10:35:25,547 p=72886 u=stephenamaki n=ansible | PLAY [PLAY 1: Testing our route-target AS getter] *****************************************************************************************************************************************************************************
+2023-11-02 10:35:25,562 p=72886 u=stephenamaki n=ansible | TASK [TASK 1: Get router configuration] ***************************************************************************************************************************************************************************************
+2023-11-02 10:35:26,730 p=72886 u=stephenamaki n=ansible | network_os is set to ios
+2023-11-02 10:35:26,731 p=72886 u=stephenamaki n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2023-11-02 10:35:26,763 p=72898 u=stephenamaki n=p=72898 u=stephenamaki | paramiko [10.255.255.71] | Connected (version 1.99, client Cisco-1.25)
+2023-11-02 10:35:27,143 p=72898 u=stephenamaki n=p=72898 u=stephenamaki | paramiko [10.255.255.71] | Auth banner: b"\r\n**************************************************************************\r\n* IOSv is strictly limited to use for evaluation, demonstration and IOS  *\r\n* education. IOSv is provided as-is and is not supported by Cisco's      *\r\n* Technical Advisory Center. Any use or disclosure, in whole or in part, *\r\n* of the IOSv Software or Documentation to any third party for any       *\r\n* purposes is expressly prohibited except as otherwise authorized by     *\r\n* Cisco in writing.                                                      *\r\n**************************************************************************"
+2023-11-02 10:35:27,151 p=72898 u=stephenamaki n=p=72898 u=stephenamaki | paramiko [10.255.255.71] | Authentication (password) successful!
+2023-11-02 10:35:28,187 p=72886 u=stephenamaki n=ansible | ok: [10.255.255.71]
+2023-11-02 10:35:28,197 p=72886 u=stephenamaki n=ansible | TASK [TASK2: Parse the RT import and export data] *****************************************************************************************************************************************************************************
+2023-11-02 10:35:29,313 p=72886 u=stephenamaki n=ansible | ok: [10.255.255.71]
+2023-11-02 10:35:29,319 p=72886 u=stephenamaki n=ansible | TASK [TASK 3: Print results] **************************************************************************************************************************************************************************************************
+2023-11-02 10:35:30,414 p=72886 u=stephenamaki n=ansible | ok: [10.255.255.71] => {
+    "msg": {
+        "VRF_1": {
+            "route_export": [
+                "713:713",
+                "714:714",
+                "65000:1"
+            ],
+            "route_import": [
+                "712:712",
+                "711:711",
+                "65000:1"
+            ]
+        },
+        "VRF_2": {
+            "route_export": [
+                "65000:2",
+                "717:717",
+                "718:718"
+            ],
+            "route_import": [
+                "65000:2",
+                "716:716",
+                "715:715"
+            ]
+        }
+    }
+}
+2023-11-02 10:35:30,428 p=72886 u=stephenamaki n=ansible | PLAY RECAP ********************************************************************************************************************************************************************************************************************
+2023-11-02 10:35:30,428 p=72886 u=stephenamaki n=ansible | 10.255.255.71              : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-11-02 10:35:30,529 p=72898 u=stephenamaki n=ansible | shutdown complete
+2023-11-02 10:36:03,838 p=73154 u=stephenamaki n=ansible | PLAY [PLAY 1: Testing our route-target AS getter] *****************************************************************************************************************************************************************************
+2023-11-02 10:36:03,852 p=73154 u=stephenamaki n=ansible | TASK [TASK 1: Get router configuration] ***************************************************************************************************************************************************************************************
+2023-11-02 10:36:05,029 p=73154 u=stephenamaki n=ansible | network_os is set to ios
+2023-11-02 10:36:05,031 p=73154 u=stephenamaki n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2023-11-02 10:36:05,058 p=73166 u=stephenamaki n=p=73166 u=stephenamaki | paramiko [10.255.255.71] | Connected (version 1.99, client Cisco-1.25)
+2023-11-02 10:36:05,478 p=73166 u=stephenamaki n=p=73166 u=stephenamaki | paramiko [10.255.255.71] | Auth banner: b"\r\n**************************************************************************\r\n* IOSv is strictly limited to use for evaluation, demonstration and IOS  *\r\n* education. IOSv is provided as-is and is not supported by Cisco's      *\r\n* Technical Advisory Center. Any use or disclosure, in whole or in part, *\r\n* of the IOSv Software or Documentation to any third party for any       *\r\n* purposes is expressly prohibited except as otherwise authorized by     *\r\n* Cisco in writing.                                                      *\r\n**************************************************************************"
+2023-11-02 10:36:05,484 p=73166 u=stephenamaki n=p=73166 u=stephenamaki | paramiko [10.255.255.71] | Authentication (password) successful!
+2023-11-02 10:36:06,546 p=73154 u=stephenamaki n=ansible | ok: [10.255.255.71]
+2023-11-02 10:36:06,552 p=73154 u=stephenamaki n=ansible | TASK [TASK2: Parse the RT import and export data] *****************************************************************************************************************************************************************************
+2023-11-02 10:36:07,649 p=73154 u=stephenamaki n=ansible | ok: [10.255.255.71]
+2023-11-02 10:36:07,655 p=73154 u=stephenamaki n=ansible | TASK [TASK 3: Print results] **************************************************************************************************************************************************************************************************
+2023-11-02 10:36:08,746 p=73154 u=stephenamaki n=ansible | ok: [10.255.255.71] => {
+    "msg": {
+        "VRF_1": {
+            "route_export": [
+                "714:714",
+                "65000:1",
+                "713:713"
+            ],
+            "route_import": [
+                "65000:1",
+                "711:711",
+                "712:712"
+            ]
+        },
+        "VRF_2": {
+            "route_export": [
+                "717:717",
+                "65000:2",
+                "718:718"
+            ],
+            "route_import": [
+                "65000:2",
+                "716:716",
+                "715:715"
+            ]
+        }
+    }
+}
+2023-11-02 10:36:08,760 p=73154 u=stephenamaki n=ansible | PLAY RECAP ********************************************************************************************************************************************************************************************************************
+2023-11-02 10:36:08,760 p=73154 u=stephenamaki n=ansible | 10.255.255.71              : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-11-02 10:36:08,860 p=73166 u=stephenamaki n=ansible | shutdown complete
+2023-11-02 10:45:14,197 p=76129 u=stephenamaki n=ansible | PLAY [PLAY 1: Perform automated Python filter (unit) testing] ************************************************************************************************************************************
+2023-11-02 10:45:14,210 p=76129 u=stephenamaki n=ansible | TASK [TASK 1: Find all of the 'tasks/test_' cases] ***********************************************************************************************************************************************
+2023-11-02 10:45:14,591 p=76129 u=stephenamaki n=ansible | ok: [localhost]
+2023-11-02 10:45:14,596 p=76129 u=stephenamaki n=ansible | TASK [TASK2: Assemble the 'path' field from each entry into a list] ******************************************************************************************************************************
+2023-11-02 10:45:14,641 p=76129 u=stephenamaki n=ansible | ok: [localhost]
+2023-11-02 10:45:14,645 p=76129 u=stephenamaki n=ansible | TASK [TASK 3: Include all of the test cases] *****************************************************************************************************************************************************
+2023-11-02 10:45:14,673 p=76129 u=stephenamaki n=ansible | included: /Users/stephenamaki/Dropbox/netdevops/ansible/myscripts_ansible/4_ansible_custom_filters/tests/tasks/test_ios_vrf_rt.yml for localhost => (item=/Users/stephenamaki/Dropbox/netdevops/ansible/myscripts_ansible/4_ansible_custom_filters/tests/tasks/test_ios_vrf_rt.yml)
+2023-11-02 10:45:14,677 p=76129 u=stephenamaki n=ansible | TASK [Store IOS VRF text] ************************************************************************************************************************************************************************
+2023-11-02 10:45:14,694 p=76129 u=stephenamaki n=ansible | ok: [localhost]
+2023-11-02 10:45:14,698 p=76129 u=stephenamaki n=ansible | TASK [Perform parsing] ***************************************************************************************************************************************************************************
+2023-11-02 10:45:14,729 p=76129 u=stephenamaki n=ansible | ok: [localhost]
+2023-11-02 10:45:14,733 p=76129 u=stephenamaki n=ansible | TASK [Print structured vrf_data] *****************************************************************************************************************************************************************
+2023-11-02 10:45:14,755 p=76129 u=stephenamaki n=ansible | ok: [localhost] => {
+    "msg": {
+        "VRF_1": {
+            "route_export": [
+                "65000:1",
+                "723:723",
+                "724:724"
+            ],
+            "route_import": [
+                "65000:1",
+                "721:721",
+                "722:722"
+            ]
+        },
+        "VRF_2": {
+            "route_export": [
+                "65000:2",
+                "727:727",
+                "728:728"
+            ],
+            "route_import": [
+                "65000:2",
+                "725:725",
+                "726:726"
+            ]
+        }
+    }
+}
+2023-11-02 10:45:14,760 p=76129 u=stephenamaki n=ansible | TASK [ASSERT >> Ensure VRF_1 parsing succeeded] **************************************************************************************************************************************************
+2023-11-02 10:45:14,815 p=76129 u=stephenamaki n=ansible | ok: [localhost] => {
+    "changed": false,
+    "msg": "All assertions passed"
+}
+2023-11-02 10:45:14,818 p=76129 u=stephenamaki n=ansible | TASK [ASSERT >> Ensure VRF_2 parsing succeeded] **************************************************************************************************************************************************
+2023-11-02 10:45:14,873 p=76129 u=stephenamaki n=ansible | fatal: [localhost]: FAILED! => {
+    "assertion": "vrf_data['VRF_2']['route_import'][2] == '725:725'",
+    "changed": false,
+    "evaluated_to": false,
+    "msg": "Assertion failed"
+}
+2023-11-02 10:45:14,874 p=76129 u=stephenamaki n=ansible | PLAY RECAP ***************************************************************************************************************************************************************************************
+2023-11-02 10:45:14,874 p=76129 u=stephenamaki n=ansible | localhost                  : ok=7    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-11-02 10:48:36,438 p=77316 u=stephenamaki n=ansible | PLAY [PLAY 1: Perform automated Python filter (unit) testing] ************************************************************************************************************************************
+2023-11-02 10:48:36,470 p=77316 u=stephenamaki n=ansible | TASK [TASK 1: Find all of the 'tasks/test_' cases] ***********************************************************************************************************************************************
+2023-11-02 10:48:36,877 p=77316 u=stephenamaki n=ansible | ok: [localhost]
+2023-11-02 10:48:36,881 p=77316 u=stephenamaki n=ansible | TASK [TASK2: Assemble the 'path' field from each entry into a list] ******************************************************************************************************************************
+2023-11-02 10:48:36,926 p=77316 u=stephenamaki n=ansible | ok: [localhost]
+2023-11-02 10:48:36,931 p=77316 u=stephenamaki n=ansible | TASK [TASK 3: Include all of the test cases] *****************************************************************************************************************************************************
+2023-11-02 10:48:36,954 p=77316 u=stephenamaki n=ansible | included: /Users/stephenamaki/Dropbox/netdevops/ansible/myscripts_ansible/4_ansible_custom_filters/tests/tasks/test_ios_vrf_rt.yml for localhost => (item=/Users/stephenamaki/Dropbox/netdevops/ansible/myscripts_ansible/4_ansible_custom_filters/tests/tasks/test_ios_vrf_rt.yml)
+2023-11-02 10:48:36,958 p=77316 u=stephenamaki n=ansible | TASK [Store IOS VRF text] ************************************************************************************************************************************************************************
+2023-11-02 10:48:36,973 p=77316 u=stephenamaki n=ansible | ok: [localhost]
+2023-11-02 10:48:36,977 p=77316 u=stephenamaki n=ansible | TASK [Perform parsing] ***************************************************************************************************************************************************************************
+2023-11-02 10:48:37,004 p=77316 u=stephenamaki n=ansible | ok: [localhost]
+2023-11-02 10:48:37,014 p=77316 u=stephenamaki n=ansible | TASK [Print structured vrf_data] *****************************************************************************************************************************************************************
+2023-11-02 10:48:37,035 p=77316 u=stephenamaki n=ansible | ok: [localhost] => {
+    "msg": {
+        "VRF_1": {
+            "route_export": [
+                "65000:1",
+                "723:723",
+                "724:724"
+            ],
+            "route_import": [
+                "65000:1",
+                "721:721",
+                "722:722"
+            ]
+        },
+        "VRF_2": {
+            "route_export": [
+                "65000:2",
+                "727:727",
+                "728:728"
+            ],
+            "route_import": [
+                "65000:2",
+                "725:725",
+                "726:726"
+            ]
+        }
+    }
+}
+2023-11-02 10:48:37,039 p=77316 u=stephenamaki n=ansible | TASK [ASSERT >> Ensure VRF_1 parsing succeeded] **************************************************************************************************************************************************
+2023-11-02 10:48:37,091 p=77316 u=stephenamaki n=ansible | ok: [localhost] => {
+    "changed": false,
+    "msg": "All assertions passed"
+}
+2023-11-02 10:48:37,095 p=77316 u=stephenamaki n=ansible | TASK [ASSERT >> Ensure VRF_2 parsing succeeded] **************************************************************************************************************************************************
+2023-11-02 10:48:37,149 p=77316 u=stephenamaki n=ansible | ok: [localhost] => {
+    "changed": false,
+    "msg": "All assertions passed"
+}
+2023-11-02 10:48:37,160 p=77316 u=stephenamaki n=ansible | PLAY RECAP ***************************************************************************************************************************************************************************************
+2023-11-02 10:48:37,160 p=77316 u=stephenamaki n=ansible | localhost                  : ok=8    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-11-02 10:52:04,680 p=78509 u=stephenamaki n=ansible | PLAY [PLAY 1: Perform automated Python filter (unit) testing] ************************************************************************************************************************************
+2023-11-02 10:52:04,696 p=78509 u=stephenamaki n=ansible | TASK [TASK 1: Find all of the 'tasks/test_' cases] ***********************************************************************************************************************************************
+2023-11-02 10:52:05,093 p=78509 u=stephenamaki n=ansible | ok: [localhost]
+2023-11-02 10:52:05,098 p=78509 u=stephenamaki n=ansible | TASK [TASK2: Assemble the 'path' field from each entry into a list] ******************************************************************************************************************************
+2023-11-02 10:52:05,167 p=78509 u=stephenamaki n=ansible | ok: [localhost]
+2023-11-02 10:52:05,171 p=78509 u=stephenamaki n=ansible | TASK [TASK 3: Include all of the test cases] *****************************************************************************************************************************************************
+2023-11-02 10:52:05,201 p=78509 u=stephenamaki n=ansible | included: /Users/stephenamaki/Dropbox/netdevops/ansible/myscripts_ansible/4_ansible_custom_filters/tests/tasks/test_ios_vrf_rt.yml for localhost => (item=/Users/stephenamaki/Dropbox/netdevops/ansible/myscripts_ansible/4_ansible_custom_filters/tests/tasks/test_ios_vrf_rt.yml)
+2023-11-02 10:52:05,205 p=78509 u=stephenamaki n=ansible | TASK [Store IOS VRF text] ************************************************************************************************************************************************************************
+2023-11-02 10:52:05,220 p=78509 u=stephenamaki n=ansible | ok: [localhost]
+2023-11-02 10:52:05,225 p=78509 u=stephenamaki n=ansible | TASK [Perform parsing] ***************************************************************************************************************************************************************************
+2023-11-02 10:52:05,253 p=78509 u=stephenamaki n=ansible | ok: [localhost]
+2023-11-02 10:52:05,257 p=78509 u=stephenamaki n=ansible | TASK [Print structured vrf_data] *****************************************************************************************************************************************************************
+2023-11-02 10:52:05,278 p=78509 u=stephenamaki n=ansible | ok: [localhost] => {
+    "msg": {
+        "VRF_1": {
+            "route_export": [
+                "65000:1",
+                "721:721",
+                "722:722"
+            ],
+            "route_import": [
+                "65000:1",
+                "721:721",
+                "722:722"
+            ]
+        },
+        "VRF_2": {
+            "route_export": [
+                "65000:2",
+                "725:725",
+                "726:726"
+            ],
+            "route_import": [
+                "65000:2",
+                "725:725",
+                "726:726"
+            ]
+        }
+    }
+}
+2023-11-02 10:52:05,288 p=78509 u=stephenamaki n=ansible | TASK [ASSERT >> Ensure VRF_1 parsing succeeded] **************************************************************************************************************************************************
+2023-11-02 10:52:05,332 p=78509 u=stephenamaki n=ansible | fatal: [localhost]: FAILED! => {
+    "assertion": "vrf_data['VRF_1']['route_export'][1] == '723:723'",
+    "changed": false,
+    "evaluated_to": false,
+    "msg": "Assertion failed"
+}
+2023-11-02 10:52:05,334 p=78509 u=stephenamaki n=ansible | PLAY RECAP ***************************************************************************************************************************************************************************************
+2023-11-02 10:52:05,334 p=78509 u=stephenamaki n=ansible | localhost                  : ok=6    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-11-02 10:52:26,266 p=78686 u=stephenamaki n=ansible | PLAY [PLAY 1: Perform automated Python filter (unit) testing] ************************************************************************************************************************************
+2023-11-02 10:52:26,280 p=78686 u=stephenamaki n=ansible | TASK [TASK 1: Find all of the 'tasks/test_' cases] ***********************************************************************************************************************************************
+2023-11-02 10:52:26,662 p=78686 u=stephenamaki n=ansible | ok: [localhost]
+2023-11-02 10:52:26,666 p=78686 u=stephenamaki n=ansible | TASK [TASK2: Assemble the 'path' field from each entry into a list] ******************************************************************************************************************************
+2023-11-02 10:52:26,711 p=78686 u=stephenamaki n=ansible | ok: [localhost]
+2023-11-02 10:52:26,716 p=78686 u=stephenamaki n=ansible | TASK [TASK 3: Include all of the test cases] *****************************************************************************************************************************************************
+2023-11-02 10:52:26,740 p=78686 u=stephenamaki n=ansible | included: /Users/stephenamaki/Dropbox/netdevops/ansible/myscripts_ansible/4_ansible_custom_filters/tests/tasks/test_ios_vrf_rt.yml for localhost => (item=/Users/stephenamaki/Dropbox/netdevops/ansible/myscripts_ansible/4_ansible_custom_filters/tests/tasks/test_ios_vrf_rt.yml)
+2023-11-02 10:52:26,743 p=78686 u=stephenamaki n=ansible | TASK [Store IOS VRF text] ************************************************************************************************************************************************************************
+2023-11-02 10:52:26,759 p=78686 u=stephenamaki n=ansible | ok: [localhost]
+2023-11-02 10:52:26,763 p=78686 u=stephenamaki n=ansible | TASK [Perform parsing] ***************************************************************************************************************************************************************************
+2023-11-02 10:52:26,795 p=78686 u=stephenamaki n=ansible | ok: [localhost]
+2023-11-02 10:52:26,799 p=78686 u=stephenamaki n=ansible | TASK [Print structured vrf_data] *****************************************************************************************************************************************************************
+2023-11-02 10:52:26,825 p=78686 u=stephenamaki n=ansible | ok: [localhost] => {
+    "msg": {
+        "VRF_1": {
+            "route_export": [
+                "65000:1",
+                "723:723",
+                "724:724"
+            ],
+            "route_import": [
+                "65000:1",
+                "721:721",
+                "722:722"
+            ]
+        },
+        "VRF_2": {
+            "route_export": [
+                "65000:2",
+                "727:727",
+                "728:728"
+            ],
+            "route_import": [
+                "65000:2",
+                "725:725",
+                "726:726"
+            ]
+        }
+    }
+}
+2023-11-02 10:52:26,829 p=78686 u=stephenamaki n=ansible | TASK [ASSERT >> Ensure VRF_1 parsing succeeded] **************************************************************************************************************************************************
+2023-11-02 10:52:26,894 p=78686 u=stephenamaki n=ansible | ok: [localhost] => {
+    "changed": false,
+    "msg": "All assertions passed"
+}
+2023-11-02 10:52:26,898 p=78686 u=stephenamaki n=ansible | TASK [ASSERT >> Ensure VRF_2 parsing succeeded] **************************************************************************************************************************************************
+2023-11-02 10:52:26,954 p=78686 u=stephenamaki n=ansible | ok: [localhost] => {
+    "changed": false,
+    "msg": "All assertions passed"
+}
+2023-11-02 10:52:26,966 p=78686 u=stephenamaki n=ansible | PLAY RECAP ***************************************************************************************************************************************************************************************
+2023-11-02 10:52:26,966 p=78686 u=stephenamaki n=ansible | localhost                  : ok=8    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   

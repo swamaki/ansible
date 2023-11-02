@@ -1,0 +1,11 @@
+!
+hostname {{item.hostname}}
+!
+interface loopback 0
+ ip address {{item.loopback}}
+!
+enable secret {{item.enable_secret}}
+!
+username admin privilege 15 secret {{item.admin_secret}}
+{{item.username}} privilege 15 secret {{item.username_secret}}
+!

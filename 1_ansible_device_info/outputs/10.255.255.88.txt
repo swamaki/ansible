@@ -1,0 +1,29 @@
+router bgp 103
+   no bgp default ipv4-unicast
+   maximum-paths 4 ecmp 64
+   neighbor OVERLAY peer-group
+   neighbor OVERLAY remote-as 103
+   neighbor OVERLAY update-source Loopback0
+   neighbor OVERLAY send-community extended
+   neighbor OVERLAY maximum-routes 12000 
+   neighbor 10.3.255.1 peer-group OVERLAY
+   neighbor 10.3.255.2 peer-group OVERLAY
+   !
+   vlan 10
+      rd 103:10010
+      route-target both 10:10010
+      redistribute learned
+   !
+   vlan 20
+      rd 103:10020
+      route-target both 10:10020
+      redistribute learned
+   !
+   address-family evpn
+      neighbor OVERLAY activate
+   !
+   vrf TENANT_VRF
+      rd 10.3.255.88:1
+      route-target import evpn 1:11000
+      route-target export evpn 1:11000
+      redistribute connected

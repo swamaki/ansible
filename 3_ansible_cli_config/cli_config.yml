@@ -1,0 +1,22 @@
+---
+- name: "PLAY 1: Manage VPNs with jos_config and jinja2"
+  hosts: routers
+  tasks:
+    - name: "TASK 1: Store platform-specific template path"
+      set_fact:
+        vpn_path: "templates/{{ ansible_network_os }}_vrfs.j2"
+
+    # Cisco IOS configuration do not save
+    - name: "TASK 2: Apply Generic VRF config via SSH/CLI"
+      # eos_config:
+      cli_config:
+        # ansible.netcommon.cli_config:
+        config: "{{ lookup('template', vpn_path) }}"
+      notify: config_changed
+      register: cli_result
+  # Changes are not included in registered variable
+  handlers:
+    - name: "HANDLER 1: Display relevant changes"
+      listen: config_changed
+      debug:
+        msg: "{{ cli_result }}"

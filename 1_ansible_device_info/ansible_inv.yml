@@ -1,0 +1,92 @@
+---
+# YAML format, works as of 06/21/2020 for ansible==2.9.9
+
+all:
+  vars:
+    # ansible_user:
+    # ansible_password:
+    # ansible_network_os: ios
+    # ansible_connection: network_cli
+  children:
+    cisco_ios:
+      hosts:
+        10.255.255.71:
+        10.255.255.72:
+        10.255.255.73:
+        10.255.255.74:
+    juniper_junos:
+      hosts:
+        10.255.255.75:
+        10.255.255.76:
+        10.255.255.77:
+        10.255.255.78:
+    cumulus_vx:
+      hosts:
+        10.255.255.81:
+        10.255.255.82:
+        10.255.255.83:
+        10.255.255.84:
+    arista_eos:
+      hosts:
+        10.255.255.85:
+        10.255.255.86:
+        10.255.255.87:
+        10.255.255.88:
+#=======================================
+# INI format
+
+# [all:vars]
+# # these defaults can be overridden for any group in the [group:vars] section
+# # ansible_connection=paramiko
+# # ansible_port=22
+# ansible_connection=network_cli
+# ansible_network_os=ios
+# ansible_user=admin
+# ansible_password=cisco123
+
+# [routers]
+# 169.254.224.4
+# 169.254.224.5
+
+# [switches_core]
+# 169.254.224.2
+# 169.254.224.3
+
+# [switches_access]
+# 169.254.224.11
+# 169.254.224.12
+# 169.254.224.13
+# 169.254.224.14
+# 169.254.224.15
+
+# [routers:vars]
+# ansible_user=admin
+# ansible_password=cisco123
+
+# [switches_core:vars]
+# ansible_user=admin
+# ansible_password=cisco123
+
+# [switches_access:vars]
+# ansible_user=admin
+# ansible_password=cisco123
+
+#=======================================
+
+# [routers]
+# ROUTER-1 ansible_host=169.254.224.4
+# ROUTER-2 ansible_host=169.254.224.5
+
+# [switches_core]
+# CORE-1 ansible_host=169.254.224.2
+# CORE-2 ansible_host=169.254.224.3
+
+# [switches_access]
+# ACCESS-1 ansible_host=169.254.224.11
+# ACCESS-2 ansible_host=169.254.224.12
+# ACCESS-3 ansible_host=169.254.224.13
+# ACCESS-4 ansible_host=169.254.224.14
+# ACCESS-5 ansible_host=169.254.224.15
+
+#=======================================
+

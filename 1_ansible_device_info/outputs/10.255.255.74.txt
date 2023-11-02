@@ -1,0 +1,18 @@
+router bgp 65000
+ bgp router-id 10.1.255.74
+ bgp log-neighbor-changes
+ neighbor 10.1.255.1 remote-as 65000
+ neighbor 10.1.255.2 remote-as 65000
+ neighbor 10.1.255.3 remote-as 65000
+ !
+ address-family ipv4
+  neighbor 10.1.255.1 activate
+  neighbor 10.1.255.2 activate
+  neighbor 10.1.255.3 activate
+ exit-address-family
+ !
+ address-family ipv6
+  neighbor 10.1.255.1 activate
+  neighbor 10.1.255.2 activate
+  neighbor 10.1.255.3 activate
+ exit-address-family

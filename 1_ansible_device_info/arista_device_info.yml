@@ -1,0 +1,25 @@
+---
+- name: "PLAY 1: Capture and store BGP config"
+  hosts: arista_eos
+  # connection: network_cli
+  tasks:
+    - name: "TASK 1: Get BGP config from devices"
+      arista.eos.eos_command:
+        commands:
+          - show run | section bgp
+      register: cli_result
+
+    - name: "TASK 2: Print BGP output"
+      debug:
+        msg: "{{ cli_result }}"
+
+    - name: "TASK 3: Create outputs/ folder"
+      file:
+        path: "outputs"
+        state: directory
+      run_once: true
+
+    - name: "TASK 4: Write output to file"
+      copy:
+        content: "{{ cli_result['stdout'][0] }}\n"
+        dest: "outputs/{{ inventory_hostname }}.txt"

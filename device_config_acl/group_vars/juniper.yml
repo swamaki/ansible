@@ -1,0 +1,6 @@
+---
+ansible_network_os: junos
+# ansible_user: admin
+# ansible_password: cisco123
+# ansible_connection: network_cli
+# user_pod: switches_pod

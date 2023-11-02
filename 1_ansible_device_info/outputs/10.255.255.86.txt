@@ -1,0 +1,11 @@
+router bgp 103
+   maximum-paths 4 ecmp 64
+   bgp listen range 10.3.255.0/24 peer-group OVERLAY remote-as 103
+   neighbor OVERLAY peer-group
+   neighbor OVERLAY update-source Loopback0
+   neighbor OVERLAY route-reflector-client
+   neighbor OVERLAY send-community extended
+   neighbor OVERLAY maximum-routes 12000 
+   !
+   address-family evpn
+      neighbor OVERLAY activate

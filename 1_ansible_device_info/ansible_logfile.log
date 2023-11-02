@@ -1,0 +1,1112 @@
+2023-10-31 09:45:44,390 p=43048 u=stephenamaki n=ansible | PLAY [PLAY 1: Capture and store VRF config] ******************************************************************************************************************************************************
+2023-10-31 09:45:44,421 p=43048 u=stephenamaki n=ansible | TASK [TASK 1: Get VRF config from devices] *******************************************************************************************************************************************************
+2023-10-31 09:45:45,923 p=43048 u=stephenamaki n=ansible | network_os is set to eos
+2023-10-31 09:45:45,924 p=43048 u=stephenamaki n=ansible | network_os is set to eos
+2023-10-31 09:45:45,925 p=43048 u=stephenamaki n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2023-10-31 09:45:45,925 p=43048 u=stephenamaki n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2023-10-31 09:45:45,925 p=43048 u=stephenamaki n=ansible | network_os is set to eos
+2023-10-31 09:45:45,926 p=43048 u=stephenamaki n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2023-10-31 09:45:45,926 p=43048 u=stephenamaki n=ansible | network_os is set to eos
+2023-10-31 09:45:45,926 p=43048 u=stephenamaki n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2023-10-31 09:45:46,050 p=43082 u=stephenamaki n=p=43082 u=stephenamaki | paramiko [10.255.255.85] | Connected (version 2.0, client OpenSSH_6.6.1)
+2023-10-31 09:45:46,050 p=43080 u=stephenamaki n=p=43080 u=stephenamaki | paramiko [10.255.255.87] | Connected (version 2.0, client OpenSSH_6.6.1)
+2023-10-31 09:45:46,062 p=43079 u=stephenamaki n=p=43079 u=stephenamaki | paramiko [10.255.255.88] | Connected (version 2.0, client OpenSSH_6.6.1)
+2023-10-31 09:45:46,064 p=43081 u=stephenamaki n=p=43081 u=stephenamaki | paramiko [10.255.255.86] | Connected (version 2.0, client OpenSSH_6.6.1)
+2023-10-31 09:45:46,171 p=43081 u=stephenamaki n=p=43081 u=stephenamaki | paramiko [10.255.255.86] | Authentication (keyboard-interactive) successful!
+2023-10-31 09:45:46,175 p=43080 u=stephenamaki n=p=43080 u=stephenamaki | paramiko [10.255.255.87] | Authentication (keyboard-interactive) successful!
+2023-10-31 09:45:46,179 p=43079 u=stephenamaki n=p=43079 u=stephenamaki | paramiko [10.255.255.88] | Authentication (keyboard-interactive) successful!
+2023-10-31 09:45:46,179 p=43082 u=stephenamaki n=p=43082 u=stephenamaki | paramiko [10.255.255.85] | Authentication (keyboard-interactive) successful!
+2023-10-31 09:45:47,725 p=43048 u=stephenamaki n=ansible | ok: [10.255.255.85]
+2023-10-31 09:45:47,726 p=43048 u=stephenamaki n=ansible | ok: [10.255.255.88]
+2023-10-31 09:45:47,740 p=43048 u=stephenamaki n=ansible | ok: [10.255.255.87]
+2023-10-31 09:45:47,781 p=43048 u=stephenamaki n=ansible | ok: [10.255.255.86]
+2023-10-31 09:45:47,792 p=43048 u=stephenamaki n=ansible | TASK [TASK 2: Print VRF output] ******************************************************************************************************************************************************************
+2023-10-31 09:45:48,972 p=43048 u=stephenamaki n=ansible | ok: [10.255.255.86] => {
+    "msg": {
+        "changed": false,
+        "failed": false,
+        "stdout": [
+            "router bgp 103\n   maximum-paths 4 ecmp 64\n   bgp listen range 10.3.255.0/24 peer-group OVERLAY remote-as 103\n   neighbor OVERLAY peer-group\n   neighbor OVERLAY update-source Loopback0\n   neighbor OVERLAY route-reflector-client\n   neighbor OVERLAY send-community extended\n   neighbor OVERLAY maximum-routes 12000 \n   !\n   address-family evpn\n      neighbor OVERLAY activate",
+            "Arista vEOS\nHardware version:    \nSerial number:       \nSystem MAC address:  0cbe.82f1.6f76\n\nSoftware image version: 4.21.1.1F\nArchitecture:           i386\nInternal build version: 4.21.1.1F-10146868.42111F\nInternal build ID:      ed3973a9-79db-4acc-b9ac-19b9622d23e2\n\nUptime:                 0 weeks, 0 days, 9 hours and 21 minutes\nTotal memory:           2016548 kB\nFree memory:            1261704 kB"
+        ],
+        "stdout_lines": [
+            [
+                "router bgp 103",
+                "   maximum-paths 4 ecmp 64",
+                "   bgp listen range 10.3.255.0/24 peer-group OVERLAY remote-as 103",
+                "   neighbor OVERLAY peer-group",
+                "   neighbor OVERLAY update-source Loopback0",
+                "   neighbor OVERLAY route-reflector-client",
+                "   neighbor OVERLAY send-community extended",
+                "   neighbor OVERLAY maximum-routes 12000 ",
+                "   !",
+                "   address-family evpn",
+                "      neighbor OVERLAY activate"
+            ],
+            [
+                "Arista vEOS",
+                "Hardware version:    ",
+                "Serial number:       ",
+                "System MAC address:  0cbe.82f1.6f76",
+                "",
+                "Software image version: 4.21.1.1F",
+                "Architecture:           i386",
+                "Internal build version: 4.21.1.1F-10146868.42111F",
+                "Internal build ID:      ed3973a9-79db-4acc-b9ac-19b9622d23e2",
+                "",
+                "Uptime:                 0 weeks, 0 days, 9 hours and 21 minutes",
+                "Total memory:           2016548 kB",
+                "Free memory:            1261704 kB"
+            ]
+        ]
+    }
+}
+2023-10-31 09:45:48,973 p=43048 u=stephenamaki n=ansible | ok: [10.255.255.85] => {
+    "msg": {
+        "changed": false,
+        "failed": false,
+        "stdout": [
+            "router bgp 103\n   maximum-paths 4 ecmp 64\n   bgp listen range 10.3.255.0/24 peer-group OVERLAY remote-as 103\n   neighbor OVERLAY peer-group\n   neighbor OVERLAY update-source Loopback0\n   neighbor OVERLAY route-reflector-client\n   neighbor OVERLAY send-community extended\n   neighbor OVERLAY maximum-routes 12000 \n   !\n   address-family evpn\n      neighbor OVERLAY activate",
+            "Arista vEOS\nHardware version:    \nSerial number:       \nSystem MAC address:  0c16.0581.13c2\n\nSoftware image version: 4.21.1.1F\nArchitecture:           i386\nInternal build version: 4.21.1.1F-10146868.42111F\nInternal build ID:      ed3973a9-79db-4acc-b9ac-19b9622d23e2\n\nUptime:                 0 weeks, 0 days, 9 hours and 21 minutes\nTotal memory:           2016548 kB\nFree memory:            1263792 kB"
+        ],
+        "stdout_lines": [
+            [
+                "router bgp 103",
+                "   maximum-paths 4 ecmp 64",
+                "   bgp listen range 10.3.255.0/24 peer-group OVERLAY remote-as 103",
+                "   neighbor OVERLAY peer-group",
+                "   neighbor OVERLAY update-source Loopback0",
+                "   neighbor OVERLAY route-reflector-client",
+                "   neighbor OVERLAY send-community extended",
+                "   neighbor OVERLAY maximum-routes 12000 ",
+                "   !",
+                "   address-family evpn",
+                "      neighbor OVERLAY activate"
+            ],
+            [
+                "Arista vEOS",
+                "Hardware version:    ",
+                "Serial number:       ",
+                "System MAC address:  0c16.0581.13c2",
+                "",
+                "Software image version: 4.21.1.1F",
+                "Architecture:           i386",
+                "Internal build version: 4.21.1.1F-10146868.42111F",
+                "Internal build ID:      ed3973a9-79db-4acc-b9ac-19b9622d23e2",
+                "",
+                "Uptime:                 0 weeks, 0 days, 9 hours and 21 minutes",
+                "Total memory:           2016548 kB",
+                "Free memory:            1263792 kB"
+            ]
+        ]
+    }
+}
+2023-10-31 09:45:48,973 p=43048 u=stephenamaki n=ansible | ok: [10.255.255.87] => {
+    "msg": {
+        "changed": false,
+        "failed": false,
+        "stdout": [
+            "router bgp 103\n   no bgp default ipv4-unicast\n   maximum-paths 4 ecmp 64\n   neighbor OVERLAY peer-group\n   neighbor OVERLAY remote-as 103\n   neighbor OVERLAY update-source Loopback0\n   neighbor OVERLAY send-community extended\n   neighbor OVERLAY maximum-routes 12000 \n   neighbor 10.3.255.85 peer-group OVERLAY\n   neighbor 10.3.255.86 peer-group OVERLAY\n   !\n   vlan 10\n      rd 103:10010\n      route-target both 10:10010\n      redistribute learned\n   !\n   vlan 20\n      rd 103:10020\n      route-target both 10:10020\n      redistribute learned\n   !\n   address-family evpn\n      neighbor OVERLAY activate\n   !\n   vrf TENANT_VRF\n      rd 10.3.255.87:1\n      route-target import evpn 1:11000\n      route-target export evpn 1:11000\n      redistribute connected",
+            "Arista vEOS\nHardware version:    \nSerial number:       \nSystem MAC address:  0c0c.9c31.c64b\n\nSoftware image version: 4.21.1.1F\nArchitecture:           i386\nInternal build version: 4.21.1.1F-10146868.42111F\nInternal build ID:      ed3973a9-79db-4acc-b9ac-19b9622d23e2\n\nUptime:                 0 weeks, 0 days, 9 hours and 21 minutes\nTotal memory:           2016548 kB\nFree memory:            1193500 kB"
+        ],
+        "stdout_lines": [
+            [
+                "router bgp 103",
+                "   no bgp default ipv4-unicast",
+                "   maximum-paths 4 ecmp 64",
+                "   neighbor OVERLAY peer-group",
+                "   neighbor OVERLAY remote-as 103",
+                "   neighbor OVERLAY update-source Loopback0",
+                "   neighbor OVERLAY send-community extended",
+                "   neighbor OVERLAY maximum-routes 12000 ",
+                "   neighbor 10.3.255.85 peer-group OVERLAY",
+                "   neighbor 10.3.255.86 peer-group OVERLAY",
+                "   !",
+                "   vlan 10",
+                "      rd 103:10010",
+                "      route-target both 10:10010",
+                "      redistribute learned",
+                "   !",
+                "   vlan 20",
+                "      rd 103:10020",
+                "      route-target both 10:10020",
+                "      redistribute learned",
+                "   !",
+                "   address-family evpn",
+                "      neighbor OVERLAY activate",
+                "   !",
+                "   vrf TENANT_VRF",
+                "      rd 10.3.255.87:1",
+                "      route-target import evpn 1:11000",
+                "      route-target export evpn 1:11000",
+                "      redistribute connected"
+            ],
+            [
+                "Arista vEOS",
+                "Hardware version:    ",
+                "Serial number:       ",
+                "System MAC address:  0c0c.9c31.c64b",
+                "",
+                "Software image version: 4.21.1.1F",
+                "Architecture:           i386",
+                "Internal build version: 4.21.1.1F-10146868.42111F",
+                "Internal build ID:      ed3973a9-79db-4acc-b9ac-19b9622d23e2",
+                "",
+                "Uptime:                 0 weeks, 0 days, 9 hours and 21 minutes",
+                "Total memory:           2016548 kB",
+                "Free memory:            1193500 kB"
+            ]
+        ]
+    }
+}
+2023-10-31 09:45:48,974 p=43048 u=stephenamaki n=ansible | ok: [10.255.255.88] => {
+    "msg": {
+        "changed": false,
+        "failed": false,
+        "stdout": [
+            "router bgp 103\n   no bgp default ipv4-unicast\n   maximum-paths 4 ecmp 64\n   neighbor OVERLAY peer-group\n   neighbor OVERLAY remote-as 103\n   neighbor OVERLAY update-source Loopback0\n   neighbor OVERLAY send-community extended\n   neighbor OVERLAY maximum-routes 12000 \n   neighbor 10.3.255.1 peer-group OVERLAY\n   neighbor 10.3.255.2 peer-group OVERLAY\n   !\n   vlan 10\n      rd 103:10010\n      route-target both 10:10010\n      redistribute learned\n   !\n   vlan 20\n      rd 103:10020\n      route-target both 10:10020\n      redistribute learned\n   !\n   address-family evpn\n      neighbor OVERLAY activate\n   !\n   vrf TENANT_VRF\n      rd 10.3.255.88:1\n      route-target import evpn 1:11000\n      route-target export evpn 1:11000\n      redistribute connected",
+            "Arista vEOS\nHardware version:    \nSerial number:       \nSystem MAC address:  0ca1.738e.c129\n\nSoftware image version: 4.21.1.1F\nArchitecture:           i386\nInternal build version: 4.21.1.1F-10146868.42111F\nInternal build ID:      ed3973a9-79db-4acc-b9ac-19b9622d23e2\n\nUptime:                 0 weeks, 0 days, 9 hours and 21 minutes\nTotal memory:           2016548 kB\nFree memory:            1187080 kB"
+        ],
+        "stdout_lines": [
+            [
+                "router bgp 103",
+                "   no bgp default ipv4-unicast",
+                "   maximum-paths 4 ecmp 64",
+                "   neighbor OVERLAY peer-group",
+                "   neighbor OVERLAY remote-as 103",
+                "   neighbor OVERLAY update-source Loopback0",
+                "   neighbor OVERLAY send-community extended",
+                "   neighbor OVERLAY maximum-routes 12000 ",
+                "   neighbor 10.3.255.1 peer-group OVERLAY",
+                "   neighbor 10.3.255.2 peer-group OVERLAY",
+                "   !",
+                "   vlan 10",
+                "      rd 103:10010",
+                "      route-target both 10:10010",
+                "      redistribute learned",
+                "   !",
+                "   vlan 20",
+                "      rd 103:10020",
+                "      route-target both 10:10020",
+                "      redistribute learned",
+                "   !",
+                "   address-family evpn",
+                "      neighbor OVERLAY activate",
+                "   !",
+                "   vrf TENANT_VRF",
+                "      rd 10.3.255.88:1",
+                "      route-target import evpn 1:11000",
+                "      route-target export evpn 1:11000",
+                "      redistribute connected"
+            ],
+            [
+                "Arista vEOS",
+                "Hardware version:    ",
+                "Serial number:       ",
+                "System MAC address:  0ca1.738e.c129",
+                "",
+                "Software image version: 4.21.1.1F",
+                "Architecture:           i386",
+                "Internal build version: 4.21.1.1F-10146868.42111F",
+                "Internal build ID:      ed3973a9-79db-4acc-b9ac-19b9622d23e2",
+                "",
+                "Uptime:                 0 weeks, 0 days, 9 hours and 21 minutes",
+                "Total memory:           2016548 kB",
+                "Free memory:            1187080 kB"
+            ]
+        ]
+    }
+}
+2023-10-31 09:45:48,979 p=43048 u=stephenamaki n=ansible | TASK [TASK 3: Create outputs/ folder] ************************************************************************************************************************************************************
+2023-10-31 09:45:50,476 p=43048 u=stephenamaki n=ansible | ok: [10.255.255.85]
+2023-10-31 09:45:50,483 p=43048 u=stephenamaki n=ansible | TASK [TASK 4: Write output to file] **************************************************************************************************************************************************************
+2023-10-31 09:45:52,435 p=43048 u=stephenamaki n=ansible | changed: [10.255.255.85]
+2023-10-31 09:45:52,436 p=43048 u=stephenamaki n=ansible | changed: [10.255.255.86]
+2023-10-31 09:45:52,436 p=43048 u=stephenamaki n=ansible | changed: [10.255.255.87]
+2023-10-31 09:45:52,436 p=43048 u=stephenamaki n=ansible | changed: [10.255.255.88]
+2023-10-31 09:45:52,480 p=43048 u=stephenamaki n=ansible | PLAY RECAP ***************************************************************************************************************************************************************************************
+2023-10-31 09:45:52,480 p=43048 u=stephenamaki n=ansible | 10.255.255.85              : ok=4    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-10-31 09:45:52,480 p=43048 u=stephenamaki n=ansible | 10.255.255.86              : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-10-31 09:45:52,480 p=43048 u=stephenamaki n=ansible | 10.255.255.87              : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-10-31 09:45:52,480 p=43048 u=stephenamaki n=ansible | 10.255.255.88              : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-10-31 09:45:52,578 p=43082 u=stephenamaki n=ansible | shutdown complete
+2023-10-31 09:45:52,578 p=43079 u=stephenamaki n=ansible | shutdown complete
+2023-10-31 09:45:52,580 p=43080 u=stephenamaki n=ansible | shutdown complete
+2023-10-31 09:45:52,580 p=43081 u=stephenamaki n=ansible | shutdown complete
+2023-10-31 09:47:40,853 p=43878 u=stephenamaki n=ansible | PLAY [PLAY 1: Capture and store VRF config] ******************************************************************************************************************************************************
+2023-10-31 09:47:40,882 p=43878 u=stephenamaki n=ansible | TASK [TASK 1: Get VRF config from devices] *******************************************************************************************************************************************************
+2023-10-31 09:47:42,189 p=43878 u=stephenamaki n=ansible | network_os is set to ios
+2023-10-31 09:47:42,189 p=43878 u=stephenamaki n=ansible | network_os is set to ios
+2023-10-31 09:47:42,190 p=43878 u=stephenamaki n=ansible | network_os is set to ios
+2023-10-31 09:47:42,190 p=43878 u=stephenamaki n=ansible | network_os is set to ios
+2023-10-31 09:47:42,191 p=43878 u=stephenamaki n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2023-10-31 09:47:42,191 p=43878 u=stephenamaki n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2023-10-31 09:47:42,191 p=43878 u=stephenamaki n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2023-10-31 09:47:42,193 p=43878 u=stephenamaki n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2023-10-31 09:47:42,227 p=43904 u=stephenamaki n=p=43904 u=stephenamaki | paramiko [10.255.255.72] | Connected (version 1.99, client Cisco-1.25)
+2023-10-31 09:47:42,227 p=43908 u=stephenamaki n=p=43908 u=stephenamaki | paramiko [10.255.255.74] | Connected (version 1.99, client Cisco-1.25)
+2023-10-31 09:47:42,228 p=43907 u=stephenamaki n=p=43907 u=stephenamaki | paramiko [10.255.255.73] | Connected (version 1.99, client Cisco-1.25)
+2023-10-31 09:47:42,234 p=43906 u=stephenamaki n=p=43906 u=stephenamaki | paramiko [10.255.255.71] | Connected (version 1.99, client Cisco-1.25)
+2023-10-31 09:47:42,607 p=43906 u=stephenamaki n=p=43906 u=stephenamaki | paramiko [10.255.255.71] | Auth banner: b"\r\n**************************************************************************\r\n* IOSv is strictly limited to use for evaluation, demonstration and IOS  *\r\n* education. IOSv is provided as-is and is not supported by Cisco's      *\r\n* Technical Advisory Center. Any use or disclosure, in whole or in part, *\r\n* of the IOSv Software or Documentation to any third party for any       *\r\n* purposes is expressly prohibited except as otherwise authorized by     *\r\n* Cisco in writing.                                                      *\r\n**************************************************************************"
+2023-10-31 09:47:42,609 p=43906 u=stephenamaki n=p=43906 u=stephenamaki | paramiko [10.255.255.71] | Authentication (password) successful!
+2023-10-31 09:47:43,084 p=43908 u=stephenamaki n=p=43908 u=stephenamaki | paramiko [10.255.255.74] | Auth banner: b"\r\n**************************************************************************\r\n* IOSv is strictly limited to use for evaluation, demonstration and IOS  *\r\n* education. IOSv is provided as-is and is not supported by Cisco's      *\r\n* Technical Advisory Center. Any use or disclosure, in whole or in part, *\r\n* of the IOSv Software or Documentation to any third party for any       *\r\n* purposes is expressly prohibited except as otherwise authorized by     *\r\n* Cisco in writing.                                                      *\r\n**************************************************************************"
+2023-10-31 09:47:43,089 p=43908 u=stephenamaki n=p=43908 u=stephenamaki | paramiko [10.255.255.74] | Authentication (password) successful!
+2023-10-31 09:47:43,094 p=43907 u=stephenamaki n=p=43907 u=stephenamaki | paramiko [10.255.255.73] | Auth banner: b"\r\n**************************************************************************\r\n* IOSv is strictly limited to use for evaluation, demonstration and IOS  *\r\n* education. IOSv is provided as-is and is not supported by Cisco's      *\r\n* Technical Advisory Center. Any use or disclosure, in whole or in part, *\r\n* of the IOSv Software or Documentation to any third party for any       *\r\n* purposes is expressly prohibited except as otherwise authorized by     *\r\n* Cisco in writing.                                                      *\r\n**************************************************************************"
+2023-10-31 09:47:43,099 p=43904 u=stephenamaki n=p=43904 u=stephenamaki | paramiko [10.255.255.72] | Auth banner: b"\r\n**************************************************************************\r\n* IOSv is strictly limited to use for evaluation, demonstration and IOS  *\r\n* education. IOSv is provided as-is and is not supported by Cisco's      *\r\n* Technical Advisory Center. Any use or disclosure, in whole or in part, *\r\n* of the IOSv Software or Documentation to any third party for any       *\r\n* purposes is expressly prohibited except as otherwise authorized by     *\r\n* Cisco in writing.                                                      *\r\n**************************************************************************"
+2023-10-31 09:47:43,099 p=43907 u=stephenamaki n=p=43907 u=stephenamaki | paramiko [10.255.255.73] | Authentication (password) successful!
+2023-10-31 09:47:43,102 p=43904 u=stephenamaki n=p=43904 u=stephenamaki | paramiko [10.255.255.72] | Authentication (password) successful!
+2023-10-31 09:47:43,256 p=43878 u=stephenamaki n=ansible | fatal: [10.255.255.71]: FAILED! => {"changed": false, "msg": "'output' value text is not supported for run_commands"}
+2023-10-31 09:47:43,777 p=43878 u=stephenamaki n=ansible | fatal: [10.255.255.74]: FAILED! => {"changed": false, "msg": "'output' value text is not supported for run_commands"}
+2023-10-31 09:47:43,779 p=43878 u=stephenamaki n=ansible | fatal: [10.255.255.73]: FAILED! => {"changed": false, "msg": "'output' value text is not supported for run_commands"}
+2023-10-31 09:47:43,783 p=43878 u=stephenamaki n=ansible | fatal: [10.255.255.72]: FAILED! => {"changed": false, "msg": "'output' value text is not supported for run_commands"}
+2023-10-31 09:47:43,788 p=43878 u=stephenamaki n=ansible | PLAY RECAP ***************************************************************************************************************************************************************************************
+2023-10-31 09:47:43,788 p=43878 u=stephenamaki n=ansible | 10.255.255.71              : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-10-31 09:47:43,789 p=43878 u=stephenamaki n=ansible | 10.255.255.72              : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-10-31 09:47:43,789 p=43878 u=stephenamaki n=ansible | 10.255.255.73              : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-10-31 09:47:43,789 p=43878 u=stephenamaki n=ansible | 10.255.255.74              : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-10-31 09:47:43,886 p=43906 u=stephenamaki n=ansible | shutdown complete
+2023-10-31 09:47:43,888 p=43907 u=stephenamaki n=ansible | shutdown complete
+2023-10-31 09:47:43,888 p=43908 u=stephenamaki n=ansible | shutdown complete
+2023-10-31 09:47:43,890 p=43904 u=stephenamaki n=ansible | shutdown complete
+2023-10-31 09:49:30,733 p=44522 u=stephenamaki n=ansible | PLAY [PLAY 1: Capture and store BGP config] ******************************************************************************************************************************************************
+2023-10-31 09:49:30,762 p=44522 u=stephenamaki n=ansible | TASK [TASK 1: Get BGP config from devices] *******************************************************************************************************************************************************
+2023-10-31 09:49:32,005 p=44522 u=stephenamaki n=ansible | network_os is set to eos
+2023-10-31 09:49:32,007 p=44522 u=stephenamaki n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2023-10-31 09:49:32,009 p=44522 u=stephenamaki n=ansible | network_os is set to eos
+2023-10-31 09:49:32,010 p=44522 u=stephenamaki n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2023-10-31 09:49:32,014 p=44522 u=stephenamaki n=ansible | network_os is set to eos
+2023-10-31 09:49:32,015 p=44522 u=stephenamaki n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2023-10-31 09:49:32,022 p=44522 u=stephenamaki n=ansible | network_os is set to eos
+2023-10-31 09:49:32,024 p=44522 u=stephenamaki n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2023-10-31 09:49:32,143 p=44547 u=stephenamaki n=p=44547 u=stephenamaki | paramiko [10.255.255.85] | Connected (version 2.0, client OpenSSH_6.6.1)
+2023-10-31 09:49:32,147 p=44556 u=stephenamaki n=p=44556 u=stephenamaki | paramiko [10.255.255.88] | Connected (version 2.0, client OpenSSH_6.6.1)
+2023-10-31 09:49:32,159 p=44550 u=stephenamaki n=p=44550 u=stephenamaki | paramiko [10.255.255.86] | Connected (version 2.0, client OpenSSH_6.6.1)
+2023-10-31 09:49:32,160 p=44553 u=stephenamaki n=p=44553 u=stephenamaki | paramiko [10.255.255.87] | Connected (version 2.0, client OpenSSH_6.6.1)
+2023-10-31 09:49:32,249 p=44556 u=stephenamaki n=p=44556 u=stephenamaki | paramiko [10.255.255.88] | Authentication (keyboard-interactive) successful!
+2023-10-31 09:49:32,254 p=44547 u=stephenamaki n=p=44547 u=stephenamaki | paramiko [10.255.255.85] | Authentication (keyboard-interactive) successful!
+2023-10-31 09:49:32,276 p=44553 u=stephenamaki n=p=44553 u=stephenamaki | paramiko [10.255.255.87] | Authentication (keyboard-interactive) successful!
+2023-10-31 09:49:32,285 p=44550 u=stephenamaki n=p=44550 u=stephenamaki | paramiko [10.255.255.86] | Authentication (keyboard-interactive) successful!
+2023-10-31 09:49:33,757 p=44522 u=stephenamaki n=ansible | ok: [10.255.255.85]
+2023-10-31 09:49:33,817 p=44522 u=stephenamaki n=ansible | ok: [10.255.255.87]
+2023-10-31 09:49:33,835 p=44522 u=stephenamaki n=ansible | ok: [10.255.255.88]
+2023-10-31 09:49:33,868 p=44522 u=stephenamaki n=ansible | ok: [10.255.255.86]
+2023-10-31 09:49:33,874 p=44522 u=stephenamaki n=ansible | TASK [TASK 2: Print BGP output] ******************************************************************************************************************************************************************
+2023-10-31 09:49:35,046 p=44522 u=stephenamaki n=ansible | ok: [10.255.255.85] => {
+    "msg": {
+        "changed": false,
+        "failed": false,
+        "stdout": [
+            "router bgp 103\n   maximum-paths 4 ecmp 64\n   bgp listen range 10.3.255.0/24 peer-group OVERLAY remote-as 103\n   neighbor OVERLAY peer-group\n   neighbor OVERLAY update-source Loopback0\n   neighbor OVERLAY route-reflector-client\n   neighbor OVERLAY send-community extended\n   neighbor OVERLAY maximum-routes 12000 \n   !\n   address-family evpn\n      neighbor OVERLAY activate"
+        ],
+        "stdout_lines": [
+            [
+                "router bgp 103",
+                "   maximum-paths 4 ecmp 64",
+                "   bgp listen range 10.3.255.0/24 peer-group OVERLAY remote-as 103",
+                "   neighbor OVERLAY peer-group",
+                "   neighbor OVERLAY update-source Loopback0",
+                "   neighbor OVERLAY route-reflector-client",
+                "   neighbor OVERLAY send-community extended",
+                "   neighbor OVERLAY maximum-routes 12000 ",
+                "   !",
+                "   address-family evpn",
+                "      neighbor OVERLAY activate"
+            ]
+        ]
+    }
+}
+2023-10-31 09:49:35,047 p=44522 u=stephenamaki n=ansible | ok: [10.255.255.86] => {
+    "msg": {
+        "changed": false,
+        "failed": false,
+        "stdout": [
+            "router bgp 103\n   maximum-paths 4 ecmp 64\n   bgp listen range 10.3.255.0/24 peer-group OVERLAY remote-as 103\n   neighbor OVERLAY peer-group\n   neighbor OVERLAY update-source Loopback0\n   neighbor OVERLAY route-reflector-client\n   neighbor OVERLAY send-community extended\n   neighbor OVERLAY maximum-routes 12000 \n   !\n   address-family evpn\n      neighbor OVERLAY activate"
+        ],
+        "stdout_lines": [
+            [
+                "router bgp 103",
+                "   maximum-paths 4 ecmp 64",
+                "   bgp listen range 10.3.255.0/24 peer-group OVERLAY remote-as 103",
+                "   neighbor OVERLAY peer-group",
+                "   neighbor OVERLAY update-source Loopback0",
+                "   neighbor OVERLAY route-reflector-client",
+                "   neighbor OVERLAY send-community extended",
+                "   neighbor OVERLAY maximum-routes 12000 ",
+                "   !",
+                "   address-family evpn",
+                "      neighbor OVERLAY activate"
+            ]
+        ]
+    }
+}
+2023-10-31 09:49:35,047 p=44522 u=stephenamaki n=ansible | ok: [10.255.255.87] => {
+    "msg": {
+        "changed": false,
+        "failed": false,
+        "stdout": [
+            "router bgp 103\n   no bgp default ipv4-unicast\n   maximum-paths 4 ecmp 64\n   neighbor OVERLAY peer-group\n   neighbor OVERLAY remote-as 103\n   neighbor OVERLAY update-source Loopback0\n   neighbor OVERLAY send-community extended\n   neighbor OVERLAY maximum-routes 12000 \n   neighbor 10.3.255.85 peer-group OVERLAY\n   neighbor 10.3.255.86 peer-group OVERLAY\n   !\n   vlan 10\n      rd 103:10010\n      route-target both 10:10010\n      redistribute learned\n   !\n   vlan 20\n      rd 103:10020\n      route-target both 10:10020\n      redistribute learned\n   !\n   address-family evpn\n      neighbor OVERLAY activate\n   !\n   vrf TENANT_VRF\n      rd 10.3.255.87:1\n      route-target import evpn 1:11000\n      route-target export evpn 1:11000\n      redistribute connected"
+        ],
+        "stdout_lines": [
+            [
+                "router bgp 103",
+                "   no bgp default ipv4-unicast",
+                "   maximum-paths 4 ecmp 64",
+                "   neighbor OVERLAY peer-group",
+                "   neighbor OVERLAY remote-as 103",
+                "   neighbor OVERLAY update-source Loopback0",
+                "   neighbor OVERLAY send-community extended",
+                "   neighbor OVERLAY maximum-routes 12000 ",
+                "   neighbor 10.3.255.85 peer-group OVERLAY",
+                "   neighbor 10.3.255.86 peer-group OVERLAY",
+                "   !",
+                "   vlan 10",
+                "      rd 103:10010",
+                "      route-target both 10:10010",
+                "      redistribute learned",
+                "   !",
+                "   vlan 20",
+                "      rd 103:10020",
+                "      route-target both 10:10020",
+                "      redistribute learned",
+                "   !",
+                "   address-family evpn",
+                "      neighbor OVERLAY activate",
+                "   !",
+                "   vrf TENANT_VRF",
+                "      rd 10.3.255.87:1",
+                "      route-target import evpn 1:11000",
+                "      route-target export evpn 1:11000",
+                "      redistribute connected"
+            ]
+        ]
+    }
+}
+2023-10-31 09:49:35,056 p=44522 u=stephenamaki n=ansible | ok: [10.255.255.88] => {
+    "msg": {
+        "changed": false,
+        "failed": false,
+        "stdout": [
+            "router bgp 103\n   no bgp default ipv4-unicast\n   maximum-paths 4 ecmp 64\n   neighbor OVERLAY peer-group\n   neighbor OVERLAY remote-as 103\n   neighbor OVERLAY update-source Loopback0\n   neighbor OVERLAY send-community extended\n   neighbor OVERLAY maximum-routes 12000 \n   neighbor 10.3.255.1 peer-group OVERLAY\n   neighbor 10.3.255.2 peer-group OVERLAY\n   !\n   vlan 10\n      rd 103:10010\n      route-target both 10:10010\n      redistribute learned\n   !\n   vlan 20\n      rd 103:10020\n      route-target both 10:10020\n      redistribute learned\n   !\n   address-family evpn\n      neighbor OVERLAY activate\n   !\n   vrf TENANT_VRF\n      rd 10.3.255.88:1\n      route-target import evpn 1:11000\n      route-target export evpn 1:11000\n      redistribute connected"
+        ],
+        "stdout_lines": [
+            [
+                "router bgp 103",
+                "   no bgp default ipv4-unicast",
+                "   maximum-paths 4 ecmp 64",
+                "   neighbor OVERLAY peer-group",
+                "   neighbor OVERLAY remote-as 103",
+                "   neighbor OVERLAY update-source Loopback0",
+                "   neighbor OVERLAY send-community extended",
+                "   neighbor OVERLAY maximum-routes 12000 ",
+                "   neighbor 10.3.255.1 peer-group OVERLAY",
+                "   neighbor 10.3.255.2 peer-group OVERLAY",
+                "   !",
+                "   vlan 10",
+                "      rd 103:10010",
+                "      route-target both 10:10010",
+                "      redistribute learned",
+                "   !",
+                "   vlan 20",
+                "      rd 103:10020",
+                "      route-target both 10:10020",
+                "      redistribute learned",
+                "   !",
+                "   address-family evpn",
+                "      neighbor OVERLAY activate",
+                "   !",
+                "   vrf TENANT_VRF",
+                "      rd 10.3.255.88:1",
+                "      route-target import evpn 1:11000",
+                "      route-target export evpn 1:11000",
+                "      redistribute connected"
+            ]
+        ]
+    }
+}
+2023-10-31 09:49:35,063 p=44522 u=stephenamaki n=ansible | TASK [TASK 3: Create outputs/ folder] ************************************************************************************************************************************************************
+2023-10-31 09:49:36,537 p=44522 u=stephenamaki n=ansible | ok: [10.255.255.85]
+2023-10-31 09:49:36,544 p=44522 u=stephenamaki n=ansible | TASK [TASK 4: Write output to file] **************************************************************************************************************************************************************
+2023-10-31 09:49:38,378 p=44522 u=stephenamaki n=ansible | ok: [10.255.255.87]
+2023-10-31 09:49:38,380 p=44522 u=stephenamaki n=ansible | ok: [10.255.255.86]
+2023-10-31 09:49:38,380 p=44522 u=stephenamaki n=ansible | ok: [10.255.255.85]
+2023-10-31 09:49:38,380 p=44522 u=stephenamaki n=ansible | ok: [10.255.255.88]
+2023-10-31 09:49:38,422 p=44522 u=stephenamaki n=ansible | PLAY RECAP ***************************************************************************************************************************************************************************************
+2023-10-31 09:49:38,422 p=44522 u=stephenamaki n=ansible | 10.255.255.85              : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-10-31 09:49:38,422 p=44522 u=stephenamaki n=ansible | 10.255.255.86              : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-10-31 09:49:38,422 p=44522 u=stephenamaki n=ansible | 10.255.255.87              : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-10-31 09:49:38,422 p=44522 u=stephenamaki n=ansible | 10.255.255.88              : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-10-31 09:49:38,522 p=44547 u=stephenamaki n=ansible | shutdown complete
+2023-10-31 09:49:38,522 p=44553 u=stephenamaki n=ansible | shutdown complete
+2023-10-31 09:49:38,523 p=44556 u=stephenamaki n=ansible | shutdown complete
+2023-10-31 09:49:38,523 p=44550 u=stephenamaki n=ansible | shutdown complete
+2023-10-31 09:49:53,140 p=44876 u=stephenamaki n=ansible | PLAY [PLAY 1: Capture and store BGP config] ******************************************************************************************************************************************************
+2023-10-31 09:49:53,169 p=44876 u=stephenamaki n=ansible | TASK [TASK 1: Get BGP config from devices] *******************************************************************************************************************************************************
+2023-10-31 09:49:54,419 p=44876 u=stephenamaki n=ansible | network_os is set to ios
+2023-10-31 09:49:54,420 p=44876 u=stephenamaki n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2023-10-31 09:49:54,420 p=44876 u=stephenamaki n=ansible | network_os is set to ios
+2023-10-31 09:49:54,420 p=44876 u=stephenamaki n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2023-10-31 09:49:54,422 p=44876 u=stephenamaki n=ansible | network_os is set to ios
+2023-10-31 09:49:54,422 p=44876 u=stephenamaki n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2023-10-31 09:49:54,437 p=44876 u=stephenamaki n=ansible | network_os is set to ios
+2023-10-31 09:49:54,437 p=44876 u=stephenamaki n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2023-10-31 09:49:54,452 p=44897 u=stephenamaki n=p=44897 u=stephenamaki | paramiko [10.255.255.72] | Connected (version 1.99, client Cisco-1.25)
+2023-10-31 09:49:54,456 p=44900 u=stephenamaki n=p=44900 u=stephenamaki | paramiko [10.255.255.73] | Connected (version 1.99, client Cisco-1.25)
+2023-10-31 09:49:54,466 p=44894 u=stephenamaki n=p=44894 u=stephenamaki | paramiko [10.255.255.71] | Connected (version 1.99, client Cisco-1.25)
+2023-10-31 09:49:54,469 p=44903 u=stephenamaki n=p=44903 u=stephenamaki | paramiko [10.255.255.74] | Connected (version 1.99, client Cisco-1.25)
+2023-10-31 09:49:54,855 p=44894 u=stephenamaki n=p=44894 u=stephenamaki | paramiko [10.255.255.71] | Auth banner: b"\r\n**************************************************************************\r\n* IOSv is strictly limited to use for evaluation, demonstration and IOS  *\r\n* education. IOSv is provided as-is and is not supported by Cisco's      *\r\n* Technical Advisory Center. Any use or disclosure, in whole or in part, *\r\n* of the IOSv Software or Documentation to any third party for any       *\r\n* purposes is expressly prohibited except as otherwise authorized by     *\r\n* Cisco in writing.                                                      *\r\n**************************************************************************"
+2023-10-31 09:49:54,858 p=44894 u=stephenamaki n=p=44894 u=stephenamaki | paramiko [10.255.255.71] | Authentication (password) successful!
+2023-10-31 09:49:55,311 p=44900 u=stephenamaki n=p=44900 u=stephenamaki | paramiko [10.255.255.73] | Auth banner: b"\r\n**************************************************************************\r\n* IOSv is strictly limited to use for evaluation, demonstration and IOS  *\r\n* education. IOSv is provided as-is and is not supported by Cisco's      *\r\n* Technical Advisory Center. Any use or disclosure, in whole or in part, *\r\n* of the IOSv Software or Documentation to any third party for any       *\r\n* purposes is expressly prohibited except as otherwise authorized by     *\r\n* Cisco in writing.                                                      *\r\n**************************************************************************"
+2023-10-31 09:49:55,314 p=44897 u=stephenamaki n=p=44897 u=stephenamaki | paramiko [10.255.255.72] | Auth banner: b"\r\n**************************************************************************\r\n* IOSv is strictly limited to use for evaluation, demonstration and IOS  *\r\n* education. IOSv is provided as-is and is not supported by Cisco's      *\r\n* Technical Advisory Center. Any use or disclosure, in whole or in part, *\r\n* of the IOSv Software or Documentation to any third party for any       *\r\n* purposes is expressly prohibited except as otherwise authorized by     *\r\n* Cisco in writing.                                                      *\r\n**************************************************************************"
+2023-10-31 09:49:55,315 p=44900 u=stephenamaki n=p=44900 u=stephenamaki | paramiko [10.255.255.73] | Authentication (password) successful!
+2023-10-31 09:49:55,316 p=44903 u=stephenamaki n=p=44903 u=stephenamaki | paramiko [10.255.255.74] | Auth banner: b"\r\n**************************************************************************\r\n* IOSv is strictly limited to use for evaluation, demonstration and IOS  *\r\n* education. IOSv is provided as-is and is not supported by Cisco's      *\r\n* Technical Advisory Center. Any use or disclosure, in whole or in part, *\r\n* of the IOSv Software or Documentation to any third party for any       *\r\n* purposes is expressly prohibited except as otherwise authorized by     *\r\n* Cisco in writing.                                                      *\r\n**************************************************************************"
+2023-10-31 09:49:55,320 p=44897 u=stephenamaki n=p=44897 u=stephenamaki | paramiko [10.255.255.72] | Authentication (password) successful!
+2023-10-31 09:49:55,323 p=44903 u=stephenamaki n=p=44903 u=stephenamaki | paramiko [10.255.255.74] | Authentication (password) successful!
+2023-10-31 09:49:55,520 p=44876 u=stephenamaki n=ansible | fatal: [10.255.255.71]: FAILED! => {"changed": false, "msg": "'output' value text is not supported for run_commands"}
+2023-10-31 09:49:56,024 p=44876 u=stephenamaki n=ansible | fatal: [10.255.255.73]: FAILED! => {"changed": false, "msg": "'output' value text is not supported for run_commands"}
+2023-10-31 09:49:56,030 p=44876 u=stephenamaki n=ansible | fatal: [10.255.255.74]: FAILED! => {"changed": false, "msg": "'output' value text is not supported for run_commands"}
+2023-10-31 09:49:56,031 p=44876 u=stephenamaki n=ansible | fatal: [10.255.255.72]: FAILED! => {"changed": false, "msg": "'output' value text is not supported for run_commands"}
+2023-10-31 09:49:56,036 p=44876 u=stephenamaki n=ansible | PLAY RECAP ***************************************************************************************************************************************************************************************
+2023-10-31 09:49:56,037 p=44876 u=stephenamaki n=ansible | 10.255.255.71              : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-10-31 09:49:56,037 p=44876 u=stephenamaki n=ansible | 10.255.255.72              : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-10-31 09:49:56,037 p=44876 u=stephenamaki n=ansible | 10.255.255.73              : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-10-31 09:49:56,037 p=44876 u=stephenamaki n=ansible | 10.255.255.74              : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-10-31 09:49:56,135 p=44900 u=stephenamaki n=ansible | shutdown complete
+2023-10-31 09:49:56,135 p=44894 u=stephenamaki n=ansible | shutdown complete
+2023-10-31 09:49:56,136 p=44897 u=stephenamaki n=ansible | shutdown complete
+2023-10-31 09:49:56,136 p=44903 u=stephenamaki n=ansible | shutdown complete
+2023-10-31 09:50:28,723 p=45119 u=stephenamaki n=ansible | PLAY [PLAY 1: Capture and store BGP config] ******************************************************************************************************************************************************
+2023-10-31 09:50:28,753 p=45119 u=stephenamaki n=ansible | TASK [TASK 1: Get BGP config from devices] *******************************************************************************************************************************************************
+2023-10-31 09:50:30,002 p=45119 u=stephenamaki n=ansible | network_os is set to ios
+2023-10-31 09:50:30,003 p=45119 u=stephenamaki n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2023-10-31 09:50:30,008 p=45119 u=stephenamaki n=ansible | network_os is set to ios
+2023-10-31 09:50:30,009 p=45119 u=stephenamaki n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2023-10-31 09:50:30,010 p=45119 u=stephenamaki n=ansible | network_os is set to ios
+2023-10-31 09:50:30,011 p=45119 u=stephenamaki n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2023-10-31 09:50:30,019 p=45119 u=stephenamaki n=ansible | network_os is set to ios
+2023-10-31 09:50:30,019 p=45119 u=stephenamaki n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2023-10-31 09:50:30,067 p=45145 u=stephenamaki n=p=45145 u=stephenamaki | paramiko [10.255.255.73] | Connected (version 1.99, client Cisco-1.25)
+2023-10-31 09:50:30,068 p=45142 u=stephenamaki n=p=45142 u=stephenamaki | paramiko [10.255.255.72] | Connected (version 1.99, client Cisco-1.25)
+2023-10-31 09:50:30,069 p=45148 u=stephenamaki n=p=45148 u=stephenamaki | paramiko [10.255.255.74] | Connected (version 1.99, client Cisco-1.25)
+2023-10-31 09:50:30,074 p=45139 u=stephenamaki n=p=45139 u=stephenamaki | paramiko [10.255.255.71] | Connected (version 1.99, client Cisco-1.25)
+2023-10-31 09:50:30,450 p=45139 u=stephenamaki n=p=45139 u=stephenamaki | paramiko [10.255.255.71] | Auth banner: b"\r\n**************************************************************************\r\n* IOSv is strictly limited to use for evaluation, demonstration and IOS  *\r\n* education. IOSv is provided as-is and is not supported by Cisco's      *\r\n* Technical Advisory Center. Any use or disclosure, in whole or in part, *\r\n* of the IOSv Software or Documentation to any third party for any       *\r\n* purposes is expressly prohibited except as otherwise authorized by     *\r\n* Cisco in writing.                                                      *\r\n**************************************************************************"
+2023-10-31 09:50:30,461 p=45139 u=stephenamaki n=p=45139 u=stephenamaki | paramiko [10.255.255.71] | Authentication (password) successful!
+2023-10-31 09:50:30,920 p=45142 u=stephenamaki n=p=45142 u=stephenamaki | paramiko [10.255.255.72] | Auth banner: b"\r\n**************************************************************************\r\n* IOSv is strictly limited to use for evaluation, demonstration and IOS  *\r\n* education. IOSv is provided as-is and is not supported by Cisco's      *\r\n* Technical Advisory Center. Any use or disclosure, in whole or in part, *\r\n* of the IOSv Software or Documentation to any third party for any       *\r\n* purposes is expressly prohibited except as otherwise authorized by     *\r\n* Cisco in writing.                                                      *\r\n**************************************************************************"
+2023-10-31 09:50:30,924 p=45142 u=stephenamaki n=p=45142 u=stephenamaki | paramiko [10.255.255.72] | Authentication (password) successful!
+2023-10-31 09:50:31,149 p=45145 u=stephenamaki n=p=45145 u=stephenamaki | paramiko [10.255.255.73] | Auth banner: b"\r\n**************************************************************************\r\n* IOSv is strictly limited to use for evaluation, demonstration and IOS  *\r\n* education. IOSv is provided as-is and is not supported by Cisco's      *\r\n* Technical Advisory Center. Any use or disclosure, in whole or in part, *\r\n* of the IOSv Software or Documentation to any third party for any       *\r\n* purposes is expressly prohibited except as otherwise authorized by     *\r\n* Cisco in writing.                                                      *\r\n**************************************************************************"
+2023-10-31 09:50:31,150 p=45148 u=stephenamaki n=p=45148 u=stephenamaki | paramiko [10.255.255.74] | Auth banner: b"\r\n**************************************************************************\r\n* IOSv is strictly limited to use for evaluation, demonstration and IOS  *\r\n* education. IOSv is provided as-is and is not supported by Cisco's      *\r\n* Technical Advisory Center. Any use or disclosure, in whole or in part, *\r\n* of the IOSv Software or Documentation to any third party for any       *\r\n* purposes is expressly prohibited except as otherwise authorized by     *\r\n* Cisco in writing.                                                      *\r\n**************************************************************************"
+2023-10-31 09:50:31,153 p=45145 u=stephenamaki n=p=45145 u=stephenamaki | paramiko [10.255.255.73] | Authentication (password) successful!
+2023-10-31 09:50:31,155 p=45148 u=stephenamaki n=p=45148 u=stephenamaki | paramiko [10.255.255.74] | Authentication (password) successful!
+2023-10-31 09:50:31,484 p=45119 u=stephenamaki n=ansible | ok: [10.255.255.71]
+2023-10-31 09:50:31,885 p=45119 u=stephenamaki n=ansible | ok: [10.255.255.72]
+2023-10-31 09:50:32,098 p=45119 u=stephenamaki n=ansible | ok: [10.255.255.74]
+2023-10-31 09:50:32,101 p=45119 u=stephenamaki n=ansible | ok: [10.255.255.73]
+2023-10-31 09:50:32,109 p=45119 u=stephenamaki n=ansible | TASK [TASK 2: Print BGP output] ******************************************************************************************************************************************************************
+2023-10-31 09:50:33,283 p=45119 u=stephenamaki n=ansible | ok: [10.255.255.72] => {
+    "msg": {
+        "changed": false,
+        "failed": false,
+        "stdout": [
+            ""
+        ],
+        "stdout_lines": [
+            [
+                ""
+            ]
+        ]
+    }
+}
+2023-10-31 09:50:33,284 p=45119 u=stephenamaki n=ansible | ok: [10.255.255.73] => {
+    "msg": {
+        "changed": false,
+        "failed": false,
+        "stdout": [
+            ""
+        ],
+        "stdout_lines": [
+            [
+                ""
+            ]
+        ]
+    }
+}
+2023-10-31 09:50:33,284 p=45119 u=stephenamaki n=ansible | ok: [10.255.255.71] => {
+    "msg": {
+        "changed": false,
+        "failed": false,
+        "stdout": [
+            ""
+        ],
+        "stdout_lines": [
+            [
+                ""
+            ]
+        ]
+    }
+}
+2023-10-31 09:50:33,287 p=45119 u=stephenamaki n=ansible | ok: [10.255.255.74] => {
+    "msg": {
+        "changed": false,
+        "failed": false,
+        "stdout": [
+            ""
+        ],
+        "stdout_lines": [
+            [
+                ""
+            ]
+        ]
+    }
+}
+2023-10-31 09:50:33,293 p=45119 u=stephenamaki n=ansible | TASK [TASK 3: Create outputs/ folder] ************************************************************************************************************************************************************
+2023-10-31 09:50:34,793 p=45119 u=stephenamaki n=ansible | ok: [10.255.255.71]
+2023-10-31 09:50:34,800 p=45119 u=stephenamaki n=ansible | TASK [TASK 4: Write output to file] **************************************************************************************************************************************************************
+2023-10-31 09:50:36,804 p=45119 u=stephenamaki n=ansible | changed: [10.255.255.73]
+2023-10-31 09:50:36,805 p=45119 u=stephenamaki n=ansible | changed: [10.255.255.74]
+2023-10-31 09:50:36,805 p=45119 u=stephenamaki n=ansible | changed: [10.255.255.72]
+2023-10-31 09:50:36,805 p=45119 u=stephenamaki n=ansible | changed: [10.255.255.71]
+2023-10-31 09:50:36,847 p=45119 u=stephenamaki n=ansible | PLAY RECAP ***************************************************************************************************************************************************************************************
+2023-10-31 09:50:36,848 p=45119 u=stephenamaki n=ansible | 10.255.255.71              : ok=4    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-10-31 09:50:36,848 p=45119 u=stephenamaki n=ansible | 10.255.255.72              : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-10-31 09:50:36,848 p=45119 u=stephenamaki n=ansible | 10.255.255.73              : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-10-31 09:50:36,848 p=45119 u=stephenamaki n=ansible | 10.255.255.74              : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-10-31 09:50:36,946 p=45139 u=stephenamaki n=ansible | shutdown complete
+2023-10-31 09:50:36,947 p=45142 u=stephenamaki n=ansible | shutdown complete
+2023-10-31 09:50:36,948 p=45145 u=stephenamaki n=ansible | shutdown complete
+2023-10-31 09:50:36,948 p=45148 u=stephenamaki n=ansible | shutdown complete
+2023-10-31 09:55:53,930 p=47013 u=stephenamaki n=ansible | PLAY [PLAY 1: Capture and store BGP config] ******************************************************************************************************************************************************
+2023-10-31 09:55:53,962 p=47013 u=stephenamaki n=ansible | TASK [TASK 1: Get BGP config from devices] *******************************************************************************************************************************************************
+2023-10-31 09:55:55,304 p=47013 u=stephenamaki n=ansible | network_os is set to ios
+2023-10-31 09:55:55,305 p=47013 u=stephenamaki n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2023-10-31 09:55:55,306 p=47013 u=stephenamaki n=ansible | network_os is set to ios
+2023-10-31 09:55:55,307 p=47013 u=stephenamaki n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2023-10-31 09:55:55,316 p=47013 u=stephenamaki n=ansible | network_os is set to ios
+2023-10-31 09:55:55,316 p=47013 u=stephenamaki n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2023-10-31 09:55:55,328 p=47013 u=stephenamaki n=ansible | network_os is set to ios
+2023-10-31 09:55:55,329 p=47013 u=stephenamaki n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2023-10-31 09:55:55,367 p=47036 u=stephenamaki n=p=47036 u=stephenamaki | paramiko [10.255.255.72] | Connected (version 1.99, client Cisco-1.25)
+2023-10-31 09:55:55,369 p=47039 u=stephenamaki n=p=47039 u=stephenamaki | paramiko [10.255.255.73] | Connected (version 1.99, client Cisco-1.25)
+2023-10-31 09:55:55,373 p=47042 u=stephenamaki n=p=47042 u=stephenamaki | paramiko [10.255.255.74] | Connected (version 1.99, client Cisco-1.25)
+2023-10-31 09:55:55,380 p=47035 u=stephenamaki n=p=47035 u=stephenamaki | paramiko [10.255.255.71] | Connected (version 1.99, client Cisco-1.25)
+2023-10-31 09:55:55,773 p=47035 u=stephenamaki n=p=47035 u=stephenamaki | paramiko [10.255.255.71] | Auth banner: b"\r\n**************************************************************************\r\n* IOSv is strictly limited to use for evaluation, demonstration and IOS  *\r\n* education. IOSv is provided as-is and is not supported by Cisco's      *\r\n* Technical Advisory Center. Any use or disclosure, in whole or in part, *\r\n* of the IOSv Software or Documentation to any third party for any       *\r\n* purposes is expressly prohibited except as otherwise authorized by     *\r\n* Cisco in writing.                                                      *\r\n**************************************************************************"
+2023-10-31 09:55:55,781 p=47035 u=stephenamaki n=p=47035 u=stephenamaki | paramiko [10.255.255.71] | Authentication (password) successful!
+2023-10-31 09:55:56,216 p=47036 u=stephenamaki n=p=47036 u=stephenamaki | paramiko [10.255.255.72] | Auth banner: b"\r\n**************************************************************************\r\n* IOSv is strictly limited to use for evaluation, demonstration and IOS  *\r\n* education. IOSv is provided as-is and is not supported by Cisco's      *\r\n* Technical Advisory Center. Any use or disclosure, in whole or in part, *\r\n* of the IOSv Software or Documentation to any third party for any       *\r\n* purposes is expressly prohibited except as otherwise authorized by     *\r\n* Cisco in writing.                                                      *\r\n**************************************************************************"
+2023-10-31 09:55:56,216 p=47042 u=stephenamaki n=p=47042 u=stephenamaki | paramiko [10.255.255.74] | Auth banner: b"\r\n**************************************************************************\r\n* IOSv is strictly limited to use for evaluation, demonstration and IOS  *\r\n* education. IOSv is provided as-is and is not supported by Cisco's      *\r\n* Technical Advisory Center. Any use or disclosure, in whole or in part, *\r\n* of the IOSv Software or Documentation to any third party for any       *\r\n* purposes is expressly prohibited except as otherwise authorized by     *\r\n* Cisco in writing.                                                      *\r\n**************************************************************************"
+2023-10-31 09:55:56,224 p=47036 u=stephenamaki n=p=47036 u=stephenamaki | paramiko [10.255.255.72] | Authentication (password) successful!
+2023-10-31 09:55:56,226 p=47042 u=stephenamaki n=p=47042 u=stephenamaki | paramiko [10.255.255.74] | Authentication (password) successful!
+2023-10-31 09:55:56,234 p=47039 u=stephenamaki n=p=47039 u=stephenamaki | paramiko [10.255.255.73] | Auth banner: b"\r\n**************************************************************************\r\n* IOSv is strictly limited to use for evaluation, demonstration and IOS  *\r\n* education. IOSv is provided as-is and is not supported by Cisco's      *\r\n* Technical Advisory Center. Any use or disclosure, in whole or in part, *\r\n* of the IOSv Software or Documentation to any third party for any       *\r\n* purposes is expressly prohibited except as otherwise authorized by     *\r\n* Cisco in writing.                                                      *\r\n**************************************************************************"
+2023-10-31 09:55:56,242 p=47039 u=stephenamaki n=p=47039 u=stephenamaki | paramiko [10.255.255.73] | Authentication (password) successful!
+2023-10-31 09:55:56,796 p=47013 u=stephenamaki n=ansible | ok: [10.255.255.71]
+2023-10-31 09:55:57,202 p=47013 u=stephenamaki n=ansible | ok: [10.255.255.74]
+2023-10-31 09:55:57,208 p=47013 u=stephenamaki n=ansible | ok: [10.255.255.72]
+2023-10-31 09:55:57,210 p=47013 u=stephenamaki n=ansible | ok: [10.255.255.73]
+2023-10-31 09:55:57,218 p=47013 u=stephenamaki n=ansible | TASK [TASK 2: Print BGP output] ******************************************************************************************************************************************************************
+2023-10-31 09:55:58,393 p=47013 u=stephenamaki n=ansible | ok: [10.255.255.71] => {
+    "msg": {
+        "changed": false,
+        "failed": false,
+        "stdout": [
+            "router bgp 65000\n bgp router-id 10.1.255.71\n bgp log-neighbor-changes\n neighbor 10.1.255.1 remote-as 65000\n neighbor 10.1.255.2 remote-as 65000\n neighbor 10.1.255.3 remote-as 65000\n !\n address-family ipv4\n  neighbor 10.1.255.1 activate\n  neighbor 10.1.255.2 activate\n  neighbor 10.1.255.3 activate\n exit-address-family\n !\n address-family ipv6\n  neighbor 10.1.255.1 activate\n  neighbor 10.1.255.2 activate\n  neighbor 10.1.255.3 activate\n exit-address-family"
+        ],
+        "stdout_lines": [
+            [
+                "router bgp 65000",
+                " bgp router-id 10.1.255.71",
+                " bgp log-neighbor-changes",
+                " neighbor 10.1.255.1 remote-as 65000",
+                " neighbor 10.1.255.2 remote-as 65000",
+                " neighbor 10.1.255.3 remote-as 65000",
+                " !",
+                " address-family ipv4",
+                "  neighbor 10.1.255.1 activate",
+                "  neighbor 10.1.255.2 activate",
+                "  neighbor 10.1.255.3 activate",
+                " exit-address-family",
+                " !",
+                " address-family ipv6",
+                "  neighbor 10.1.255.1 activate",
+                "  neighbor 10.1.255.2 activate",
+                "  neighbor 10.1.255.3 activate",
+                " exit-address-family"
+            ]
+        ]
+    }
+}
+2023-10-31 09:55:58,404 p=47013 u=stephenamaki n=ansible | ok: [10.255.255.72] => {
+    "msg": {
+        "changed": false,
+        "failed": false,
+        "stdout": [
+            "router bgp 65000\n bgp router-id 10.1.255.72\n bgp log-neighbor-changes\n neighbor 10.1.255.1 remote-as 65000\n neighbor 10.1.255.2 remote-as 65000\n neighbor 10.1.255.3 remote-as 65000\n !\n address-family ipv4\n  neighbor 10.1.255.1 activate\n  neighbor 10.1.255.2 activate\n  neighbor 10.1.255.3 activate\n exit-address-family\n !\n address-family ipv6\n  neighbor 10.1.255.1 activate\n  neighbor 10.1.255.2 activate\n  neighbor 10.1.255.3 activate\n exit-address-family"
+        ],
+        "stdout_lines": [
+            [
+                "router bgp 65000",
+                " bgp router-id 10.1.255.72",
+                " bgp log-neighbor-changes",
+                " neighbor 10.1.255.1 remote-as 65000",
+                " neighbor 10.1.255.2 remote-as 65000",
+                " neighbor 10.1.255.3 remote-as 65000",
+                " !",
+                " address-family ipv4",
+                "  neighbor 10.1.255.1 activate",
+                "  neighbor 10.1.255.2 activate",
+                "  neighbor 10.1.255.3 activate",
+                " exit-address-family",
+                " !",
+                " address-family ipv6",
+                "  neighbor 10.1.255.1 activate",
+                "  neighbor 10.1.255.2 activate",
+                "  neighbor 10.1.255.3 activate",
+                " exit-address-family"
+            ]
+        ]
+    }
+}
+2023-10-31 09:55:58,407 p=47013 u=stephenamaki n=ansible | ok: [10.255.255.73] => {
+    "msg": {
+        "changed": false,
+        "failed": false,
+        "stdout": [
+            "router bgp 65000\n bgp router-id 10.1.255.73\n bgp log-neighbor-changes\n neighbor 10.1.255.1 remote-as 65000\n neighbor 10.1.255.2 remote-as 65000\n neighbor 10.1.255.3 remote-as 65000\n !\n address-family ipv4\n  neighbor 10.1.255.1 activate\n  neighbor 10.1.255.2 activate\n  neighbor 10.1.255.3 activate\n exit-address-family\n !\n address-family ipv6\n  neighbor 10.1.255.1 activate\n  neighbor 10.1.255.2 activate\n  neighbor 10.1.255.3 activate\n exit-address-family"
+        ],
+        "stdout_lines": [
+            [
+                "router bgp 65000",
+                " bgp router-id 10.1.255.73",
+                " bgp log-neighbor-changes",
+                " neighbor 10.1.255.1 remote-as 65000",
+                " neighbor 10.1.255.2 remote-as 65000",
+                " neighbor 10.1.255.3 remote-as 65000",
+                " !",
+                " address-family ipv4",
+                "  neighbor 10.1.255.1 activate",
+                "  neighbor 10.1.255.2 activate",
+                "  neighbor 10.1.255.3 activate",
+                " exit-address-family",
+                " !",
+                " address-family ipv6",
+                "  neighbor 10.1.255.1 activate",
+                "  neighbor 10.1.255.2 activate",
+                "  neighbor 10.1.255.3 activate",
+                " exit-address-family"
+            ]
+        ]
+    }
+}
+2023-10-31 09:55:58,419 p=47013 u=stephenamaki n=ansible | ok: [10.255.255.74] => {
+    "msg": {
+        "changed": false,
+        "failed": false,
+        "stdout": [
+            "router bgp 65000\n bgp router-id 10.1.255.74\n bgp log-neighbor-changes\n neighbor 10.1.255.1 remote-as 65000\n neighbor 10.1.255.2 remote-as 65000\n neighbor 10.1.255.3 remote-as 65000\n !\n address-family ipv4\n  neighbor 10.1.255.1 activate\n  neighbor 10.1.255.2 activate\n  neighbor 10.1.255.3 activate\n exit-address-family\n !\n address-family ipv6\n  neighbor 10.1.255.1 activate\n  neighbor 10.1.255.2 activate\n  neighbor 10.1.255.3 activate\n exit-address-family"
+        ],
+        "stdout_lines": [
+            [
+                "router bgp 65000",
+                " bgp router-id 10.1.255.74",
+                " bgp log-neighbor-changes",
+                " neighbor 10.1.255.1 remote-as 65000",
+                " neighbor 10.1.255.2 remote-as 65000",
+                " neighbor 10.1.255.3 remote-as 65000",
+                " !",
+                " address-family ipv4",
+                "  neighbor 10.1.255.1 activate",
+                "  neighbor 10.1.255.2 activate",
+                "  neighbor 10.1.255.3 activate",
+                " exit-address-family",
+                " !",
+                " address-family ipv6",
+                "  neighbor 10.1.255.1 activate",
+                "  neighbor 10.1.255.2 activate",
+                "  neighbor 10.1.255.3 activate",
+                " exit-address-family"
+            ]
+        ]
+    }
+}
+2023-10-31 09:55:58,426 p=47013 u=stephenamaki n=ansible | TASK [TASK 3: Create outputs/ folder] ************************************************************************************************************************************************************
+2023-10-31 09:55:59,945 p=47013 u=stephenamaki n=ansible | ok: [10.255.255.71]
+2023-10-31 09:55:59,953 p=47013 u=stephenamaki n=ansible | TASK [TASK 4: Write output to file] **************************************************************************************************************************************************************
+2023-10-31 09:56:02,107 p=47013 u=stephenamaki n=ansible | changed: [10.255.255.74]
+2023-10-31 09:56:02,107 p=47013 u=stephenamaki n=ansible | changed: [10.255.255.72]
+2023-10-31 09:56:02,108 p=47013 u=stephenamaki n=ansible | changed: [10.255.255.73]
+2023-10-31 09:56:02,112 p=47013 u=stephenamaki n=ansible | changed: [10.255.255.71]
+2023-10-31 09:56:02,163 p=47013 u=stephenamaki n=ansible | PLAY RECAP ***************************************************************************************************************************************************************************************
+2023-10-31 09:56:02,163 p=47013 u=stephenamaki n=ansible | 10.255.255.71              : ok=4    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-10-31 09:56:02,163 p=47013 u=stephenamaki n=ansible | 10.255.255.72              : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-10-31 09:56:02,163 p=47013 u=stephenamaki n=ansible | 10.255.255.73              : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-10-31 09:56:02,163 p=47013 u=stephenamaki n=ansible | 10.255.255.74              : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-10-31 09:56:02,262 p=47035 u=stephenamaki n=ansible | shutdown complete
+2023-10-31 09:56:02,262 p=47042 u=stephenamaki n=ansible | shutdown complete
+2023-10-31 09:56:02,263 p=47036 u=stephenamaki n=ansible | shutdown complete
+2023-10-31 09:56:02,264 p=47039 u=stephenamaki n=ansible | shutdown complete
+2023-10-31 09:56:34,006 p=47424 u=stephenamaki n=ansible | PLAY [PLAY 1: Capture and store BGP config] ******************************************************************************************************************************************************
+2023-10-31 09:56:34,035 p=47424 u=stephenamaki n=ansible | TASK [TASK 1: Get BGP config from devices] *******************************************************************************************************************************************************
+2023-10-31 09:56:35,266 p=47424 u=stephenamaki n=ansible | network_os is set to ios
+2023-10-31 09:56:35,267 p=47424 u=stephenamaki n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2023-10-31 09:56:35,267 p=47424 u=stephenamaki n=ansible | network_os is set to ios
+2023-10-31 09:56:35,268 p=47424 u=stephenamaki n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2023-10-31 09:56:35,278 p=47424 u=stephenamaki n=ansible | network_os is set to ios
+2023-10-31 09:56:35,278 p=47424 u=stephenamaki n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2023-10-31 09:56:35,289 p=47424 u=stephenamaki n=ansible | network_os is set to ios
+2023-10-31 09:56:35,290 p=47424 u=stephenamaki n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2023-10-31 09:56:35,306 p=47447 u=stephenamaki n=p=47447 u=stephenamaki | paramiko [10.255.255.72] | Connected (version 1.99, client Cisco-1.25)
+2023-10-31 09:56:35,309 p=47450 u=stephenamaki n=p=47450 u=stephenamaki | paramiko [10.255.255.73] | Connected (version 1.99, client Cisco-1.25)
+2023-10-31 09:56:35,318 p=47444 u=stephenamaki n=p=47444 u=stephenamaki | paramiko [10.255.255.71] | Connected (version 1.99, client Cisco-1.25)
+2023-10-31 09:56:35,320 p=47453 u=stephenamaki n=p=47453 u=stephenamaki | paramiko [10.255.255.74] | Connected (version 1.99, client Cisco-1.25)
+2023-10-31 09:56:35,699 p=47444 u=stephenamaki n=p=47444 u=stephenamaki | paramiko [10.255.255.71] | Auth banner: b"\r\n**************************************************************************\r\n* IOSv is strictly limited to use for evaluation, demonstration and IOS  *\r\n* education. IOSv is provided as-is and is not supported by Cisco's      *\r\n* Technical Advisory Center. Any use or disclosure, in whole or in part, *\r\n* of the IOSv Software or Documentation to any third party for any       *\r\n* purposes is expressly prohibited except as otherwise authorized by     *\r\n* Cisco in writing.                                                      *\r\n**************************************************************************"
+2023-10-31 09:56:35,706 p=47444 u=stephenamaki n=p=47444 u=stephenamaki | paramiko [10.255.255.71] | Authentication (password) successful!
+2023-10-31 09:56:36,157 p=47450 u=stephenamaki n=p=47450 u=stephenamaki | paramiko [10.255.255.73] | Auth banner: b"\r\n**************************************************************************\r\n* IOSv is strictly limited to use for evaluation, demonstration and IOS  *\r\n* education. IOSv is provided as-is and is not supported by Cisco's      *\r\n* Technical Advisory Center. Any use or disclosure, in whole or in part, *\r\n* of the IOSv Software or Documentation to any third party for any       *\r\n* purposes is expressly prohibited except as otherwise authorized by     *\r\n* Cisco in writing.                                                      *\r\n**************************************************************************"
+2023-10-31 09:56:36,163 p=47450 u=stephenamaki n=p=47450 u=stephenamaki | paramiko [10.255.255.73] | Authentication (password) successful!
+2023-10-31 09:56:36,174 p=47447 u=stephenamaki n=p=47447 u=stephenamaki | paramiko [10.255.255.72] | Auth banner: b"\r\n**************************************************************************\r\n* IOSv is strictly limited to use for evaluation, demonstration and IOS  *\r\n* education. IOSv is provided as-is and is not supported by Cisco's      *\r\n* Technical Advisory Center. Any use or disclosure, in whole or in part, *\r\n* of the IOSv Software or Documentation to any third party for any       *\r\n* purposes is expressly prohibited except as otherwise authorized by     *\r\n* Cisco in writing.                                                      *\r\n**************************************************************************"
+2023-10-31 09:56:36,178 p=47447 u=stephenamaki n=p=47447 u=stephenamaki | paramiko [10.255.255.72] | Authentication (password) successful!
+2023-10-31 09:56:36,183 p=47453 u=stephenamaki n=p=47453 u=stephenamaki | paramiko [10.255.255.74] | Auth banner: b"\r\n**************************************************************************\r\n* IOSv is strictly limited to use for evaluation, demonstration and IOS  *\r\n* education. IOSv is provided as-is and is not supported by Cisco's      *\r\n* Technical Advisory Center. Any use or disclosure, in whole or in part, *\r\n* of the IOSv Software or Documentation to any third party for any       *\r\n* purposes is expressly prohibited except as otherwise authorized by     *\r\n* Cisco in writing.                                                      *\r\n**************************************************************************"
+2023-10-31 09:56:36,188 p=47453 u=stephenamaki n=p=47453 u=stephenamaki | paramiko [10.255.255.74] | Authentication (password) successful!
+2023-10-31 09:56:36,783 p=47424 u=stephenamaki n=ansible | ok: [10.255.255.71]
+2023-10-31 09:56:37,132 p=47424 u=stephenamaki n=ansible | ok: [10.255.255.73]
+2023-10-31 09:56:37,166 p=47424 u=stephenamaki n=ansible | ok: [10.255.255.72]
+2023-10-31 09:56:37,180 p=47424 u=stephenamaki n=ansible | ok: [10.255.255.74]
+2023-10-31 09:56:37,192 p=47424 u=stephenamaki n=ansible | TASK [TASK 2: Print BGP output] ******************************************************************************************************************************************************************
+2023-10-31 09:56:38,347 p=47424 u=stephenamaki n=ansible | ok: [10.255.255.71] => {
+    "msg": {
+        "changed": false,
+        "failed": false,
+        "stdout": [
+            "router bgp 65000\n bgp router-id 10.1.255.71\n bgp log-neighbor-changes\n neighbor 10.1.255.1 remote-as 65000\n neighbor 10.1.255.2 remote-as 65000\n neighbor 10.1.255.3 remote-as 65000\n !\n address-family ipv4\n  neighbor 10.1.255.1 activate\n  neighbor 10.1.255.2 activate\n  neighbor 10.1.255.3 activate\n exit-address-family\n !\n address-family ipv6\n  neighbor 10.1.255.1 activate\n  neighbor 10.1.255.2 activate\n  neighbor 10.1.255.3 activate\n exit-address-family"
+        ],
+        "stdout_lines": [
+            [
+                "router bgp 65000",
+                " bgp router-id 10.1.255.71",
+                " bgp log-neighbor-changes",
+                " neighbor 10.1.255.1 remote-as 65000",
+                " neighbor 10.1.255.2 remote-as 65000",
+                " neighbor 10.1.255.3 remote-as 65000",
+                " !",
+                " address-family ipv4",
+                "  neighbor 10.1.255.1 activate",
+                "  neighbor 10.1.255.2 activate",
+                "  neighbor 10.1.255.3 activate",
+                " exit-address-family",
+                " !",
+                " address-family ipv6",
+                "  neighbor 10.1.255.1 activate",
+                "  neighbor 10.1.255.2 activate",
+                "  neighbor 10.1.255.3 activate",
+                " exit-address-family"
+            ]
+        ]
+    }
+}
+2023-10-31 09:56:38,349 p=47424 u=stephenamaki n=ansible | ok: [10.255.255.72] => {
+    "msg": {
+        "changed": false,
+        "failed": false,
+        "stdout": [
+            "router bgp 65000\n bgp router-id 10.1.255.72\n bgp log-neighbor-changes\n neighbor 10.1.255.1 remote-as 65000\n neighbor 10.1.255.2 remote-as 65000\n neighbor 10.1.255.3 remote-as 65000\n !\n address-family ipv4\n  neighbor 10.1.255.1 activate\n  neighbor 10.1.255.2 activate\n  neighbor 10.1.255.3 activate\n exit-address-family\n !\n address-family ipv6\n  neighbor 10.1.255.1 activate\n  neighbor 10.1.255.2 activate\n  neighbor 10.1.255.3 activate\n exit-address-family"
+        ],
+        "stdout_lines": [
+            [
+                "router bgp 65000",
+                " bgp router-id 10.1.255.72",
+                " bgp log-neighbor-changes",
+                " neighbor 10.1.255.1 remote-as 65000",
+                " neighbor 10.1.255.2 remote-as 65000",
+                " neighbor 10.1.255.3 remote-as 65000",
+                " !",
+                " address-family ipv4",
+                "  neighbor 10.1.255.1 activate",
+                "  neighbor 10.1.255.2 activate",
+                "  neighbor 10.1.255.3 activate",
+                " exit-address-family",
+                " !",
+                " address-family ipv6",
+                "  neighbor 10.1.255.1 activate",
+                "  neighbor 10.1.255.2 activate",
+                "  neighbor 10.1.255.3 activate",
+                " exit-address-family"
+            ]
+        ]
+    }
+}
+2023-10-31 09:56:38,350 p=47424 u=stephenamaki n=ansible | ok: [10.255.255.73] => {
+    "msg": {
+        "changed": false,
+        "failed": false,
+        "stdout": [
+            "router bgp 65000\n bgp router-id 10.1.255.73\n bgp log-neighbor-changes\n neighbor 10.1.255.1 remote-as 65000\n neighbor 10.1.255.2 remote-as 65000\n neighbor 10.1.255.3 remote-as 65000\n !\n address-family ipv4\n  neighbor 10.1.255.1 activate\n  neighbor 10.1.255.2 activate\n  neighbor 10.1.255.3 activate\n exit-address-family\n !\n address-family ipv6\n  neighbor 10.1.255.1 activate\n  neighbor 10.1.255.2 activate\n  neighbor 10.1.255.3 activate\n exit-address-family"
+        ],
+        "stdout_lines": [
+            [
+                "router bgp 65000",
+                " bgp router-id 10.1.255.73",
+                " bgp log-neighbor-changes",
+                " neighbor 10.1.255.1 remote-as 65000",
+                " neighbor 10.1.255.2 remote-as 65000",
+                " neighbor 10.1.255.3 remote-as 65000",
+                " !",
+                " address-family ipv4",
+                "  neighbor 10.1.255.1 activate",
+                "  neighbor 10.1.255.2 activate",
+                "  neighbor 10.1.255.3 activate",
+                " exit-address-family",
+                " !",
+                " address-family ipv6",
+                "  neighbor 10.1.255.1 activate",
+                "  neighbor 10.1.255.2 activate",
+                "  neighbor 10.1.255.3 activate",
+                " exit-address-family"
+            ]
+        ]
+    }
+}
+2023-10-31 09:56:38,361 p=47424 u=stephenamaki n=ansible | ok: [10.255.255.74] => {
+    "msg": {
+        "changed": false,
+        "failed": false,
+        "stdout": [
+            "router bgp 65000\n bgp router-id 10.1.255.74\n bgp log-neighbor-changes\n neighbor 10.1.255.1 remote-as 65000\n neighbor 10.1.255.2 remote-as 65000\n neighbor 10.1.255.3 remote-as 65000\n !\n address-family ipv4\n  neighbor 10.1.255.1 activate\n  neighbor 10.1.255.2 activate\n  neighbor 10.1.255.3 activate\n exit-address-family\n !\n address-family ipv6\n  neighbor 10.1.255.1 activate\n  neighbor 10.1.255.2 activate\n  neighbor 10.1.255.3 activate\n exit-address-family"
+        ],
+        "stdout_lines": [
+            [
+                "router bgp 65000",
+                " bgp router-id 10.1.255.74",
+                " bgp log-neighbor-changes",
+                " neighbor 10.1.255.1 remote-as 65000",
+                " neighbor 10.1.255.2 remote-as 65000",
+                " neighbor 10.1.255.3 remote-as 65000",
+                " !",
+                " address-family ipv4",
+                "  neighbor 10.1.255.1 activate",
+                "  neighbor 10.1.255.2 activate",
+                "  neighbor 10.1.255.3 activate",
+                " exit-address-family",
+                " !",
+                " address-family ipv6",
+                "  neighbor 10.1.255.1 activate",
+                "  neighbor 10.1.255.2 activate",
+                "  neighbor 10.1.255.3 activate",
+                " exit-address-family"
+            ]
+        ]
+    }
+}
+2023-10-31 09:56:38,366 p=47424 u=stephenamaki n=ansible | TASK [TASK 3: Create outputs/ folder] ************************************************************************************************************************************************************
+2023-10-31 09:56:39,857 p=47424 u=stephenamaki n=ansible | ok: [10.255.255.71]
+2023-10-31 09:56:39,864 p=47424 u=stephenamaki n=ansible | TASK [TASK 4: Write output to file] **************************************************************************************************************************************************************
+2023-10-31 09:56:41,747 p=47424 u=stephenamaki n=ansible | ok: [10.255.255.72]
+2023-10-31 09:56:41,747 p=47424 u=stephenamaki n=ansible | ok: [10.255.255.73]
+2023-10-31 09:56:41,747 p=47424 u=stephenamaki n=ansible | ok: [10.255.255.74]
+2023-10-31 09:56:41,747 p=47424 u=stephenamaki n=ansible | ok: [10.255.255.71]
+2023-10-31 09:56:41,794 p=47424 u=stephenamaki n=ansible | PLAY RECAP ***************************************************************************************************************************************************************************************
+2023-10-31 09:56:41,794 p=47424 u=stephenamaki n=ansible | 10.255.255.71              : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-10-31 09:56:41,794 p=47424 u=stephenamaki n=ansible | 10.255.255.72              : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-10-31 09:56:41,794 p=47424 u=stephenamaki n=ansible | 10.255.255.73              : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-10-31 09:56:41,794 p=47424 u=stephenamaki n=ansible | 10.255.255.74              : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-10-31 09:56:41,894 p=47450 u=stephenamaki n=ansible | shutdown complete
+2023-10-31 09:56:41,895 p=47447 u=stephenamaki n=ansible | shutdown complete
+2023-10-31 09:56:41,896 p=47453 u=stephenamaki n=ansible | shutdown complete
+2023-10-31 09:56:41,893 p=47444 u=stephenamaki n=ansible | shutdown complete
+2023-10-31 09:58:30,358 p=48202 u=stephenamaki n=ansible | PLAY [PLAY 1: Capture and store BGP config] ******************************************************************************************************************************************************
+2023-10-31 09:58:30,388 p=48202 u=stephenamaki n=ansible | TASK [TASK 1: Get BGP config from devices] *******************************************************************************************************************************************************
+2023-10-31 09:58:31,629 p=48202 u=stephenamaki n=ansible | network_os is set to eos
+2023-10-31 09:58:31,629 p=48202 u=stephenamaki n=ansible | network_os is set to eos
+2023-10-31 09:58:31,630 p=48202 u=stephenamaki n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2023-10-31 09:58:31,630 p=48202 u=stephenamaki n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2023-10-31 09:58:31,643 p=48202 u=stephenamaki n=ansible | network_os is set to eos
+2023-10-31 09:58:31,644 p=48202 u=stephenamaki n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2023-10-31 09:58:31,648 p=48202 u=stephenamaki n=ansible | network_os is set to eos
+2023-10-31 09:58:31,651 p=48202 u=stephenamaki n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2023-10-31 09:58:31,789 p=48228 u=stephenamaki n=p=48228 u=stephenamaki | paramiko [10.255.255.87] | Connected (version 2.0, client OpenSSH_6.6.1)
+2023-10-31 09:58:31,789 p=48231 u=stephenamaki n=p=48231 u=stephenamaki | paramiko [10.255.255.88] | Connected (version 2.0, client OpenSSH_6.6.1)
+2023-10-31 09:58:31,806 p=48224 u=stephenamaki n=p=48224 u=stephenamaki | paramiko [10.255.255.86] | Connected (version 2.0, client OpenSSH_6.6.1)
+2023-10-31 09:58:31,844 p=48225 u=stephenamaki n=p=48225 u=stephenamaki | paramiko [10.255.255.85] | Connected (version 2.0, client OpenSSH_6.6.1)
+2023-10-31 09:58:31,904 p=48228 u=stephenamaki n=p=48228 u=stephenamaki | paramiko [10.255.255.87] | Authentication (keyboard-interactive) successful!
+2023-10-31 09:58:31,908 p=48224 u=stephenamaki n=p=48224 u=stephenamaki | paramiko [10.255.255.86] | Authentication (keyboard-interactive) successful!
+2023-10-31 09:58:31,963 p=48231 u=stephenamaki n=p=48231 u=stephenamaki | paramiko [10.255.255.88] | Authentication (keyboard-interactive) successful!
+2023-10-31 09:58:31,970 p=48225 u=stephenamaki n=p=48225 u=stephenamaki | paramiko [10.255.255.85] | Authentication (keyboard-interactive) successful!
+2023-10-31 09:58:33,396 p=48202 u=stephenamaki n=ansible | ok: [10.255.255.87]
+2023-10-31 09:58:33,401 p=48202 u=stephenamaki n=ansible | ok: [10.255.255.86]
+2023-10-31 09:58:33,405 p=48202 u=stephenamaki n=ansible | ok: [10.255.255.88]
+2023-10-31 09:58:33,424 p=48202 u=stephenamaki n=ansible | ok: [10.255.255.85]
+2023-10-31 09:58:33,430 p=48202 u=stephenamaki n=ansible | TASK [TASK 2: Print BGP output] ******************************************************************************************************************************************************************
+2023-10-31 09:58:34,587 p=48202 u=stephenamaki n=ansible | ok: [10.255.255.86] => {
+    "msg": {
+        "changed": false,
+        "failed": false,
+        "stdout": [
+            "router bgp 103\n   maximum-paths 4 ecmp 64\n   bgp listen range 10.3.255.0/24 peer-group OVERLAY remote-as 103\n   neighbor OVERLAY peer-group\n   neighbor OVERLAY update-source Loopback0\n   neighbor OVERLAY route-reflector-client\n   neighbor OVERLAY send-community extended\n   neighbor OVERLAY maximum-routes 12000 \n   !\n   address-family evpn\n      neighbor OVERLAY activate"
+        ],
+        "stdout_lines": [
+            [
+                "router bgp 103",
+                "   maximum-paths 4 ecmp 64",
+                "   bgp listen range 10.3.255.0/24 peer-group OVERLAY remote-as 103",
+                "   neighbor OVERLAY peer-group",
+                "   neighbor OVERLAY update-source Loopback0",
+                "   neighbor OVERLAY route-reflector-client",
+                "   neighbor OVERLAY send-community extended",
+                "   neighbor OVERLAY maximum-routes 12000 ",
+                "   !",
+                "   address-family evpn",
+                "      neighbor OVERLAY activate"
+            ]
+        ]
+    }
+}
+2023-10-31 09:58:34,587 p=48202 u=stephenamaki n=ansible | ok: [10.255.255.85] => {
+    "msg": {
+        "changed": false,
+        "failed": false,
+        "stdout": [
+            "router bgp 103\n   maximum-paths 4 ecmp 64\n   bgp listen range 10.3.255.0/24 peer-group OVERLAY remote-as 103\n   neighbor OVERLAY peer-group\n   neighbor OVERLAY update-source Loopback0\n   neighbor OVERLAY route-reflector-client\n   neighbor OVERLAY send-community extended\n   neighbor OVERLAY maximum-routes 12000 \n   !\n   address-family evpn\n      neighbor OVERLAY activate"
+        ],
+        "stdout_lines": [
+            [
+                "router bgp 103",
+                "   maximum-paths 4 ecmp 64",
+                "   bgp listen range 10.3.255.0/24 peer-group OVERLAY remote-as 103",
+                "   neighbor OVERLAY peer-group",
+                "   neighbor OVERLAY update-source Loopback0",
+                "   neighbor OVERLAY route-reflector-client",
+                "   neighbor OVERLAY send-community extended",
+                "   neighbor OVERLAY maximum-routes 12000 ",
+                "   !",
+                "   address-family evpn",
+                "      neighbor OVERLAY activate"
+            ]
+        ]
+    }
+}
+2023-10-31 09:58:34,588 p=48202 u=stephenamaki n=ansible | ok: [10.255.255.87] => {
+    "msg": {
+        "changed": false,
+        "failed": false,
+        "stdout": [
+            "router bgp 103\n   no bgp default ipv4-unicast\n   maximum-paths 4 ecmp 64\n   neighbor OVERLAY peer-group\n   neighbor OVERLAY remote-as 103\n   neighbor OVERLAY update-source Loopback0\n   neighbor OVERLAY send-community extended\n   neighbor OVERLAY maximum-routes 12000 \n   neighbor 10.3.255.85 peer-group OVERLAY\n   neighbor 10.3.255.86 peer-group OVERLAY\n   !\n   vlan 10\n      rd 103:10010\n      route-target both 10:10010\n      redistribute learned\n   !\n   vlan 20\n      rd 103:10020\n      route-target both 10:10020\n      redistribute learned\n   !\n   address-family evpn\n      neighbor OVERLAY activate\n   !\n   vrf TENANT_VRF\n      rd 10.3.255.87:1\n      route-target import evpn 1:11000\n      route-target export evpn 1:11000\n      redistribute connected"
+        ],
+        "stdout_lines": [
+            [
+                "router bgp 103",
+                "   no bgp default ipv4-unicast",
+                "   maximum-paths 4 ecmp 64",
+                "   neighbor OVERLAY peer-group",
+                "   neighbor OVERLAY remote-as 103",
+                "   neighbor OVERLAY update-source Loopback0",
+                "   neighbor OVERLAY send-community extended",
+                "   neighbor OVERLAY maximum-routes 12000 ",
+                "   neighbor 10.3.255.85 peer-group OVERLAY",
+                "   neighbor 10.3.255.86 peer-group OVERLAY",
+                "   !",
+                "   vlan 10",
+                "      rd 103:10010",
+                "      route-target both 10:10010",
+                "      redistribute learned",
+                "   !",
+                "   vlan 20",
+                "      rd 103:10020",
+                "      route-target both 10:10020",
+                "      redistribute learned",
+                "   !",
+                "   address-family evpn",
+                "      neighbor OVERLAY activate",
+                "   !",
+                "   vrf TENANT_VRF",
+                "      rd 10.3.255.87:1",
+                "      route-target import evpn 1:11000",
+                "      route-target export evpn 1:11000",
+                "      redistribute connected"
+            ]
+        ]
+    }
+}
+2023-10-31 09:58:34,597 p=48202 u=stephenamaki n=ansible | ok: [10.255.255.88] => {
+    "msg": {
+        "changed": false,
+        "failed": false,
+        "stdout": [
+            "router bgp 103\n   no bgp default ipv4-unicast\n   maximum-paths 4 ecmp 64\n   neighbor OVERLAY peer-group\n   neighbor OVERLAY remote-as 103\n   neighbor OVERLAY update-source Loopback0\n   neighbor OVERLAY send-community extended\n   neighbor OVERLAY maximum-routes 12000 \n   neighbor 10.3.255.1 peer-group OVERLAY\n   neighbor 10.3.255.2 peer-group OVERLAY\n   !\n   vlan 10\n      rd 103:10010\n      route-target both 10:10010\n      redistribute learned\n   !\n   vlan 20\n      rd 103:10020\n      route-target both 10:10020\n      redistribute learned\n   !\n   address-family evpn\n      neighbor OVERLAY activate\n   !\n   vrf TENANT_VRF\n      rd 10.3.255.88:1\n      route-target import evpn 1:11000\n      route-target export evpn 1:11000\n      redistribute connected"
+        ],
+        "stdout_lines": [
+            [
+                "router bgp 103",
+                "   no bgp default ipv4-unicast",
+                "   maximum-paths 4 ecmp 64",
+                "   neighbor OVERLAY peer-group",
+                "   neighbor OVERLAY remote-as 103",
+                "   neighbor OVERLAY update-source Loopback0",
+                "   neighbor OVERLAY send-community extended",
+                "   neighbor OVERLAY maximum-routes 12000 ",
+                "   neighbor 10.3.255.1 peer-group OVERLAY",
+                "   neighbor 10.3.255.2 peer-group OVERLAY",
+                "   !",
+                "   vlan 10",
+                "      rd 103:10010",
+                "      route-target both 10:10010",
+                "      redistribute learned",
+                "   !",
+                "   vlan 20",
+                "      rd 103:10020",
+                "      route-target both 10:10020",
+                "      redistribute learned",
+                "   !",
+                "   address-family evpn",
+                "      neighbor OVERLAY activate",
+                "   !",
+                "   vrf TENANT_VRF",
+                "      rd 10.3.255.88:1",
+                "      route-target import evpn 1:11000",
+                "      route-target export evpn 1:11000",
+                "      redistribute connected"
+            ]
+        ]
+    }
+}
+2023-10-31 09:58:34,603 p=48202 u=stephenamaki n=ansible | TASK [TASK 3: Create outputs/ folder] ************************************************************************************************************************************************************
+2023-10-31 09:58:36,095 p=48202 u=stephenamaki n=ansible | ok: [10.255.255.85]
+2023-10-31 09:58:36,102 p=48202 u=stephenamaki n=ansible | TASK [TASK 4: Write output to file] **************************************************************************************************************************************************************
+2023-10-31 09:58:37,956 p=48202 u=stephenamaki n=ansible | ok: [10.255.255.88]
+2023-10-31 09:58:37,958 p=48202 u=stephenamaki n=ansible | ok: [10.255.255.87]
+2023-10-31 09:58:37,958 p=48202 u=stephenamaki n=ansible | ok: [10.255.255.85]
+2023-10-31 09:58:37,958 p=48202 u=stephenamaki n=ansible | ok: [10.255.255.86]
+2023-10-31 09:58:38,004 p=48202 u=stephenamaki n=ansible | PLAY RECAP ***************************************************************************************************************************************************************************************
+2023-10-31 09:58:38,004 p=48202 u=stephenamaki n=ansible | 10.255.255.85              : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-10-31 09:58:38,004 p=48202 u=stephenamaki n=ansible | 10.255.255.86              : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-10-31 09:58:38,004 p=48202 u=stephenamaki n=ansible | 10.255.255.87              : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-10-31 09:58:38,004 p=48202 u=stephenamaki n=ansible | 10.255.255.88              : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-10-31 09:58:38,103 p=48231 u=stephenamaki n=ansible | shutdown complete
+2023-10-31 09:58:38,103 p=48228 u=stephenamaki n=ansible | shutdown complete
+2023-10-31 09:58:38,103 p=48224 u=stephenamaki n=ansible | shutdown complete
+2023-10-31 09:58:38,105 p=48225 u=stephenamaki n=ansible | shutdown complete

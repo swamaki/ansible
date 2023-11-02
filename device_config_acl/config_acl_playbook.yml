@@ -1,0 +1,28 @@
+---
+# playbook is intended to create an access-list on the devices, and confirm that a specific set of VRFs exist on those devices
+
+- name: Sample IOS config 
+  hosts: routers
+  gather_facts: false
+
+  tasks:
+  - name: set ACL via CLI
+    ios_config:
+      lines:
+        - 10 permit ip host 1.1.1.1 any log
+        - 20 permit ip host 2.2.2.2 any log
+        - 30 permit ip host 3.3.3.3 any log
+        - 40 permit ip host 4.4.4.4 any log
+        - 50 permit ip host 5.5.5.5 any log
+      parents: ['ip access-list extended pod_{{ user_pod }}_acl']
+      before: no ip access-list extended pod_{{ user_pod }}_acl
+
+  # - name: Confirm all VRFs exist
+  #   ios_vrf:
+  #     vrfs: "{{ local_vrfs }}"
+  #     state: present
+  #     purge: yes
+  #   check_mode: yes
+
+# "ansible-playbook config_acl_playbook.yml" (runs the first option, generates config from template and applies)
+# Works as of 07/11/2020 

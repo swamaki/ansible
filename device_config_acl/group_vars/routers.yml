@@ -1,0 +1,6 @@
+---
+ansible_network_os: ios
+# ansible_user: 
+# ansible_password: 
+# ansible_connection: network_cli
+user_pod: routers_pod

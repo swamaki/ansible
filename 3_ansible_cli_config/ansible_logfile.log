@@ -1,0 +1,1035 @@
+2023-11-01 11:02:12,075 p=21949 u=stephenamaki n=ansible | PLAY [PLAY 1: Manage VPNs with jos_config and jinja] *********************************************************************************************************************************************
+2023-11-01 11:02:12,091 p=21949 u=stephenamaki n=ansible | TASK [TASK 1: Store platform-specific template path] *********************************************************************************************************************************************
+2023-11-01 11:02:13,308 p=21949 u=stephenamaki n=ansible | network_os is set to eos
+2023-11-01 11:02:13,310 p=21949 u=stephenamaki n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2023-11-01 11:02:13,315 p=21949 u=stephenamaki n=ansible | ok: [10.255.255.85]
+2023-11-01 11:02:13,323 p=21949 u=stephenamaki n=ansible | TASK [TASK 2: Apply Generic VRF config via SSH/CLI] **********************************************************************************************************************************************
+2023-11-01 11:02:13,353 p=21949 u=stephenamaki n=ansible | fatal: [10.255.255.85]: FAILED! => {"msg": "The task includes an option with an undefined variable. The error was: 'dict object' has no attribute 'name'. 'dict object' has no attribute 'name'. 'dict object' has no attribute 'name'. 'dict object' has no attribute 'name'\n\nThe error appears to be in '/Users/stephenamaki/Dropbox/netdevops/ansible/myscripts_ansible/ansible_cli_config/cli_config.yml': line 10, column 7, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n    # Cisco IOS configuration do not save\n    - name: \"TASK 2: Apply Generic VRF config via SSH/CLI\"\n      ^ here\nThis one looks easy to fix. It seems that there is a value started\nwith a quote, and the YAML parser is expecting to see the line ended\nwith the same kind of quote. For instance:\n\n    when: \"ok\" in result.stdout\n\nCould be written as:\n\n   when: '\"ok\" in result.stdout'\n\nOr equivalently:\n\n   when: \"'ok' in result.stdout\"\n"}
+2023-11-01 11:02:13,354 p=21949 u=stephenamaki n=ansible | PLAY RECAP ***************************************************************************************************************************************************************************************
+2023-11-01 11:02:13,354 p=21949 u=stephenamaki n=ansible | 10.255.255.85              : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-11-01 11:02:42,635 p=21964 u=stephenamaki n=ansible | persistent connection idle timeout triggered, timeout value is 30 secs.
+See the timeout setting options in the Network Debug and Troubleshooting Guide.
+2023-11-01 11:02:42,740 p=21964 u=stephenamaki n=ansible | shutdown complete
+2023-11-01 11:04:00,235 p=22546 u=stephenamaki n=ansible | PLAY [PLAY 1: Manage VPNs with jos_config and jinja] *********************************************************************************************************************************************
+2023-11-01 11:04:00,288 p=22546 u=stephenamaki n=ansible | TASK [TASK 1: Store platform-specific template path] *********************************************************************************************************************************************
+2023-11-01 11:04:01,622 p=22546 u=stephenamaki n=ansible | network_os is set to eos
+2023-11-01 11:04:01,624 p=22546 u=stephenamaki n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2023-11-01 11:04:01,633 p=22546 u=stephenamaki n=ansible | ok: [10.255.255.85]
+2023-11-01 11:04:01,644 p=22546 u=stephenamaki n=ansible | TASK [TASK 2: Apply Generic VRF config via SSH/CLI] **********************************************************************************************************************************************
+2023-11-01 11:04:01,685 p=22546 u=stephenamaki n=ansible | fatal: [10.255.255.85]: FAILED! => {"msg": "The task includes an option with an undefined variable. The error was: 'dict object' has no attribute 'name'. 'dict object' has no attribute 'name'. 'dict object' has no attribute 'name'. 'dict object' has no attribute 'name'\n\nThe error appears to be in '/Users/stephenamaki/Dropbox/netdevops/ansible/myscripts_ansible/ansible_cli_config/cli_config.yml': line 10, column 7, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n    # Cisco IOS configuration do not save\n    - name: \"TASK 2: Apply Generic VRF config via SSH/CLI\"\n      ^ here\nThis one looks easy to fix. It seems that there is a value started\nwith a quote, and the YAML parser is expecting to see the line ended\nwith the same kind of quote. For instance:\n\n    when: \"ok\" in result.stdout\n\nCould be written as:\n\n   when: '\"ok\" in result.stdout'\n\nOr equivalently:\n\n   when: \"'ok' in result.stdout\"\n"}
+2023-11-01 11:04:01,686 p=22546 u=stephenamaki n=ansible | PLAY RECAP ***************************************************************************************************************************************************************************************
+2023-11-01 11:04:01,686 p=22546 u=stephenamaki n=ansible | 10.255.255.85              : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-11-01 11:04:30,953 p=22560 u=stephenamaki n=ansible | persistent connection idle timeout triggered, timeout value is 30 secs.
+See the timeout setting options in the Network Debug and Troubleshooting Guide.
+2023-11-01 11:04:31,060 p=22560 u=stephenamaki n=ansible | shutdown complete
+2023-11-01 11:05:06,281 p=22933 u=stephenamaki n=ansible | PLAY [PLAY 1: Manage VPNs with jos_config and jinja] *********************************************************************************************************************************************
+2023-11-01 11:05:06,318 p=22933 u=stephenamaki n=ansible | TASK [TASK 1: Store platform-specific template path] *********************************************************************************************************************************************
+2023-11-01 11:05:07,712 p=22933 u=stephenamaki n=ansible | network_os is set to eos
+2023-11-01 11:05:07,713 p=22933 u=stephenamaki n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2023-11-01 11:05:07,718 p=22933 u=stephenamaki n=ansible | ok: [10.255.255.85]
+2023-11-01 11:05:07,722 p=22933 u=stephenamaki n=ansible | TASK [TASK 2: Apply Generic VRF config via SSH/CLI] **********************************************************************************************************************************************
+2023-11-01 11:05:07,757 p=22933 u=stephenamaki n=ansible | fatal: [10.255.255.85]: FAILED! => {"msg": "The task includes an option with an undefined variable. The error was: 'dict object' has no attribute 'name'. 'dict object' has no attribute 'name'. 'dict object' has no attribute 'name'. 'dict object' has no attribute 'name'\n\nThe error appears to be in '/Users/stephenamaki/Dropbox/netdevops/ansible/myscripts_ansible/ansible_cli_config/cli_config.yml': line 10, column 7, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n    # Cisco IOS configuration do not save\n    - name: \"TASK 2: Apply Generic VRF config via SSH/CLI\"\n      ^ here\nThis one looks easy to fix. It seems that there is a value started\nwith a quote, and the YAML parser is expecting to see the line ended\nwith the same kind of quote. For instance:\n\n    when: \"ok\" in result.stdout\n\nCould be written as:\n\n   when: '\"ok\" in result.stdout'\n\nOr equivalently:\n\n   when: \"'ok' in result.stdout\"\n"}
+2023-11-01 11:05:07,758 p=22933 u=stephenamaki n=ansible | PLAY RECAP ***************************************************************************************************************************************************************************************
+2023-11-01 11:05:07,758 p=22933 u=stephenamaki n=ansible | 10.255.255.85              : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-11-01 11:05:37,045 p=22952 u=stephenamaki n=ansible | persistent connection idle timeout triggered, timeout value is 30 secs.
+See the timeout setting options in the Network Debug and Troubleshooting Guide.
+2023-11-01 11:05:37,153 p=22952 u=stephenamaki n=ansible | shutdown complete
+2023-11-01 11:05:50,634 p=23187 u=stephenamaki n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 1 column 1 (char 0)
+
+Syntax Error while loading YAML.
+  did not find expected key
+
+The error appears to be in '/Users/stephenamaki/Dropbox/netdevops/ansible/myscripts_ansible/ansible_cli_config/cli_config.yml': line 11, column 9, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+    - name: "TASK 2: Apply Generic VRF config via SSH/CLI"
+        eos_config:
+        ^ here
+
+2023-11-01 11:07:07,430 p=23629 u=stephenamaki n=ansible | PLAY [PLAY 1: Manage VPNs with jos_config and jinja] *********************************************************************************************************************************************
+2023-11-01 11:07:07,456 p=23629 u=stephenamaki n=ansible | TASK [TASK 1: Store platform-specific template path] *********************************************************************************************************************************************
+2023-11-01 11:07:08,690 p=23629 u=stephenamaki n=ansible | network_os is set to ios
+2023-11-01 11:07:08,692 p=23629 u=stephenamaki n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2023-11-01 11:07:08,692 p=23629 u=stephenamaki n=ansible | network_os is set to eos
+2023-11-01 11:07:08,692 p=23629 u=stephenamaki n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2023-11-01 11:07:08,698 p=23629 u=stephenamaki n=ansible | ok: [10.255.255.71]
+2023-11-01 11:07:08,700 p=23629 u=stephenamaki n=ansible | ok: [10.255.255.85]
+2023-11-01 11:07:08,712 p=23629 u=stephenamaki n=ansible | TASK [TASK 2: Apply Generic VRF config via SSH/CLI] **********************************************************************************************************************************************
+2023-11-01 11:07:08,750 p=23629 u=stephenamaki n=ansible | fatal: [10.255.255.85]: FAILED! => {"msg": "The task includes an option with an undefined variable. The error was: 'dict object' has no attribute 'name'. 'dict object' has no attribute 'name'. 'dict object' has no attribute 'name'. 'dict object' has no attribute 'name'\n\nThe error appears to be in '/Users/stephenamaki/Dropbox/netdevops/ansible/myscripts_ansible/ansible_cli_config/cli_config.yml': line 10, column 7, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n    # Cisco IOS configuration do not save\n    - name: \"TASK 2: Apply Generic VRF config via SSH/CLI\"\n      ^ here\nThis one looks easy to fix. It seems that there is a value started\nwith a quote, and the YAML parser is expecting to see the line ended\nwith the same kind of quote. For instance:\n\n    when: \"ok\" in result.stdout\n\nCould be written as:\n\n   when: '\"ok\" in result.stdout'\n\nOr equivalently:\n\n   when: \"'ok' in result.stdout\"\n"}
+2023-11-01 11:07:09,873 p=23647 u=stephenamaki n=p=23647 u=stephenamaki | paramiko [10.255.255.71] | Connected (version 1.99, client Cisco-1.25)
+2023-11-01 11:07:10,255 p=23647 u=stephenamaki n=p=23647 u=stephenamaki | paramiko [10.255.255.71] | Auth banner: b"\r\n**************************************************************************\r\n* IOSv is strictly limited to use for evaluation, demonstration and IOS  *\r\n* education. IOSv is provided as-is and is not supported by Cisco's      *\r\n* Technical Advisory Center. Any use or disclosure, in whole or in part, *\r\n* of the IOSv Software or Documentation to any third party for any       *\r\n* purposes is expressly prohibited except as otherwise authorized by     *\r\n* Cisco in writing.                                                      *\r\n**************************************************************************"
+2023-11-01 11:07:10,265 p=23647 u=stephenamaki n=p=23647 u=stephenamaki | paramiko [10.255.255.71] | Authentication (password) successful!
+2023-11-01 11:07:11,567 p=23629 u=stephenamaki n=ansible | fatal: [10.255.255.71]: FAILED! => {"changed": false, "msg": "rd 65000:1\r\nrd 65000:1\r\n ^\r\n% Invalid input detected at '^' marker.\r\n\r\nROUTER-71(config)#"}
+2023-11-01 11:07:11,571 p=23629 u=stephenamaki n=ansible | PLAY RECAP ***************************************************************************************************************************************************************************************
+2023-11-01 11:07:11,571 p=23629 u=stephenamaki n=ansible | 10.255.255.71              : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-11-01 11:07:11,571 p=23629 u=stephenamaki n=ansible | 10.255.255.85              : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-11-01 11:07:11,671 p=23647 u=stephenamaki n=ansible | shutdown complete
+2023-11-01 11:07:38,002 p=23648 u=stephenamaki n=ansible | persistent connection idle timeout triggered, timeout value is 30 secs.
+See the timeout setting options in the Network Debug and Troubleshooting Guide.
+2023-11-01 11:07:38,113 p=23648 u=stephenamaki n=ansible | shutdown complete
+2023-11-01 11:07:57,109 p=23950 u=stephenamaki n=ansible | PLAY [PLAY 1: Manage VPNs with jos_config and jinja] *********************************************************************************************************************************************
+2023-11-01 11:07:57,131 p=23950 u=stephenamaki n=ansible | TASK [TASK 1: Store platform-specific template path] *********************************************************************************************************************************************
+2023-11-01 11:07:58,335 p=23950 u=stephenamaki n=ansible | network_os is set to ios
+2023-11-01 11:07:58,336 p=23950 u=stephenamaki n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2023-11-01 11:07:58,345 p=23950 u=stephenamaki n=ansible | ok: [10.255.255.71]
+2023-11-01 11:07:58,347 p=23950 u=stephenamaki n=ansible | network_os is set to eos
+2023-11-01 11:07:58,348 p=23950 u=stephenamaki n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2023-11-01 11:07:58,352 p=23950 u=stephenamaki n=ansible | ok: [10.255.255.85]
+2023-11-01 11:07:58,362 p=23950 u=stephenamaki n=ansible | TASK [TASK 2: Apply Generic VRF config via SSH/CLI] **********************************************************************************************************************************************
+2023-11-01 11:07:58,400 p=23950 u=stephenamaki n=ansible | fatal: [10.255.255.85]: FAILED! => {"msg": "The task includes an option with an undefined variable. The error was: 'dict object' has no attribute 'name'. 'dict object' has no attribute 'name'. 'dict object' has no attribute 'name'. 'dict object' has no attribute 'name'\n\nThe error appears to be in '/Users/stephenamaki/Dropbox/netdevops/ansible/myscripts_ansible/ansible_cli_config/cli_config.yml': line 10, column 7, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n    # Cisco IOS configuration do not save\n    - name: \"TASK 2: Apply Generic VRF config via SSH/CLI\"\n      ^ here\nThis one looks easy to fix. It seems that there is a value started\nwith a quote, and the YAML parser is expecting to see the line ended\nwith the same kind of quote. For instance:\n\n    when: \"ok\" in result.stdout\n\nCould be written as:\n\n   when: '\"ok\" in result.stdout'\n\nOr equivalently:\n\n   when: \"'ok' in result.stdout\"\n"}
+2023-11-01 11:07:59,541 p=23968 u=stephenamaki n=p=23968 u=stephenamaki | paramiko [10.255.255.71] | Connected (version 1.99, client Cisco-1.25)
+2023-11-01 11:07:59,924 p=23968 u=stephenamaki n=p=23968 u=stephenamaki | paramiko [10.255.255.71] | Auth banner: b"\r\n**************************************************************************\r\n* IOSv is strictly limited to use for evaluation, demonstration and IOS  *\r\n* education. IOSv is provided as-is and is not supported by Cisco's      *\r\n* Technical Advisory Center. Any use or disclosure, in whole or in part, *\r\n* of the IOSv Software or Documentation to any third party for any       *\r\n* purposes is expressly prohibited except as otherwise authorized by     *\r\n* Cisco in writing.                                                      *\r\n**************************************************************************"
+2023-11-01 11:07:59,933 p=23968 u=stephenamaki n=p=23968 u=stephenamaki | paramiko [10.255.255.71] | Authentication (password) successful!
+2023-11-01 11:08:08,888 p=23950 u=stephenamaki n=ansible | [WARNING]: To ensure idempotency and correct diff the input configuration lines should be similar to how they appear if present in the running configuration on device including the indentation
+
+2023-11-01 11:08:08,888 p=23950 u=stephenamaki n=ansible | changed: [10.255.255.71]
+2023-11-01 11:08:08,899 p=23950 u=stephenamaki n=ansible | RUNNING HANDLER [HANDLER 1: Display relevant changes] ********************************************************************************************************************************************
+2023-11-01 11:08:10,011 p=23950 u=stephenamaki n=ansible | ok: [10.255.255.71] => {
+    "msg": {
+        "changed": true,
+        "commands": [
+            "vrf definition VRF_1",
+            "rd 65000:1",
+            "description VRF_1 EXAMPLE",
+            "address-family ipv4",
+            "route-target export 65000:1",
+            "address-family ipv6",
+            "route-target export 65000:1",
+            "address-family ipv4",
+            "route-target export 65713:713",
+            "address-family ipv6",
+            "route-target export 65713:713",
+            "address-family ipv4",
+            "route-target export 65714:714",
+            "address-family ipv6",
+            "route-target export 65714:714",
+            "address-family ipv4",
+            "route-target import 65000:1",
+            "address-family ipv6",
+            "route-target import 65000:1",
+            "address-family ipv4",
+            "route-target import 65711:711",
+            "address-family ipv6",
+            "route-target import 65711:711",
+            "address-family ipv4",
+            "route-target import 65712:712",
+            "address-family ipv6",
+            "route-target import 65712:712",
+            "vrf definition VRF_2",
+            "rd 65000:2",
+            "description VRF_2 EXAMPLE",
+            "address-family ipv4",
+            "route-target export 65000:2",
+            "address-family ipv6",
+            "route-target export 65000:2",
+            "address-family ipv4",
+            "route-target export 65718:717",
+            "address-family ipv6",
+            "route-target export 65718:717",
+            "address-family ipv4",
+            "route-target export 65718:718",
+            "address-family ipv6",
+            "route-target export 65718:718",
+            "address-family ipv4",
+            "route-target import 65000:2",
+            "address-family ipv6",
+            "route-target import 65000:2",
+            "address-family ipv4",
+            "route-target import 65715:715",
+            "address-family ipv6",
+            "route-target import 65715:715",
+            "address-family ipv4",
+            "route-target import 65716:716",
+            "address-family ipv6",
+            "route-target import 65716:716"
+        ],
+        "failed": false,
+        "warnings": [
+            "To ensure idempotency and correct diff the input configuration lines should be similar to how they appear if present in the running configuration on device including the indentation"
+        ]
+    }
+}
+2023-11-01 11:08:10,021 p=23950 u=stephenamaki n=ansible | PLAY RECAP ***************************************************************************************************************************************************************************************
+2023-11-01 11:08:10,022 p=23950 u=stephenamaki n=ansible | 10.255.255.71              : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-11-01 11:08:10,022 p=23950 u=stephenamaki n=ansible | 10.255.255.85              : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-11-01 11:08:10,122 p=23968 u=stephenamaki n=ansible | shutdown complete
+2023-11-01 11:08:27,665 p=23971 u=stephenamaki n=ansible | persistent connection idle timeout triggered, timeout value is 30 secs.
+See the timeout setting options in the Network Debug and Troubleshooting Guide.
+2023-11-01 11:08:27,775 p=23971 u=stephenamaki n=ansible | shutdown complete
+2023-11-01 12:58:24,473 p=60409 u=stephenamaki n=ansible | PLAY [PLAY 1: Manage VPNs with jos_config and jinja2] ********************************************************************************************************************************************
+2023-11-01 12:58:24,501 p=60409 u=stephenamaki n=ansible | TASK [TASK 1: Store platform-specific template path] *********************************************************************************************************************************************
+2023-11-01 12:58:25,685 p=60409 u=stephenamaki n=ansible | network_os is set to ios
+2023-11-01 12:58:25,686 p=60409 u=stephenamaki n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2023-11-01 12:58:25,690 p=60409 u=stephenamaki n=ansible | ok: [10.255.255.71]
+2023-11-01 12:58:25,695 p=60409 u=stephenamaki n=ansible | network_os is set to eos
+2023-11-01 12:58:25,696 p=60409 u=stephenamaki n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2023-11-01 12:58:25,701 p=60409 u=stephenamaki n=ansible | ok: [10.255.255.85]
+2023-11-01 12:58:25,717 p=60409 u=stephenamaki n=ansible | TASK [TASK 2: Apply Generic VRF config via SSH/CLI] **********************************************************************************************************************************************
+2023-11-01 12:58:26,862 p=60425 u=stephenamaki n=p=60425 u=stephenamaki | paramiko [10.255.255.71] | Connected (version 1.99, client Cisco-1.25)
+2023-11-01 12:58:26,975 p=60429 u=stephenamaki n=p=60429 u=stephenamaki | paramiko [10.255.255.85] | Connected (version 2.0, client OpenSSH_6.6.1)
+2023-11-01 12:58:27,072 p=60429 u=stephenamaki n=p=60429 u=stephenamaki | paramiko [10.255.255.85] | Authentication (keyboard-interactive) successful!
+2023-11-01 12:58:27,249 p=60425 u=stephenamaki n=p=60425 u=stephenamaki | paramiko [10.255.255.71] | Auth banner: b"\r\n**************************************************************************\r\n* IOSv is strictly limited to use for evaluation, demonstration and IOS  *\r\n* education. IOSv is provided as-is and is not supported by Cisco's      *\r\n* Technical Advisory Center. Any use or disclosure, in whole or in part, *\r\n* of the IOSv Software or Documentation to any third party for any       *\r\n* purposes is expressly prohibited except as otherwise authorized by     *\r\n* Cisco in writing.                                                      *\r\n**************************************************************************"
+2023-11-01 12:58:27,255 p=60425 u=stephenamaki n=p=60425 u=stephenamaki | paramiko [10.255.255.71] | Authentication (password) successful!
+2023-11-01 12:58:34,731 p=60409 u=stephenamaki n=ansible | [WARNING]: To ensure idempotency and correct diff the input configuration lines should be similar to how they appear if present in the running configuration on device including the indentation
+
+2023-11-01 12:58:34,731 p=60409 u=stephenamaki n=ansible | changed: [10.255.255.85]
+2023-11-01 12:58:35,623 p=60409 u=stephenamaki n=ansible | changed: [10.255.255.71]
+2023-11-01 12:58:35,639 p=60409 u=stephenamaki n=ansible | RUNNING HANDLER [HANDLER 1: Display relevant changes] ********************************************************************************************************************************************
+2023-11-01 12:58:36,820 p=60409 u=stephenamaki n=ansible | ok: [10.255.255.71] => {
+    "msg": {
+        "changed": true,
+        "commands": [
+            "vrf definition VRF_1",
+            "rd 65000:1",
+            "description VRF_1 EXAMPLE",
+            "address-family ipv4",
+            "route-target export 65000:1",
+            "address-family ipv6",
+            "route-target export 65000:1",
+            "address-family ipv4",
+            "route-target export 713:713",
+            "address-family ipv6",
+            "route-target export 713:713",
+            "address-family ipv4",
+            "route-target export 714:714",
+            "address-family ipv6",
+            "route-target export 714:714",
+            "address-family ipv4",
+            "route-target import 65000:1",
+            "address-family ipv6",
+            "route-target import 65000:1",
+            "address-family ipv4",
+            "route-target import 711:711",
+            "address-family ipv6",
+            "route-target import 711:711",
+            "address-family ipv4",
+            "route-target import 712:712",
+            "address-family ipv6",
+            "route-target import 712:712",
+            "vrf definition VRF_2",
+            "rd 65000:2",
+            "description VRF_2 EXAMPLE",
+            "address-family ipv4",
+            "route-target export 65000:2",
+            "address-family ipv6",
+            "route-target export 65000:2",
+            "address-family ipv4",
+            "route-target export 717:717",
+            "address-family ipv6",
+            "route-target export 717:717",
+            "address-family ipv4",
+            "route-target export 718:718",
+            "address-family ipv6",
+            "route-target export 718:718",
+            "address-family ipv4",
+            "route-target import 65000:2",
+            "address-family ipv6",
+            "route-target import 65000:2",
+            "address-family ipv4",
+            "route-target import 715:715",
+            "address-family ipv6",
+            "route-target import 715:715",
+            "address-family ipv4",
+            "route-target import 716:716",
+            "address-family ipv6",
+            "route-target import 716:716"
+        ],
+        "failed": false,
+        "warnings": [
+            "To ensure idempotency and correct diff the input configuration lines should be similar to how they appear if present in the running configuration on device including the indentation"
+        ]
+    }
+}
+2023-11-01 12:58:36,821 p=60409 u=stephenamaki n=ansible | ok: [10.255.255.85] => {
+    "msg": {
+        "changed": true,
+        "diff": "--- system:/running-config\n+++ session:/ansible_169885790836-session-config\n@@ -19,6 +19,12 @@\n username admin role network-admin secret sha512 $6$5/sHXHxPPEWuOKZH$wWysJJYyH2NcwEOn5wWRc0ocQjiJ2N8VEy6wBS8N78fH13xKWnWp/bbPazTs17DxiSHp4LDN5qy6M63LZmbn3.\n !\n clock timezone America/New_York\n+!\n+vrf definition VRF_1\n+   description VRF_1 EXAMPLE\n+!\n+vrf definition VRF_2\n+   description VRF_2 EXAMPLE\n !\n interface Ethernet1\n    no switchport\n@@ -94,6 +100,8 @@\n ip route 0.0.0.0/0 10.255.255.254\n !\n ip routing\n+ip routing vrf VRF_1\n+ip routing vrf VRF_2\n !\n router bgp 103\n    maximum-paths 4 ecmp 64\n@@ -106,6 +114,36 @@\n    !\n    address-family evpn\n       neighbor OVERLAY activate\n+   !\n+   vrf VRF_1\n+      rd 65000:1\n+      route-target import vpn-ipv6 851:851\n+      route-target import vpn-ipv6 852:852\n+      route-target import vpn-ipv6 65000:1\n+      route-target import vpn-ipv4 851:851\n+      route-target import vpn-ipv4 852:852\n+      route-target import vpn-ipv4 65000:1\n+      route-target export vpn-ipv6 853:853\n+      route-target export vpn-ipv6 854:854\n+      route-target export vpn-ipv6 65000:1\n+      route-target export vpn-ipv4 853:853\n+      route-target export vpn-ipv4 854:854\n+      route-target export vpn-ipv4 65000:1\n+   !\n+   vrf VRF_2\n+      rd 65000:2\n+      route-target import vpn-ipv6 855:855\n+      route-target import vpn-ipv6 856:856\n+      route-target import vpn-ipv6 65000:2\n+      route-target import vpn-ipv4 855:855\n+      route-target import vpn-ipv4 856:856\n+      route-target import vpn-ipv4 65000:2\n+      route-target export vpn-ipv6 857:857\n+      route-target export vpn-ipv6 858:858\n+      route-target export vpn-ipv6 65000:2\n+      route-target export vpn-ipv4 857:857\n+      route-target export vpn-ipv4 858:858\n+      route-target export vpn-ipv4 65000:2\n !\n router ospf 103\n    router-id 10.3.255.85",
+        "failed": false,
+        "warnings": [
+            "To ensure idempotency and correct diff the input configuration lines should be similar to how they appear if present in the running configuration on device including the indentation"
+        ]
+    }
+}
+2023-11-01 12:58:36,837 p=60409 u=stephenamaki n=ansible | PLAY RECAP ***************************************************************************************************************************************************************************************
+2023-11-01 12:58:36,837 p=60409 u=stephenamaki n=ansible | 10.255.255.71              : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-11-01 12:58:36,837 p=60409 u=stephenamaki n=ansible | 10.255.255.85              : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-11-01 12:58:36,937 p=60429 u=stephenamaki n=ansible | shutdown complete
+2023-11-01 12:58:36,937 p=60425 u=stephenamaki n=ansible | shutdown complete
+2023-11-01 14:05:45,005 p=81332 u=stephenamaki n=ansible | PLAY [PLAY 1: Manage VPNs with jos_config and jinja2] ********************************************************************************************************************************************
+2023-11-01 14:05:45,074 p=81332 u=stephenamaki n=ansible | TASK [TASK 1: Store platform-specific template path] *********************************************************************************************************************************************
+2023-11-01 14:05:46,657 p=81332 u=stephenamaki n=ansible | network_os is set to ios
+2023-11-01 14:05:46,657 p=81332 u=stephenamaki n=ansible | network_os is set to ios
+2023-11-01 14:05:46,658 p=81332 u=stephenamaki n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2023-11-01 14:05:46,658 p=81332 u=stephenamaki n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2023-11-01 14:05:46,661 p=81332 u=stephenamaki n=ansible | network_os is set to ios
+2023-11-01 14:05:46,661 p=81332 u=stephenamaki n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2023-11-01 14:05:46,670 p=81332 u=stephenamaki n=ansible | ok: [10.255.255.72]
+2023-11-01 14:05:46,673 p=81332 u=stephenamaki n=ansible | network_os is set to ios
+2023-11-01 14:05:46,675 p=81332 u=stephenamaki n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2023-11-01 14:05:46,676 p=81332 u=stephenamaki n=ansible | network_os is set to eos
+2023-11-01 14:05:46,676 p=81332 u=stephenamaki n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2023-11-01 14:05:46,685 p=81332 u=stephenamaki n=ansible | ok: [10.255.255.71]
+2023-11-01 14:05:46,695 p=81332 u=stephenamaki n=ansible | ok: [10.255.255.73]
+2023-11-01 14:05:46,696 p=81332 u=stephenamaki n=ansible | ok: [10.255.255.74]
+2023-11-01 14:05:46,696 p=81332 u=stephenamaki n=ansible | ok: [10.255.255.85]
+2023-11-01 14:05:47,992 p=81332 u=stephenamaki n=ansible | network_os is set to eos
+2023-11-01 14:05:47,993 p=81332 u=stephenamaki n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2023-11-01 14:05:47,993 p=81332 u=stephenamaki n=ansible | network_os is set to eos
+2023-11-01 14:05:47,993 p=81332 u=stephenamaki n=ansible | network_os is set to eos
+2023-11-01 14:05:47,993 p=81332 u=stephenamaki n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2023-11-01 14:05:47,993 p=81332 u=stephenamaki n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2023-11-01 14:05:47,997 p=81332 u=stephenamaki n=ansible | ok: [10.255.255.86]
+2023-11-01 14:05:47,998 p=81332 u=stephenamaki n=ansible | ok: [10.255.255.87]
+2023-11-01 14:05:47,999 p=81332 u=stephenamaki n=ansible | ok: [10.255.255.88]
+2023-11-01 14:05:48,020 p=81332 u=stephenamaki n=ansible | TASK [TASK 2: Apply Generic VRF config via SSH/CLI] **********************************************************************************************************************************************
+2023-11-01 14:05:49,349 p=81371 u=stephenamaki n=p=81371 u=stephenamaki | paramiko [10.255.255.72] | Connected (version 1.99, client Cisco-1.25)
+2023-11-01 14:05:49,352 p=81369 u=stephenamaki n=p=81369 u=stephenamaki | paramiko [10.255.255.73] | Connected (version 1.99, client Cisco-1.25)
+2023-11-01 14:05:49,352 p=81364 u=stephenamaki n=p=81364 u=stephenamaki | paramiko [10.255.255.74] | Connected (version 1.99, client Cisco-1.25)
+2023-11-01 14:05:49,365 p=81366 u=stephenamaki n=p=81366 u=stephenamaki | paramiko [10.255.255.71] | Connected (version 1.99, client Cisco-1.25)
+2023-11-01 14:05:49,480 p=81370 u=stephenamaki n=p=81370 u=stephenamaki | paramiko [10.255.255.85] | Connected (version 2.0, client OpenSSH_6.6.1)
+2023-11-01 14:05:49,584 p=81370 u=stephenamaki n=p=81370 u=stephenamaki | paramiko [10.255.255.85] | Authentication (keyboard-interactive) successful!
+2023-11-01 14:05:49,758 p=81366 u=stephenamaki n=p=81366 u=stephenamaki | paramiko [10.255.255.71] | Auth banner: b"\r\n**************************************************************************\r\n* IOSv is strictly limited to use for evaluation, demonstration and IOS  *\r\n* education. IOSv is provided as-is and is not supported by Cisco's      *\r\n* Technical Advisory Center. Any use or disclosure, in whole or in part, *\r\n* of the IOSv Software or Documentation to any third party for any       *\r\n* purposes is expressly prohibited except as otherwise authorized by     *\r\n* Cisco in writing.                                                      *\r\n**************************************************************************"
+2023-11-01 14:05:49,764 p=81366 u=stephenamaki n=p=81366 u=stephenamaki | paramiko [10.255.255.71] | Authentication (password) successful!
+2023-11-01 14:05:50,195 p=81364 u=stephenamaki n=p=81364 u=stephenamaki | paramiko [10.255.255.74] | Auth banner: b"\r\n**************************************************************************\r\n* IOSv is strictly limited to use for evaluation, demonstration and IOS  *\r\n* education. IOSv is provided as-is and is not supported by Cisco's      *\r\n* Technical Advisory Center. Any use or disclosure, in whole or in part, *\r\n* of the IOSv Software or Documentation to any third party for any       *\r\n* purposes is expressly prohibited except as otherwise authorized by     *\r\n* Cisco in writing.                                                      *\r\n**************************************************************************"
+2023-11-01 14:05:50,200 p=81364 u=stephenamaki n=p=81364 u=stephenamaki | paramiko [10.255.255.74] | Authentication (password) successful!
+2023-11-01 14:05:50,554 p=81369 u=stephenamaki n=p=81369 u=stephenamaki | paramiko [10.255.255.73] | Auth banner: b"\r\n**************************************************************************\r\n* IOSv is strictly limited to use for evaluation, demonstration and IOS  *\r\n* education. IOSv is provided as-is and is not supported by Cisco's      *\r\n* Technical Advisory Center. Any use or disclosure, in whole or in part, *\r\n* of the IOSv Software or Documentation to any third party for any       *\r\n* purposes is expressly prohibited except as otherwise authorized by     *\r\n* Cisco in writing.                                                      *\r\n**************************************************************************"
+2023-11-01 14:05:50,558 p=81369 u=stephenamaki n=p=81369 u=stephenamaki | paramiko [10.255.255.73] | Authentication (password) successful!
+2023-11-01 14:05:50,564 p=81371 u=stephenamaki n=p=81371 u=stephenamaki | paramiko [10.255.255.72] | Auth banner: b"\r\n**************************************************************************\r\n* IOSv is strictly limited to use for evaluation, demonstration and IOS  *\r\n* education. IOSv is provided as-is and is not supported by Cisco's      *\r\n* Technical Advisory Center. Any use or disclosure, in whole or in part, *\r\n* of the IOSv Software or Documentation to any third party for any       *\r\n* purposes is expressly prohibited except as otherwise authorized by     *\r\n* Cisco in writing.                                                      *\r\n**************************************************************************"
+2023-11-01 14:05:50,568 p=81371 u=stephenamaki n=p=81371 u=stephenamaki | paramiko [10.255.255.72] | Authentication (password) successful!
+2023-11-01 14:05:57,513 p=81332 u=stephenamaki n=ansible | [WARNING]: To ensure idempotency and correct diff the input configuration lines should be similar to how they appear if present in the running configuration on device including the indentation
+
+2023-11-01 14:05:57,513 p=81332 u=stephenamaki n=ansible | changed: [10.255.255.85]
+2023-11-01 14:05:58,105 p=81332 u=stephenamaki n=ansible | changed: [10.255.255.71]
+2023-11-01 14:05:58,305 p=81332 u=stephenamaki n=ansible | changed: [10.255.255.74]
+2023-11-01 14:05:58,570 p=81332 u=stephenamaki n=ansible | changed: [10.255.255.73]
+2023-11-01 14:05:58,670 p=81332 u=stephenamaki n=ansible | changed: [10.255.255.72]
+2023-11-01 14:05:58,755 p=81389 u=stephenamaki n=p=81389 u=stephenamaki | paramiko [10.255.255.86] | Connected (version 2.0, client OpenSSH_6.6.1)
+2023-11-01 14:05:58,863 p=81389 u=stephenamaki n=p=81389 u=stephenamaki | paramiko [10.255.255.86] | Authentication (keyboard-interactive) successful!
+2023-11-01 14:05:59,381 p=81391 u=stephenamaki n=p=81391 u=stephenamaki | paramiko [10.255.255.87] | Connected (version 2.0, client OpenSSH_6.6.1)
+2023-11-01 14:05:59,480 p=81391 u=stephenamaki n=p=81391 u=stephenamaki | paramiko [10.255.255.87] | Authentication (keyboard-interactive) successful!
+2023-11-01 14:05:59,604 p=81390 u=stephenamaki n=p=81390 u=stephenamaki | paramiko [10.255.255.88] | Connected (version 2.0, client OpenSSH_6.6.1)
+2023-11-01 14:05:59,710 p=81390 u=stephenamaki n=p=81390 u=stephenamaki | paramiko [10.255.255.88] | Authentication (keyboard-interactive) successful!
+2023-11-01 14:06:06,456 p=81332 u=stephenamaki n=ansible | changed: [10.255.255.86]
+2023-11-01 14:06:07,110 p=81332 u=stephenamaki n=ansible | changed: [10.255.255.87]
+2023-11-01 14:06:07,449 p=81332 u=stephenamaki n=ansible | changed: [10.255.255.88]
+2023-11-01 14:06:07,508 p=81332 u=stephenamaki n=ansible | RUNNING HANDLER [HANDLER 1: Display relevant changes] ********************************************************************************************************************************************
+2023-11-01 14:06:08,839 p=81332 u=stephenamaki n=ansible | ok: [10.255.255.71] => {
+    "msg": {
+        "changed": true,
+        "commands": [
+            "vrf definition VRF_1",
+            "rd 65000:1",
+            "description VRF_1 EXAMPLE",
+            "address-family ipv4",
+            "route-target export 65000:1",
+            "address-family ipv6",
+            "route-target export 65000:1",
+            "address-family ipv4",
+            "route-target export 713:713",
+            "address-family ipv6",
+            "route-target export 713:713",
+            "address-family ipv4",
+            "route-target export 714:714",
+            "address-family ipv6",
+            "route-target export 714:714",
+            "address-family ipv4",
+            "route-target import 65000:1",
+            "address-family ipv6",
+            "route-target import 65000:1",
+            "address-family ipv4",
+            "route-target import 711:711",
+            "address-family ipv6",
+            "route-target import 711:711",
+            "address-family ipv4",
+            "route-target import 712:712",
+            "address-family ipv6",
+            "route-target import 712:712",
+            "vrf definition VRF_2",
+            "rd 65000:2",
+            "description VRF_2 EXAMPLE",
+            "address-family ipv4",
+            "route-target export 65000:2",
+            "address-family ipv6",
+            "route-target export 65000:2",
+            "address-family ipv4",
+            "route-target export 717:717",
+            "address-family ipv6",
+            "route-target export 717:717",
+            "address-family ipv4",
+            "route-target export 718:718",
+            "address-family ipv6",
+            "route-target export 718:718",
+            "address-family ipv4",
+            "route-target import 65000:2",
+            "address-family ipv6",
+            "route-target import 65000:2",
+            "address-family ipv4",
+            "route-target import 715:715",
+            "address-family ipv6",
+            "route-target import 715:715",
+            "address-family ipv4",
+            "route-target import 716:716",
+            "address-family ipv6",
+            "route-target import 716:716"
+        ],
+        "failed": false,
+        "warnings": [
+            "To ensure idempotency and correct diff the input configuration lines should be similar to how they appear if present in the running configuration on device including the indentation"
+        ]
+    }
+}
+2023-11-01 14:06:08,854 p=81332 u=stephenamaki n=ansible | ok: [10.255.255.72] => {
+    "msg": {
+        "changed": true,
+        "commands": [
+            "vrf definition VRF_1",
+            "rd 65000:1",
+            "description VRF_1 EXAMPLE",
+            "address-family ipv4",
+            "route-target export 65000:1",
+            "address-family ipv6",
+            "route-target export 65000:1",
+            "address-family ipv4",
+            "route-target export 723:723",
+            "address-family ipv6",
+            "route-target export 723:723",
+            "address-family ipv4",
+            "route-target export 724:724",
+            "address-family ipv6",
+            "route-target export 724:724",
+            "address-family ipv4",
+            "route-target import 65000:1",
+            "address-family ipv6",
+            "route-target import 65000:1",
+            "address-family ipv4",
+            "route-target import 721:721",
+            "address-family ipv6",
+            "route-target import 721:721",
+            "address-family ipv4",
+            "route-target import 722:722",
+            "address-family ipv6",
+            "route-target import 722:722",
+            "vrf definition VRF_2",
+            "rd 65000:2",
+            "description VRF_2 EXAMPLE",
+            "address-family ipv4",
+            "route-target export 65000:2",
+            "address-family ipv6",
+            "route-target export 65000:2",
+            "address-family ipv4",
+            "route-target export 727:727",
+            "address-family ipv6",
+            "route-target export 727:727",
+            "address-family ipv4",
+            "route-target export 728:728",
+            "address-family ipv6",
+            "route-target export 728:728",
+            "address-family ipv4",
+            "route-target import 65000:2",
+            "address-family ipv6",
+            "route-target import 65000:2",
+            "address-family ipv4",
+            "route-target import 725:725",
+            "address-family ipv6",
+            "route-target import 725:725",
+            "address-family ipv4",
+            "route-target import 726:726",
+            "address-family ipv6",
+            "route-target import 726:726"
+        ],
+        "failed": false,
+        "warnings": [
+            "To ensure idempotency and correct diff the input configuration lines should be similar to how they appear if present in the running configuration on device including the indentation"
+        ]
+    }
+}
+2023-11-01 14:06:08,867 p=81332 u=stephenamaki n=ansible | ok: [10.255.255.73] => {
+    "msg": {
+        "changed": true,
+        "commands": [
+            "vrf definition VRF_1",
+            "rd 65000:1",
+            "description VRF_1 EXAMPLE",
+            "address-family ipv4",
+            "route-target export 65000:1",
+            "address-family ipv6",
+            "route-target export 65000:1",
+            "address-family ipv4",
+            "route-target export 733:733",
+            "address-family ipv6",
+            "route-target export 733:733",
+            "address-family ipv4",
+            "route-target export 734:734",
+            "address-family ipv6",
+            "route-target export 734:734",
+            "address-family ipv4",
+            "route-target import 65000:1",
+            "address-family ipv6",
+            "route-target import 65000:1",
+            "address-family ipv4",
+            "route-target import 731:731",
+            "address-family ipv6",
+            "route-target import 731:731",
+            "address-family ipv4",
+            "route-target import 732:732",
+            "address-family ipv6",
+            "route-target import 732:732",
+            "vrf definition VRF_2",
+            "rd 65000:2",
+            "description VRF_2 EXAMPLE",
+            "address-family ipv4",
+            "route-target export 65000:2",
+            "address-family ipv6",
+            "route-target export 65000:2",
+            "address-family ipv4",
+            "route-target export 737:737",
+            "address-family ipv6",
+            "route-target export 737:737",
+            "address-family ipv4",
+            "route-target export 738:738",
+            "address-family ipv6",
+            "route-target export 738:738",
+            "address-family ipv4",
+            "route-target import 65000:2",
+            "address-family ipv6",
+            "route-target import 65000:2",
+            "address-family ipv4",
+            "route-target import 735:735",
+            "address-family ipv6",
+            "route-target import 735:735",
+            "address-family ipv4",
+            "route-target import 736:736",
+            "address-family ipv6",
+            "route-target import 736:736"
+        ],
+        "failed": false,
+        "warnings": [
+            "To ensure idempotency and correct diff the input configuration lines should be similar to how they appear if present in the running configuration on device including the indentation"
+        ]
+    }
+}
+2023-11-01 14:06:08,869 p=81332 u=stephenamaki n=ansible | ok: [10.255.255.74] => {
+    "msg": {
+        "changed": true,
+        "commands": [
+            "vrf definition VRF_1",
+            "rd 65000:1",
+            "description VRF_1 EXAMPLE",
+            "address-family ipv4",
+            "route-target export 65000:1",
+            "address-family ipv6",
+            "route-target export 65000:1",
+            "address-family ipv4",
+            "route-target export 743:743",
+            "address-family ipv6",
+            "route-target export 743:743",
+            "address-family ipv4",
+            "route-target export 744:744",
+            "address-family ipv6",
+            "route-target export 744:744",
+            "address-family ipv4",
+            "route-target import 65000:1",
+            "address-family ipv6",
+            "route-target import 65000:1",
+            "address-family ipv4",
+            "route-target import 741:741",
+            "address-family ipv6",
+            "route-target import 741:741",
+            "address-family ipv4",
+            "route-target import 742:742",
+            "address-family ipv6",
+            "route-target import 742:742",
+            "vrf definition VRF_2",
+            "rd 65000:2",
+            "description VRF_2 EXAMPLE",
+            "address-family ipv4",
+            "route-target export 65000:2",
+            "address-family ipv6",
+            "route-target export 65000:2",
+            "address-family ipv4",
+            "route-target export 747:747",
+            "address-family ipv6",
+            "route-target export 747:747",
+            "address-family ipv4",
+            "route-target export 748:748",
+            "address-family ipv6",
+            "route-target export 748:748",
+            "address-family ipv4",
+            "route-target import 65000:2",
+            "address-family ipv6",
+            "route-target import 65000:2",
+            "address-family ipv4",
+            "route-target import 745:745",
+            "address-family ipv6",
+            "route-target import 745:745",
+            "address-family ipv4",
+            "route-target import 746:746",
+            "address-family ipv6",
+            "route-target import 746:746"
+        ],
+        "failed": false,
+        "warnings": [
+            "To ensure idempotency and correct diff the input configuration lines should be similar to how they appear if present in the running configuration on device including the indentation"
+        ]
+    }
+}
+2023-11-01 14:06:08,886 p=81332 u=stephenamaki n=ansible | ok: [10.255.255.85] => {
+    "msg": {
+        "changed": true,
+        "diff": "--- system:/running-config\n+++ session:/ansible_169886195088-session-config\n@@ -19,6 +19,12 @@\n username admin role network-admin secret sha512 $6$5/sHXHxPPEWuOKZH$wWysJJYyH2NcwEOn5wWRc0ocQjiJ2N8VEy6wBS8N78fH13xKWnWp/bbPazTs17DxiSHp4LDN5qy6M63LZmbn3.\n !\n clock timezone America/New_York\n+!\n+vrf definition VRF_1\n+   description VRF_1 EXAMPLE\n+!\n+vrf definition VRF_2\n+   description VRF_2 EXAMPLE\n !\n interface Ethernet1\n    no switchport\n@@ -94,6 +100,8 @@\n ip route 0.0.0.0/0 10.255.255.254\n !\n ip routing\n+ip routing vrf VRF_1\n+ip routing vrf VRF_2\n !\n router bgp 103\n    maximum-paths 4 ecmp 64\n@@ -106,6 +114,36 @@\n    !\n    address-family evpn\n       neighbor OVERLAY activate\n+   !\n+   vrf VRF_1\n+      rd 65000:1\n+      route-target import vpn-ipv6 851:851\n+      route-target import vpn-ipv6 852:852\n+      route-target import vpn-ipv6 65000:1\n+      route-target import vpn-ipv4 851:851\n+      route-target import vpn-ipv4 852:852\n+      route-target import vpn-ipv4 65000:1\n+      route-target export vpn-ipv6 853:853\n+      route-target export vpn-ipv6 854:854\n+      route-target export vpn-ipv6 65000:1\n+      route-target export vpn-ipv4 853:853\n+      route-target export vpn-ipv4 854:854\n+      route-target export vpn-ipv4 65000:1\n+   !\n+   vrf VRF_2\n+      rd 65000:2\n+      route-target import vpn-ipv6 855:855\n+      route-target import vpn-ipv6 856:856\n+      route-target import vpn-ipv6 65000:2\n+      route-target import vpn-ipv4 855:855\n+      route-target import vpn-ipv4 856:856\n+      route-target import vpn-ipv4 65000:2\n+      route-target export vpn-ipv6 857:857\n+      route-target export vpn-ipv6 858:858\n+      route-target export vpn-ipv6 65000:2\n+      route-target export vpn-ipv4 857:857\n+      route-target export vpn-ipv4 858:858\n+      route-target export vpn-ipv4 65000:2\n !\n router ospf 103\n    router-id 10.3.255.85",
+        "failed": false,
+        "warnings": [
+            "To ensure idempotency and correct diff the input configuration lines should be similar to how they appear if present in the running configuration on device including the indentation"
+        ]
+    }
+}
+2023-11-01 14:06:10,054 p=81332 u=stephenamaki n=ansible | ok: [10.255.255.86] => {
+    "msg": {
+        "changed": true,
+        "diff": "--- system:/running-config\n+++ session:/ansible_169886196017-session-config\n@@ -19,6 +19,12 @@\n username admin role network-admin secret sha512 $6$nTliC8blYbVLrcJi$UpwWflzSrKMjYDTCDjpstuZuatL79VZrDiaZBzSaQjbcBB6RLT23UB.ksdjnQI2fmaNqz6kD8M4ppOMRCuGlN/\n !\n clock timezone America/New_York\n+!\n+vrf definition VRF_1\n+   description VRF_1 EXAMPLE\n+!\n+vrf definition VRF_2\n+   description VRF_2 EXAMPLE\n !\n interface Ethernet1\n    no switchport\n@@ -94,6 +100,8 @@\n ip route 0.0.0.0/0 10.255.255.254\n !\n ip routing\n+ip routing vrf VRF_1\n+ip routing vrf VRF_2\n !\n router bgp 103\n    maximum-paths 4 ecmp 64\n@@ -106,6 +114,36 @@\n    !\n    address-family evpn\n       neighbor OVERLAY activate\n+   !\n+   vrf VRF_1\n+      rd 65000:1\n+      route-target import vpn-ipv6 861:861\n+      route-target import vpn-ipv6 862:862\n+      route-target import vpn-ipv6 65000:1\n+      route-target import vpn-ipv4 861:861\n+      route-target import vpn-ipv4 862:862\n+      route-target import vpn-ipv4 65000:1\n+      route-target export vpn-ipv6 863:863\n+      route-target export vpn-ipv6 864:864\n+      route-target export vpn-ipv6 65000:1\n+      route-target export vpn-ipv4 863:863\n+      route-target export vpn-ipv4 864:864\n+      route-target export vpn-ipv4 65000:1\n+   !\n+   vrf VRF_2\n+      rd 65000:2\n+      route-target import vpn-ipv6 865:865\n+      route-target import vpn-ipv6 866:866\n+      route-target import vpn-ipv6 65000:2\n+      route-target import vpn-ipv4 865:865\n+      route-target import vpn-ipv4 866:866\n+      route-target import vpn-ipv4 65000:2\n+      route-target export vpn-ipv6 867:867\n+      route-target export vpn-ipv6 868:868\n+      route-target export vpn-ipv6 65000:2\n+      route-target export vpn-ipv4 867:867\n+      route-target export vpn-ipv4 868:868\n+      route-target export vpn-ipv4 65000:2\n !\n router ospf 103\n    router-id 10.3.255.86",
+        "failed": false,
+        "warnings": [
+            "To ensure idempotency and correct diff the input configuration lines should be similar to how they appear if present in the running configuration on device including the indentation"
+        ]
+    }
+}
+2023-11-01 14:06:10,059 p=81332 u=stephenamaki n=ansible | ok: [10.255.255.87] => {
+    "msg": {
+        "changed": true,
+        "diff": "--- system:/running-config\n+++ session:/ansible_169886196079-session-config\n@@ -28,6 +28,12 @@\n    trunk group mlag_peer\n !\n vrf definition TENANT_VRF\n+!\n+vrf definition VRF_1\n+   description VRF_1 EXAMPLE\n+!\n+vrf definition VRF_2\n+   description VRF_2 EXAMPLE\n !\n interface Port-Channel11\n    description Juniper VR\n@@ -138,7 +144,9 @@\n ip route 0.0.0.0/0 10.255.255.254\n !\n ip routing\n+ip routing vrf VRF_1\n ip routing vrf TENANT_VRF\n+ip routing vrf VRF_2\n !\n mlag configuration\n    domain-id leafs\n@@ -177,6 +185,36 @@\n       route-target import evpn 1:11000\n       route-target export evpn 1:11000\n       redistribute connected\n+   !\n+   vrf VRF_1\n+      rd 65000:1\n+      route-target import vpn-ipv6 871:871\n+      route-target import vpn-ipv6 872:872\n+      route-target import vpn-ipv6 65000:1\n+      route-target import vpn-ipv4 871:871\n+      route-target import vpn-ipv4 872:872\n+      route-target import vpn-ipv4 65000:1\n+      route-target export vpn-ipv6 873:873\n+      route-target export vpn-ipv6 874:874\n+      route-target export vpn-ipv6 65000:1\n+      route-target export vpn-ipv4 873:873\n+      route-target export vpn-ipv4 874:874\n+      route-target export vpn-ipv4 65000:1\n+   !\n+   vrf VRF_2\n+      rd 65000:2\n+      route-target import vpn-ipv6 875:875\n+      route-target import vpn-ipv6 876:876\n+      route-target import vpn-ipv6 65000:2\n+      route-target import vpn-ipv4 875:875\n+      route-target import vpn-ipv4 876:876\n+      route-target import vpn-ipv4 65000:2\n+      route-target export vpn-ipv6 877:877\n+      route-target export vpn-ipv6 878:878\n+      route-target export vpn-ipv6 65000:2\n+      route-target export vpn-ipv4 877:877\n+      route-target export vpn-ipv4 878:878\n+      route-target export vpn-ipv4 65000:2\n !\n router ospf 103\n    router-id 10.3.255.87",
+        "failed": false,
+        "warnings": [
+            "To ensure idempotency and correct diff the input configuration lines should be similar to how they appear if present in the running configuration on device including the indentation"
+        ]
+    }
+}
+2023-11-01 14:06:10,067 p=81332 u=stephenamaki n=ansible | ok: [10.255.255.88] => {
+    "msg": {
+        "changed": true,
+        "diff": "--- system:/running-config\n+++ session:/ansible_169886196104-session-config\n@@ -28,6 +28,12 @@\n    trunk group mlag_peer\n !\n vrf definition TENANT_VRF\n+!\n+vrf definition VRF_1\n+   description VRF_1 EXAMPLE\n+!\n+vrf definition VRF_2\n+   description VRF_2 EXAMPLE\n !\n interface Port-Channel11\n    description Juniper VR\n@@ -138,7 +144,9 @@\n ip route 0.0.0.0/0 10.255.255.254\n !\n ip routing\n+ip routing vrf VRF_1\n ip routing vrf TENANT_VRF\n+ip routing vrf VRF_2\n !\n mlag configuration\n    domain-id leafs\n@@ -177,6 +185,36 @@\n       route-target import evpn 1:11000\n       route-target export evpn 1:11000\n       redistribute connected\n+   !\n+   vrf VRF_1\n+      rd 65000:1\n+      route-target import vpn-ipv6 881:881\n+      route-target import vpn-ipv6 882:882\n+      route-target import vpn-ipv6 65000:1\n+      route-target import vpn-ipv4 881:881\n+      route-target import vpn-ipv4 882:882\n+      route-target import vpn-ipv4 65000:1\n+      route-target export vpn-ipv6 883:883\n+      route-target export vpn-ipv6 884:884\n+      route-target export vpn-ipv6 65000:1\n+      route-target export vpn-ipv4 883:883\n+      route-target export vpn-ipv4 884:884\n+      route-target export vpn-ipv4 65000:1\n+   !\n+   vrf VRF_2\n+      rd 65000:2\n+      route-target import vpn-ipv6 885:885\n+      route-target import vpn-ipv6 886:886\n+      route-target import vpn-ipv6 65000:2\n+      route-target import vpn-ipv4 885:885\n+      route-target import vpn-ipv4 886:886\n+      route-target import vpn-ipv4 65000:2\n+      route-target export vpn-ipv6 887:887\n+      route-target export vpn-ipv6 888:888\n+      route-target export vpn-ipv6 65000:2\n+      route-target export vpn-ipv4 887:887\n+      route-target export vpn-ipv4 888:888\n+      route-target export vpn-ipv4 65000:2\n !\n router ospf 103\n    router-id 10.3.255.88",
+        "failed": false,
+        "warnings": [
+            "To ensure idempotency and correct diff the input configuration lines should be similar to how they appear if present in the running configuration on device including the indentation"
+        ]
+    }
+}
+2023-11-01 14:06:10,122 p=81332 u=stephenamaki n=ansible | PLAY RECAP ***************************************************************************************************************************************************************************************
+2023-11-01 14:06:10,122 p=81332 u=stephenamaki n=ansible | 10.255.255.71              : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-11-01 14:06:10,122 p=81332 u=stephenamaki n=ansible | 10.255.255.72              : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-11-01 14:06:10,122 p=81332 u=stephenamaki n=ansible | 10.255.255.73              : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-11-01 14:06:10,122 p=81332 u=stephenamaki n=ansible | 10.255.255.74              : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-11-01 14:06:10,122 p=81332 u=stephenamaki n=ansible | 10.255.255.85              : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-11-01 14:06:10,122 p=81332 u=stephenamaki n=ansible | 10.255.255.86              : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-11-01 14:06:10,122 p=81332 u=stephenamaki n=ansible | 10.255.255.87              : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-11-01 14:06:10,123 p=81332 u=stephenamaki n=ansible | 10.255.255.88              : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-11-01 14:06:10,219 p=81370 u=stephenamaki n=ansible | shutdown complete
+2023-11-01 14:06:10,219 p=81366 u=stephenamaki n=ansible | shutdown complete
+2023-11-01 14:06:10,219 p=81364 u=stephenamaki n=ansible | shutdown complete
+2023-11-01 14:06:10,221 p=81369 u=stephenamaki n=ansible | shutdown complete
+2023-11-01 14:06:10,221 p=81371 u=stephenamaki n=ansible | shutdown complete
+2023-11-01 14:06:10,222 p=81389 u=stephenamaki n=ansible | shutdown complete
+2023-11-01 14:06:10,223 p=81391 u=stephenamaki n=ansible | shutdown complete
+2023-11-01 14:06:10,225 p=81390 u=stephenamaki n=ansible | shutdown complete
+2023-11-01 14:23:35,143 p=87614 u=stephenamaki n=ansible | PLAY [PLAY 1: Manage VPNs with jos_config and jinja2] ********************************************************************************************************************************************
+2023-11-01 14:23:35,209 p=87614 u=stephenamaki n=ansible | TASK [TASK 1: Store platform-specific template path] *********************************************************************************************************************************************
+2023-11-01 14:23:36,509 p=87614 u=stephenamaki n=ansible | network_os is set to ios
+2023-11-01 14:23:36,510 p=87614 u=stephenamaki n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2023-11-01 14:23:36,510 p=87614 u=stephenamaki n=ansible | network_os is set to ios
+2023-11-01 14:23:36,511 p=87614 u=stephenamaki n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2023-11-01 14:23:36,511 p=87614 u=stephenamaki n=ansible | network_os is set to ios
+2023-11-01 14:23:36,512 p=87614 u=stephenamaki n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2023-11-01 14:23:36,517 p=87614 u=stephenamaki n=ansible | network_os is set to ios
+2023-11-01 14:23:36,517 p=87614 u=stephenamaki n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2023-11-01 14:23:36,526 p=87614 u=stephenamaki n=ansible | ok: [10.255.255.73]
+2023-11-01 14:23:36,535 p=87614 u=stephenamaki n=ansible | ok: [10.255.255.71]
+2023-11-01 14:23:36,545 p=87614 u=stephenamaki n=ansible | ok: [10.255.255.72]
+2023-11-01 14:23:36,546 p=87614 u=stephenamaki n=ansible | ok: [10.255.255.74]
+2023-11-01 14:23:36,547 p=87614 u=stephenamaki n=ansible | network_os is set to eos
+2023-11-01 14:23:36,547 p=87614 u=stephenamaki n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2023-11-01 14:23:36,550 p=87614 u=stephenamaki n=ansible | ok: [10.255.255.85]
+2023-11-01 14:23:37,778 p=87614 u=stephenamaki n=ansible | network_os is set to eos
+2023-11-01 14:23:37,778 p=87614 u=stephenamaki n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2023-11-01 14:23:37,779 p=87614 u=stephenamaki n=ansible | network_os is set to eos
+2023-11-01 14:23:37,779 p=87614 u=stephenamaki n=ansible | network_os is set to eos
+2023-11-01 14:23:37,779 p=87614 u=stephenamaki n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2023-11-01 14:23:37,779 p=87614 u=stephenamaki n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2023-11-01 14:23:37,783 p=87614 u=stephenamaki n=ansible | ok: [10.255.255.88]
+2023-11-01 14:23:37,784 p=87614 u=stephenamaki n=ansible | ok: [10.255.255.87]
+2023-11-01 14:23:37,784 p=87614 u=stephenamaki n=ansible | ok: [10.255.255.86]
+2023-11-01 14:23:37,798 p=87614 u=stephenamaki n=ansible | TASK [TASK 2: Apply Generic VRF config via SSH/CLI] **********************************************************************************************************************************************
+2023-11-01 14:23:39,069 p=87638 u=stephenamaki n=p=87638 u=stephenamaki | paramiko [10.255.255.71] | Connected (version 1.99, client Cisco-1.25)
+2023-11-01 14:23:39,071 p=87635 u=stephenamaki n=p=87635 u=stephenamaki | paramiko [10.255.255.72] | Connected (version 1.99, client Cisco-1.25)
+2023-11-01 14:23:39,072 p=87640 u=stephenamaki n=p=87640 u=stephenamaki | paramiko [10.255.255.73] | Connected (version 1.99, client Cisco-1.25)
+2023-11-01 14:23:39,078 p=87643 u=stephenamaki n=p=87643 u=stephenamaki | paramiko [10.255.255.74] | Connected (version 1.99, client Cisco-1.25)
+2023-11-01 14:23:39,182 p=87646 u=stephenamaki n=p=87646 u=stephenamaki | paramiko [10.255.255.85] | Connected (version 2.0, client OpenSSH_6.6.1)
+2023-11-01 14:23:39,281 p=87646 u=stephenamaki n=p=87646 u=stephenamaki | paramiko [10.255.255.85] | Authentication (keyboard-interactive) successful!
+2023-11-01 14:23:39,458 p=87638 u=stephenamaki n=p=87638 u=stephenamaki | paramiko [10.255.255.71] | Auth banner: b"\r\n**************************************************************************\r\n* IOSv is strictly limited to use for evaluation, demonstration and IOS  *\r\n* education. IOSv is provided as-is and is not supported by Cisco's      *\r\n* Technical Advisory Center. Any use or disclosure, in whole or in part, *\r\n* of the IOSv Software or Documentation to any third party for any       *\r\n* purposes is expressly prohibited except as otherwise authorized by     *\r\n* Cisco in writing.                                                      *\r\n**************************************************************************"
+2023-11-01 14:23:39,469 p=87638 u=stephenamaki n=p=87638 u=stephenamaki | paramiko [10.255.255.71] | Authentication (password) successful!
+2023-11-01 14:23:39,936 p=87643 u=stephenamaki n=p=87643 u=stephenamaki | paramiko [10.255.255.74] | Auth banner: b"\r\n**************************************************************************\r\n* IOSv is strictly limited to use for evaluation, demonstration and IOS  *\r\n* education. IOSv is provided as-is and is not supported by Cisco's      *\r\n* Technical Advisory Center. Any use or disclosure, in whole or in part, *\r\n* of the IOSv Software or Documentation to any third party for any       *\r\n* purposes is expressly prohibited except as otherwise authorized by     *\r\n* Cisco in writing.                                                      *\r\n**************************************************************************"
+2023-11-01 14:23:39,939 p=87643 u=stephenamaki n=p=87643 u=stephenamaki | paramiko [10.255.255.74] | Authentication (password) successful!
+2023-11-01 14:23:40,149 p=87640 u=stephenamaki n=p=87640 u=stephenamaki | paramiko [10.255.255.73] | Auth banner: b"\r\n**************************************************************************\r\n* IOSv is strictly limited to use for evaluation, demonstration and IOS  *\r\n* education. IOSv is provided as-is and is not supported by Cisco's      *\r\n* Technical Advisory Center. Any use or disclosure, in whole or in part, *\r\n* of the IOSv Software or Documentation to any third party for any       *\r\n* purposes is expressly prohibited except as otherwise authorized by     *\r\n* Cisco in writing.                                                      *\r\n**************************************************************************"
+2023-11-01 14:23:40,153 p=87635 u=stephenamaki n=p=87635 u=stephenamaki | paramiko [10.255.255.72] | Auth banner: b"\r\n**************************************************************************\r\n* IOSv is strictly limited to use for evaluation, demonstration and IOS  *\r\n* education. IOSv is provided as-is and is not supported by Cisco's      *\r\n* Technical Advisory Center. Any use or disclosure, in whole or in part, *\r\n* of the IOSv Software or Documentation to any third party for any       *\r\n* purposes is expressly prohibited except as otherwise authorized by     *\r\n* Cisco in writing.                                                      *\r\n**************************************************************************"
+2023-11-01 14:23:40,154 p=87640 u=stephenamaki n=p=87640 u=stephenamaki | paramiko [10.255.255.73] | Authentication (password) successful!
+2023-11-01 14:23:40,159 p=87635 u=stephenamaki n=p=87635 u=stephenamaki | paramiko [10.255.255.72] | Authentication (password) successful!
+2023-11-01 14:23:47,052 p=87614 u=stephenamaki n=ansible | [WARNING]: To ensure idempotency and correct diff the input configuration lines should be similar to how they appear if present in the running configuration on device including the indentation
+
+2023-11-01 14:23:47,052 p=87614 u=stephenamaki n=ansible | changed: [10.255.255.85]
+2023-11-01 14:23:47,832 p=87614 u=stephenamaki n=ansible | changed: [10.255.255.71]
+2023-11-01 14:23:47,925 p=87614 u=stephenamaki n=ansible | changed: [10.255.255.74]
+2023-11-01 14:23:48,050 p=87614 u=stephenamaki n=ansible | changed: [10.255.255.73]
+2023-11-01 14:23:48,176 p=87614 u=stephenamaki n=ansible | changed: [10.255.255.72]
+2023-11-01 14:23:48,314 p=87666 u=stephenamaki n=p=87666 u=stephenamaki | paramiko [10.255.255.86] | Connected (version 2.0, client OpenSSH_6.6.1)
+2023-11-01 14:23:48,421 p=87666 u=stephenamaki n=p=87666 u=stephenamaki | paramiko [10.255.255.86] | Authentication (keyboard-interactive) successful!
+2023-11-01 14:23:49,116 p=87668 u=stephenamaki n=p=87668 u=stephenamaki | paramiko [10.255.255.87] | Connected (version 2.0, client OpenSSH_6.6.1)
+2023-11-01 14:23:49,206 p=87667 u=stephenamaki n=p=87667 u=stephenamaki | paramiko [10.255.255.88] | Connected (version 2.0, client OpenSSH_6.6.1)
+2023-11-01 14:23:49,228 p=87668 u=stephenamaki n=p=87668 u=stephenamaki | paramiko [10.255.255.87] | Authentication (keyboard-interactive) successful!
+2023-11-01 14:23:49,307 p=87667 u=stephenamaki n=p=87667 u=stephenamaki | paramiko [10.255.255.88] | Authentication (keyboard-interactive) successful!
+2023-11-01 14:23:55,915 p=87614 u=stephenamaki n=ansible | changed: [10.255.255.86]
+2023-11-01 14:23:56,955 p=87614 u=stephenamaki n=ansible | changed: [10.255.255.88]
+2023-11-01 14:23:56,956 p=87614 u=stephenamaki n=ansible | changed: [10.255.255.87]
+2023-11-01 14:23:57,012 p=87614 u=stephenamaki n=ansible | RUNNING HANDLER [HANDLER 1: Display relevant changes] ********************************************************************************************************************************************
+2023-11-01 14:23:58,245 p=87614 u=stephenamaki n=ansible | ok: [10.255.255.71] => {
+    "msg": {
+        "changed": true,
+        "commands": [
+            "vrf definition VRF_1",
+            "rd 65000:1",
+            "description VRF_1 EXAMPLE",
+            "address-family ipv4",
+            "route-target export 65000:1",
+            "address-family ipv6",
+            "route-target export 65000:1",
+            "address-family ipv4",
+            "route-target export 713:713",
+            "address-family ipv6",
+            "route-target export 713:713",
+            "address-family ipv4",
+            "route-target export 714:714",
+            "address-family ipv6",
+            "route-target export 714:714",
+            "address-family ipv4",
+            "route-target import 65000:1",
+            "address-family ipv6",
+            "route-target import 65000:1",
+            "address-family ipv4",
+            "route-target import 711:711",
+            "address-family ipv6",
+            "route-target import 711:711",
+            "address-family ipv4",
+            "route-target import 712:712",
+            "address-family ipv6",
+            "route-target import 712:712",
+            "vrf definition VRF_2",
+            "rd 65000:2",
+            "description VRF_2 EXAMPLE",
+            "address-family ipv4",
+            "route-target export 65000:2",
+            "address-family ipv6",
+            "route-target export 65000:2",
+            "address-family ipv4",
+            "route-target export 717:717",
+            "address-family ipv6",
+            "route-target export 717:717",
+            "address-family ipv4",
+            "route-target export 718:718",
+            "address-family ipv6",
+            "route-target export 718:718",
+            "address-family ipv4",
+            "route-target import 65000:2",
+            "address-family ipv6",
+            "route-target import 65000:2",
+            "address-family ipv4",
+            "route-target import 715:715",
+            "address-family ipv6",
+            "route-target import 715:715",
+            "address-family ipv4",
+            "route-target import 716:716",
+            "address-family ipv6",
+            "route-target import 716:716"
+        ],
+        "failed": false,
+        "warnings": [
+            "To ensure idempotency and correct diff the input configuration lines should be similar to how they appear if present in the running configuration on device including the indentation"
+        ]
+    }
+}
+2023-11-01 14:23:58,257 p=87614 u=stephenamaki n=ansible | ok: [10.255.255.72] => {
+    "msg": {
+        "changed": true,
+        "commands": [
+            "vrf definition VRF_1",
+            "rd 65000:1",
+            "description VRF_1 EXAMPLE",
+            "address-family ipv4",
+            "route-target export 65000:1",
+            "address-family ipv6",
+            "route-target export 65000:1",
+            "address-family ipv4",
+            "route-target export 723:723",
+            "address-family ipv6",
+            "route-target export 723:723",
+            "address-family ipv4",
+            "route-target export 724:724",
+            "address-family ipv6",
+            "route-target export 724:724",
+            "address-family ipv4",
+            "route-target import 65000:1",
+            "address-family ipv6",
+            "route-target import 65000:1",
+            "address-family ipv4",
+            "route-target import 721:721",
+            "address-family ipv6",
+            "route-target import 721:721",
+            "address-family ipv4",
+            "route-target import 722:722",
+            "address-family ipv6",
+            "route-target import 722:722",
+            "vrf definition VRF_2",
+            "rd 65000:2",
+            "description VRF_2 EXAMPLE",
+            "address-family ipv4",
+            "route-target export 65000:2",
+            "address-family ipv6",
+            "route-target export 65000:2",
+            "address-family ipv4",
+            "route-target export 727:727",
+            "address-family ipv6",
+            "route-target export 727:727",
+            "address-family ipv4",
+            "route-target export 728:728",
+            "address-family ipv6",
+            "route-target export 728:728",
+            "address-family ipv4",
+            "route-target import 65000:2",
+            "address-family ipv6",
+            "route-target import 65000:2",
+            "address-family ipv4",
+            "route-target import 725:725",
+            "address-family ipv6",
+            "route-target import 725:725",
+            "address-family ipv4",
+            "route-target import 726:726",
+            "address-family ipv6",
+            "route-target import 726:726"
+        ],
+        "failed": false,
+        "warnings": [
+            "To ensure idempotency and correct diff the input configuration lines should be similar to how they appear if present in the running configuration on device including the indentation"
+        ]
+    }
+}
+2023-11-01 14:23:58,269 p=87614 u=stephenamaki n=ansible | ok: [10.255.255.73] => {
+    "msg": {
+        "changed": true,
+        "commands": [
+            "vrf definition VRF_1",
+            "rd 65000:1",
+            "description VRF_1 EXAMPLE",
+            "address-family ipv4",
+            "route-target export 65000:1",
+            "address-family ipv6",
+            "route-target export 65000:1",
+            "address-family ipv4",
+            "route-target export 733:733",
+            "address-family ipv6",
+            "route-target export 733:733",
+            "address-family ipv4",
+            "route-target export 734:734",
+            "address-family ipv6",
+            "route-target export 734:734",
+            "address-family ipv4",
+            "route-target import 65000:1",
+            "address-family ipv6",
+            "route-target import 65000:1",
+            "address-family ipv4",
+            "route-target import 731:731",
+            "address-family ipv6",
+            "route-target import 731:731",
+            "address-family ipv4",
+            "route-target import 732:732",
+            "address-family ipv6",
+            "route-target import 732:732",
+            "vrf definition VRF_2",
+            "rd 65000:2",
+            "description VRF_2 EXAMPLE",
+            "address-family ipv4",
+            "route-target export 65000:2",
+            "address-family ipv6",
+            "route-target export 65000:2",
+            "address-family ipv4",
+            "route-target export 737:737",
+            "address-family ipv6",
+            "route-target export 737:737",
+            "address-family ipv4",
+            "route-target export 738:738",
+            "address-family ipv6",
+            "route-target export 738:738",
+            "address-family ipv4",
+            "route-target import 65000:2",
+            "address-family ipv6",
+            "route-target import 65000:2",
+            "address-family ipv4",
+            "route-target import 735:735",
+            "address-family ipv6",
+            "route-target import 735:735",
+            "address-family ipv4",
+            "route-target import 736:736",
+            "address-family ipv6",
+            "route-target import 736:736"
+        ],
+        "failed": false,
+        "warnings": [
+            "To ensure idempotency and correct diff the input configuration lines should be similar to how they appear if present in the running configuration on device including the indentation"
+        ]
+    }
+}
+2023-11-01 14:23:58,272 p=87614 u=stephenamaki n=ansible | ok: [10.255.255.74] => {
+    "msg": {
+        "changed": true,
+        "commands": [
+            "vrf definition VRF_1",
+            "rd 65000:1",
+            "description VRF_1 EXAMPLE",
+            "address-family ipv4",
+            "route-target export 65000:1",
+            "address-family ipv6",
+            "route-target export 65000:1",
+            "address-family ipv4",
+            "route-target export 743:743",
+            "address-family ipv6",
+            "route-target export 743:743",
+            "address-family ipv4",
+            "route-target export 744:744",
+            "address-family ipv6",
+            "route-target export 744:744",
+            "address-family ipv4",
+            "route-target import 65000:1",
+            "address-family ipv6",
+            "route-target import 65000:1",
+            "address-family ipv4",
+            "route-target import 741:741",
+            "address-family ipv6",
+            "route-target import 741:741",
+            "address-family ipv4",
+            "route-target import 742:742",
+            "address-family ipv6",
+            "route-target import 742:742",
+            "vrf definition VRF_2",
+            "rd 65000:2",
+            "description VRF_2 EXAMPLE",
+            "address-family ipv4",
+            "route-target export 65000:2",
+            "address-family ipv6",
+            "route-target export 65000:2",
+            "address-family ipv4",
+            "route-target export 747:747",
+            "address-family ipv6",
+            "route-target export 747:747",
+            "address-family ipv4",
+            "route-target export 748:748",
+            "address-family ipv6",
+            "route-target export 748:748",
+            "address-family ipv4",
+            "route-target import 65000:2",
+            "address-family ipv6",
+            "route-target import 65000:2",
+            "address-family ipv4",
+            "route-target import 745:745",
+            "address-family ipv6",
+            "route-target import 745:745",
+            "address-family ipv4",
+            "route-target import 746:746",
+            "address-family ipv6",
+            "route-target import 746:746"
+        ],
+        "failed": false,
+        "warnings": [
+            "To ensure idempotency and correct diff the input configuration lines should be similar to how they appear if present in the running configuration on device including the indentation"
+        ]
+    }
+}
+2023-11-01 14:23:58,272 p=87614 u=stephenamaki n=ansible | ok: [10.255.255.85] => {
+    "msg": {
+        "changed": true,
+        "diff": "--- system:/running-config\n+++ session:/ansible_169886302053-session-config\n@@ -19,6 +19,12 @@\n username admin role network-admin secret sha512 $6$5/sHXHxPPEWuOKZH$wWysJJYyH2NcwEOn5wWRc0ocQjiJ2N8VEy6wBS8N78fH13xKWnWp/bbPazTs17DxiSHp4LDN5qy6M63LZmbn3.\n !\n clock timezone America/New_York\n+!\n+vrf definition VRF_1\n+   description VRF_1 EXAMPLE\n+!\n+vrf definition VRF_2\n+   description VRF_2 EXAMPLE\n !\n interface Ethernet1\n    no switchport\n@@ -94,6 +100,8 @@\n ip route 0.0.0.0/0 10.255.255.254\n !\n ip routing\n+ip routing vrf VRF_1\n+ip routing vrf VRF_2\n !\n router bgp 103\n    maximum-paths 4 ecmp 64\n@@ -106,6 +114,36 @@\n    !\n    address-family evpn\n       neighbor OVERLAY activate\n+   !\n+   vrf VRF_1\n+      rd 65000:1\n+      route-target import vpn-ipv6 851:851\n+      route-target import vpn-ipv6 852:852\n+      route-target import vpn-ipv6 65000:1\n+      route-target import vpn-ipv4 851:851\n+      route-target import vpn-ipv4 852:852\n+      route-target import vpn-ipv4 65000:1\n+      route-target export vpn-ipv6 853:853\n+      route-target export vpn-ipv6 854:854\n+      route-target export vpn-ipv6 65000:1\n+      route-target export vpn-ipv4 853:853\n+      route-target export vpn-ipv4 854:854\n+      route-target export vpn-ipv4 65000:1\n+   !\n+   vrf VRF_2\n+      rd 65000:2\n+      route-target import vpn-ipv6 855:855\n+      route-target import vpn-ipv6 856:856\n+      route-target import vpn-ipv6 65000:2\n+      route-target import vpn-ipv4 855:855\n+      route-target import vpn-ipv4 856:856\n+      route-target import vpn-ipv4 65000:2\n+      route-target export vpn-ipv6 857:857\n+      route-target export vpn-ipv6 858:858\n+      route-target export vpn-ipv6 65000:2\n+      route-target export vpn-ipv4 857:857\n+      route-target export vpn-ipv4 858:858\n+      route-target export vpn-ipv4 65000:2\n !\n router ospf 103\n    router-id 10.3.255.85",
+        "failed": false,
+        "warnings": [
+            "To ensure idempotency and correct diff the input configuration lines should be similar to how they appear if present in the running configuration on device including the indentation"
+        ]
+    }
+}
+2023-11-01 14:23:59,422 p=87614 u=stephenamaki n=ansible | ok: [10.255.255.86] => {
+    "msg": {
+        "changed": true,
+        "diff": "--- system:/running-config\n+++ session:/ansible_169886302969-session-config\n@@ -19,6 +19,12 @@\n username admin role network-admin secret sha512 $6$nTliC8blYbVLrcJi$UpwWflzSrKMjYDTCDjpstuZuatL79VZrDiaZBzSaQjbcBB6RLT23UB.ksdjnQI2fmaNqz6kD8M4ppOMRCuGlN/\n !\n clock timezone America/New_York\n+!\n+vrf definition VRF_1\n+   description VRF_1 EXAMPLE\n+!\n+vrf definition VRF_2\n+   description VRF_2 EXAMPLE\n !\n interface Ethernet1\n    no switchport\n@@ -94,6 +100,8 @@\n ip route 0.0.0.0/0 10.255.255.254\n !\n ip routing\n+ip routing vrf VRF_1\n+ip routing vrf VRF_2\n !\n router bgp 103\n    maximum-paths 4 ecmp 64\n@@ -106,6 +114,36 @@\n    !\n    address-family evpn\n       neighbor OVERLAY activate\n+   !\n+   vrf VRF_1\n+      rd 65000:1\n+      route-target import vpn-ipv6 861:861\n+      route-target import vpn-ipv6 862:862\n+      route-target import vpn-ipv6 65000:1\n+      route-target import vpn-ipv4 861:861\n+      route-target import vpn-ipv4 862:862\n+      route-target import vpn-ipv4 65000:1\n+      route-target export vpn-ipv6 863:863\n+      route-target export vpn-ipv6 864:864\n+      route-target export vpn-ipv6 65000:1\n+      route-target export vpn-ipv4 863:863\n+      route-target export vpn-ipv4 864:864\n+      route-target export vpn-ipv4 65000:1\n+   !\n+   vrf VRF_2\n+      rd 65000:2\n+      route-target import vpn-ipv6 865:865\n+      route-target import vpn-ipv6 866:866\n+      route-target import vpn-ipv6 65000:2\n+      route-target import vpn-ipv4 865:865\n+      route-target import vpn-ipv4 866:866\n+      route-target import vpn-ipv4 65000:2\n+      route-target export vpn-ipv6 867:867\n+      route-target export vpn-ipv6 868:868\n+      route-target export vpn-ipv6 65000:2\n+      route-target export vpn-ipv4 867:867\n+      route-target export vpn-ipv4 868:868\n+      route-target export vpn-ipv4 65000:2\n !\n router ospf 103\n    router-id 10.3.255.86",
+        "failed": false,
+        "warnings": [
+            "To ensure idempotency and correct diff the input configuration lines should be similar to how they appear if present in the running configuration on device including the indentation"
+        ]
+    }
+}
+2023-11-01 14:23:59,429 p=87614 u=stephenamaki n=ansible | ok: [10.255.255.87] => {
+    "msg": {
+        "changed": true,
+        "diff": "--- system:/running-config\n+++ session:/ansible_169886303051-session-config\n@@ -28,6 +28,12 @@\n    trunk group mlag_peer\n !\n vrf definition TENANT_VRF\n+!\n+vrf definition VRF_1\n+   description VRF_1 EXAMPLE\n+!\n+vrf definition VRF_2\n+   description VRF_2 EXAMPLE\n !\n interface Port-Channel11\n    description Juniper VR\n@@ -138,7 +144,9 @@\n ip route 0.0.0.0/0 10.255.255.254\n !\n ip routing\n+ip routing vrf VRF_1\n ip routing vrf TENANT_VRF\n+ip routing vrf VRF_2\n !\n mlag configuration\n    domain-id leafs\n@@ -177,6 +185,36 @@\n       route-target import evpn 1:11000\n       route-target export evpn 1:11000\n       redistribute connected\n+   !\n+   vrf VRF_1\n+      rd 65000:1\n+      route-target import vpn-ipv6 871:871\n+      route-target import vpn-ipv6 872:872\n+      route-target import vpn-ipv6 65000:1\n+      route-target import vpn-ipv4 871:871\n+      route-target import vpn-ipv4 872:872\n+      route-target import vpn-ipv4 65000:1\n+      route-target export vpn-ipv6 873:873\n+      route-target export vpn-ipv6 874:874\n+      route-target export vpn-ipv6 65000:1\n+      route-target export vpn-ipv4 873:873\n+      route-target export vpn-ipv4 874:874\n+      route-target export vpn-ipv4 65000:1\n+   !\n+   vrf VRF_2\n+      rd 65000:2\n+      route-target import vpn-ipv6 875:875\n+      route-target import vpn-ipv6 876:876\n+      route-target import vpn-ipv6 65000:2\n+      route-target import vpn-ipv4 875:875\n+      route-target import vpn-ipv4 876:876\n+      route-target import vpn-ipv4 65000:2\n+      route-target export vpn-ipv6 877:877\n+      route-target export vpn-ipv6 878:878\n+      route-target export vpn-ipv6 65000:2\n+      route-target export vpn-ipv4 877:877\n+      route-target export vpn-ipv4 878:878\n+      route-target export vpn-ipv4 65000:2\n !\n router ospf 103\n    router-id 10.3.255.87",
+        "failed": false,
+        "warnings": [
+            "To ensure idempotency and correct diff the input configuration lines should be similar to how they appear if present in the running configuration on device including the indentation"
+        ]
+    }
+}
+2023-11-01 14:23:59,440 p=87614 u=stephenamaki n=ansible | ok: [10.255.255.88] => {
+    "msg": {
+        "changed": true,
+        "diff": "--- system:/running-config\n+++ session:/ansible_169886303063-session-config\n@@ -28,6 +28,12 @@\n    trunk group mlag_peer\n !\n vrf definition TENANT_VRF\n+!\n+vrf definition VRF_1\n+   description VRF_1 EXAMPLE\n+!\n+vrf definition VRF_2\n+   description VRF_2 EXAMPLE\n !\n interface Port-Channel11\n    description Juniper VR\n@@ -138,7 +144,9 @@\n ip route 0.0.0.0/0 10.255.255.254\n !\n ip routing\n+ip routing vrf VRF_1\n ip routing vrf TENANT_VRF\n+ip routing vrf VRF_2\n !\n mlag configuration\n    domain-id leafs\n@@ -177,6 +185,36 @@\n       route-target import evpn 1:11000\n       route-target export evpn 1:11000\n       redistribute connected\n+   !\n+   vrf VRF_1\n+      rd 65000:1\n+      route-target import vpn-ipv6 881:881\n+      route-target import vpn-ipv6 882:882\n+      route-target import vpn-ipv6 65000:1\n+      route-target import vpn-ipv4 881:881\n+      route-target import vpn-ipv4 882:882\n+      route-target import vpn-ipv4 65000:1\n+      route-target export vpn-ipv6 883:883\n+      route-target export vpn-ipv6 884:884\n+      route-target export vpn-ipv6 65000:1\n+      route-target export vpn-ipv4 883:883\n+      route-target export vpn-ipv4 884:884\n+      route-target export vpn-ipv4 65000:1\n+   !\n+   vrf VRF_2\n+      rd 65000:2\n+      route-target import vpn-ipv6 885:885\n+      route-target import vpn-ipv6 886:886\n+      route-target import vpn-ipv6 65000:2\n+      route-target import vpn-ipv4 885:885\n+      route-target import vpn-ipv4 886:886\n+      route-target import vpn-ipv4 65000:2\n+      route-target export vpn-ipv6 887:887\n+      route-target export vpn-ipv6 888:888\n+      route-target export vpn-ipv6 65000:2\n+      route-target export vpn-ipv4 887:887\n+      route-target export vpn-ipv4 888:888\n+      route-target export vpn-ipv4 65000:2\n !\n router ospf 103\n    router-id 10.3.255.88",
+        "failed": false,
+        "warnings": [
+            "To ensure idempotency and correct diff the input configuration lines should be similar to how they appear if present in the running configuration on device including the indentation"
+        ]
+    }
+}
+2023-11-01 14:23:59,491 p=87614 u=stephenamaki n=ansible | PLAY RECAP ***************************************************************************************************************************************************************************************
+2023-11-01 14:23:59,491 p=87614 u=stephenamaki n=ansible | 10.255.255.71              : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-11-01 14:23:59,491 p=87614 u=stephenamaki n=ansible | 10.255.255.72              : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-11-01 14:23:59,491 p=87614 u=stephenamaki n=ansible | 10.255.255.73              : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-11-01 14:23:59,491 p=87614 u=stephenamaki n=ansible | 10.255.255.74              : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-11-01 14:23:59,491 p=87614 u=stephenamaki n=ansible | 10.255.255.85              : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-11-01 14:23:59,491 p=87614 u=stephenamaki n=ansible | 10.255.255.86              : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-11-01 14:23:59,491 p=87614 u=stephenamaki n=ansible | 10.255.255.87              : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-11-01 14:23:59,492 p=87614 u=stephenamaki n=ansible | 10.255.255.88              : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-11-01 14:23:59,587 p=87646 u=stephenamaki n=ansible | shutdown complete
+2023-11-01 14:23:59,588 p=87638 u=stephenamaki n=ansible | shutdown complete
+2023-11-01 14:23:59,589 p=87643 u=stephenamaki n=ansible | shutdown complete
+2023-11-01 14:23:59,589 p=87635 u=stephenamaki n=ansible | shutdown complete
+2023-11-01 14:23:59,589 p=87640 u=stephenamaki n=ansible | shutdown complete
+2023-11-01 14:23:59,591 p=87666 u=stephenamaki n=ansible | shutdown complete
+2023-11-01 14:23:59,592 p=87667 u=stephenamaki n=ansible | shutdown complete
+2023-11-01 14:23:59,594 p=87668 u=stephenamaki n=ansible | shutdown complete

@@ -1,0 +1,26 @@
+---
+vrfs: 
+  - name: "VRF_1" 
+    description: "VRF_1 EXAMPLE" 
+    asn_num: "103"
+    rd: "65000:1" 
+    route_import:
+      - "65000:1"
+      - "881:881"
+      - "882:882"
+    route_export: 
+      - "65000:1"
+      - "883:883"
+      - "884:884"
+  - name: "VRF_2" 
+    description: "VRF_2 EXAMPLE" 
+    asn_num: "103"
+    rd: "65000:2" 
+    route_import:
+      - "65000:2"
+      - "885:885"
+      - "886:886"
+    route_export: 
+      - "65000:2"
+      - "887:887"
+      - "888:888"

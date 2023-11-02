@@ -1,0 +1,7 @@
+---
+ansible_network_os: ios
+# ansible_user: 
+# ansible_password: 
+# ansible_connection: network_cli
+eigrp_os_type: "named"
+# eigrp_os_type: "normal"

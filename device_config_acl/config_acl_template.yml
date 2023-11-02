@@ -1,0 +1,33 @@
+---
+# playbook is intended to create an access-list on the devices, and confirm that a specific set of VRFs exist on those devices
+
+- name: Sample IOS config 
+  hosts: routers
+  gather_facts: false
+
+  tasks: 
+    - name: Deploy snmp commands from jinja2
+      ios_config: 
+        src: "acl_template.j2"
+
+    - name: Generate snmp file
+      template: src=acl_template.j2 dest=configs/acl_generated_config.cfg
+      run_once: true
+      tags: build
+
+    - name: Deploy snmp from Auto Generated file
+      ios_config: 
+        src: "./configs/acl_template.cfg"
+      tags: deploy
+
+  # - name: Confirm all VRFs exist
+  #   ios_vrf:
+  #     vrfs: "{{ local_vrfs }}"
+  #     state: present
+  #     purge: yes
+  #   check_mode: yes
+
+# "ansible-playbook config_acl_template.yml" (runs the first option, generates config from template and applies)
+# "ansible-playbook config_acl_template.yml --tags=build" (generates the config in second option and saves the config file)
+# "ansible-playbook config_acl_template.yml --tags=deploy" (deploys the config generated in the second option)
+# Works as of 07/11/2020 

@@ -1,0 +1,15 @@
+---
+
+  - name: Deploy snmp configurations
+    hosts: routers
+    gather_facts: false
+    connection: local
+
+    tasks: 
+      - name: Deploy snmp commands directly from config file
+        ios_config: 
+          src: "./configs/snmp_generated_config.cfg"
+  
+
+# ansible-playbook config_from_file.yml 
+# Works as of 07/11/2020 

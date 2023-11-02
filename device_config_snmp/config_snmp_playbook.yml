@@ -1,0 +1,17 @@
+---
+  - name: Deploy snmp configurations
+    hosts: routers
+    gather_facts: false
+    connection: network_cli
+    tasks: 
+      - name: Deploy snmp commands
+        ios_config: 
+          commands:
+            - snmp-server community cisco123 RW 
+            - snmp-server community cisco123 RO
+            - snmp-server trap-source GigabitEthernet0/0
+            - snmp-server host 2.2.2.2 version 2c cisco123 
+  
+# ansible-playbook config_from_playbook.yml 
+# Works as of 07/11/2020
+  

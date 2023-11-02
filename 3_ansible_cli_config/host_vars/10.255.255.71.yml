@@ -1,0 +1,25 @@
+---
+vrfs: 
+  - name: "VRF_1" 
+    description: "VRF_1 EXAMPLE" 
+    rd: "65000:1" 
+    route_import:
+      - "65000:1"
+      - "711:711"
+      - "712:712"
+    route_export: 
+      - "65000:1"
+      - "713:713"
+      - "714:714"
+  - name: "VRF_2" 
+    description: "VRF_2 EXAMPLE" 
+    rd: "65000:2" 
+    route_import:
+      - "65000:2"
+      - "715:715"
+      - "716:716"
+    route_export: 
+      - "65000:2"
+      - "717:717"
+      - "718:718"
+

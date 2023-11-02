@@ -1,0 +1,9 @@
+
+---
+
+eigrp:
+    as: "100"
+    virtual: "SWAMAKI"
+    rid: "169.254.224.4"
+    network: "0.0.0.0 0.0.0.0"
+    stub: "connected"

@@ -1,0 +1,28 @@
+
+!
+ip access-list standard ALPHA_SNMP
+{% for wildmask in snmp.ast_wildmasks %}
+ permit {{ wildmask }}
+{% endfor %}
+!
+{% for commstring in snmp.ro_commstring %}
+snmp-server community {{ commstring }} RO ALPHA_SNMP
+{% endfor %}
+{% for commstring in snmp.rw_commstring %}
+snmp-server community {{ commstring }} RW ALPHA_SNMP
+{% endfor %}
+snmp-server trap-source {{ snmp.trap_source }}
+!
+{% for commstring in snmp.rw_commstring %}
+snmp-server host {{ snmp.server_host }} version 2c {{ commstring }}
+{% endfor %}
+snmp ifmib ifindex persist
+snmp-server enable traps
+!
+logging snmp-trap emergencies
+logging snmp-trap alerts
+logging snmp-trap critical
+logging snmp-trap errors
+logging snmp-trap warnings
+logging snmp-trap notifications
+!

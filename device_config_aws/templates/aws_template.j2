@@ -1,0 +1,112 @@
+
+#1: Internet Key Exchange (IKE) Configuration
+
+!
+crypto ikev1 policy {{ aws.ikev1_policy_no }}
+  encryption aes
+  authentication pre-share
+  group 2
+  lifetime 28800
+  hash sha
+!
+crypto ikev1 enable {{ aws.fw_outside }}
+!
+
+#2: IPSec Configuration
+
+!
+!
+crypto ipsec ikev1 transform-set ESP_AES_SHA esp-aes esp-sha-hmac
+!
+crypto ipsec profile IPSEC_PROFILE_AWS
+  set pfs group2
+  set security-association lifetime seconds 3600
+  set ikev1 transform-set ESP_AES_SHA
+!
+crypto ipsec df-bit clear-df {{ aws.fw_outside }}
+sysopt connection tcpmss 1379
+crypto ipsec security-association replay window-size 128
+crypto ipsec fragmentation before-encryption {{ aws.fw_outside }}
+!
+
+!
+tunnel-group {{ aws.vpn_peer1 }} type ipsec-l2l
+tunnel-group {{ aws.vpn_peer1 }} ipsec-attributes
+ ikev1 pre-shared-key {{ aws.peer1_psk }}
+ isakmp keepalive threshold 10 retry 10
+!
+tunnel-group {{ aws.vpn_peer2 }} type ipsec-l2l
+tunnel-group {{ aws.vpn_peer2 }} ipsec-attributes
+ ikev1 pre-shared-key {{ aws.peer2_psk }}
+!
+!3: Tunnel Interface Configuration
+!
+interface Tunnel{{ aws.peer1_tunnel_no }}
+ description AWS VPN Tunnel-{{ aws.peer1_tunnel_no }}
+ nameif {{ aws.peer1_tunnel_nameif }}
+ ip address {{ aws.peer1_tunnel_ip }} {{ aws.peer1_tunnel_mask }}
+ tunnel source interface {{ aws.fw_outside }}
+ tunnel destination {{ aws.vpn_peer1 }}
+ tunnel mode ipsec ipv4
+ tunnel protection ipsec profile IPSEC_PROFILE_AWS
+!
+interface Tunnel{{ aws.peer2_tunnel_no }}
+ description AWS VPN Tunnel-{{ aws.peer2_tunnel_no }}
+ nameif {{ aws.peer2_tunnel_nameif }}
+ ip address {{ aws.peer2_tunnel_ip }} {{ aws.peer2_tunnel_mask }}
+ tunnel source interface {{ aws.fw_outside }}
+ tunnel destination {{ aws.vpn_peer2 }}
+ tunnel mode ipsec ipv4
+ tunnel protection ipsec profile IPSEC_PROFILE_AWS
+!
+
+#4: Border Gateway Protocol (BGP) Configuration
+
+!
+prefix-list ROUTES_FROM_AWS seq 100 permit {{ aws.received_routes }}
+!
+{% for route in aws.advertised_prefix %}
+prefix-list ROUTES_TO_AWS permit {{ route }}
+{% endfor %}
+!
+!
+route-map RM_FROM_AWS permit 10
+ match ip address prefix-list ROUTES_FROM_AWS
+!
+route-map RM_TO_AWS1 permit 10
+ match ip address prefix-list ROUTES_TO_AWS
+!
+route-map RM_TO_AWS2 permit 10
+ match ip address prefix-list ROUTES_TO_AWS
+ set as-path prepend {{ aws.bgp_asn }} {{ aws.bgp_asn }}
+!
+
+router bgp {{ aws.bgp_asn }}
+ bgp log-neighbor-changes
+ address-family ipv4 unicast
+  neighbor {{ aws.bgp_peer1 }} remote-as {{ aws.remote_asn }}
+  neighbor {{ aws.bgp_peer1 }} description AWS VPN Tunnel-{{ aws.peer1_tunnel_no }}
+  neighbor {{ aws.bgp_peer1 }} timers 10 30 30
+  neighbor {{ aws.bgp_peer1 }} activate
+  neighbor {{ aws.bgp_peer1 }} default-originate
+  neighbor {{ aws.bgp_peer1 }} weight 200
+  neighbor {{ aws.bgp_peer1 }} route-map RM_FROM_AWS in
+  neighbor {{ aws.bgp_peer1 }} route-map RM_TO_AWS1 out
+   
+  neighbor {{ aws.bgp_peer2 }} remote-as {{ aws.remote_asn }}
+  neighbor {{ aws.bgp_peer2 }} description AWS VPN Tunnel-{{ aws.peer2_tunnel_no }}
+  neighbor {{ aws.bgp_peer2 }} timers 10 30 30
+  neighbor {{ aws.bgp_peer2 }} activate
+  neighbor {{ aws.bgp_peer2 }} default-originate
+  neighbor {{ aws.bgp_peer2 }} route-map RM_FROM_AWS in
+  neighbor {{ aws.bgp_peer2 }} route-map RM_TO_AWS2 out
+
+  {% for route in aws.advertised_routes -%}
+  network {{ route }}
+  {% endfor %}
+
+  no auto-summary
+  no synchronization
+ exit-address-family
+!
+

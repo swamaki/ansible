@@ -1,0 +1,17 @@
+{% for item in vrfs %}
+vrf definition {{ item.name }}
+  rd {{ item.rd }}
+  description {{ item.description }}
+{% for rt in item.route_export %}
+  address-family ipv4 
+    route-target export {{ rt }}
+  address-family ipv6 
+    route-target export {{ rt }}
+{% endfor %}
+{% for rt in item.route_import %}
+  address-family ipv4 
+    route-target import {{ rt }}
+  address-family ipv6 
+    route-target import {{ rt }}
+{% endfor %}
+{% endfor %}

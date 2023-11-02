@@ -1,0 +1,296 @@
+2023-11-01 21:00:18,446 p=12404 u=stephenamaki n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 1 column 1 (char 0)
+
+Syntax Error while loading YAML.
+  could not find expected ':'
+
+The error appears to be in '/Users/stephenamaki/Dropbox/netdevops/ansible/myscripts_ansible/4_ansible_custom_filters/custom_filter.yml': line 25, column 2, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+"""
+ ^ here
+
+2023-11-01 21:02:21,288 p=13056 u=stephenamaki n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 1 column 1 (char 0)
+
+Syntax Error while loading YAML.
+  could not find expected ':'
+
+The error appears to be in '/Users/stephenamaki/Dropbox/netdevops/ansible/myscripts_ansible/4_ansible_custom_filters/custom_filter.yml': line 24, column 30, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+    The first task collection, severe rough configuration and stores it as your rough config. The second task runs VRF config through our new filter and stores it as VRF data the third test out the resulting VRF data object all basic stuff we’ve seen before both R1 and R2 are configured with a diverse route targets for the previous clip so when we run the playbook, we should see these values. I’ll quickly show them again so you can refresh your memory time to run the playbook Witcher to run the playbook with you
+                             ^ here
+
+2023-11-01 21:02:43,575 p=13188 u=stephenamaki n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 1 column 1 (char 0)
+
+Syntax Error while loading YAML.
+  could not find expected ':'
+
+The error appears to be in '/Users/stephenamaki/Dropbox/netdevops/ansible/myscripts_ansible/4_ansible_custom_filters/custom_filter.yml': line 24, column 32, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+      The first task collection, severe rough configuration and stores it as your rough config. The second task runs VRF config through our new filter and stores it as VRF data the third test out the resulting VRF data object all basic stuff we’ve seen before both R1 and R2 are configured with a diverse route targets for the previous clip so when we run the playbook, we should see these values. I’ll quickly show them again so you can refresh your memory time to run the playbook Witcher to run the playbook with you
+                               ^ here
+
+2023-11-01 21:03:41,544 p=13515 u=stephenamaki n=ansible | ERROR! conflicting action statements: ios_command, msg
+
+The error appears to be in '/Users/stephenamaki/Dropbox/netdevops/ansible/myscripts_ansible/4_ansible_custom_filters/custom_filter.yml': line 6, column 7, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+  tasks:
+    - name: "TASK 1: Get router configuration"
+      ^ here
+This one looks easy to fix. It seems that there is a value started
+with a quote, and the YAML parser is expecting to see the line ended
+with the same kind of quote. For instance:
+
+    when: "ok" in result.stdout
+
+Could be written as:
+
+   when: '"ok" in result.stdout'
+
+Or equivalently:
+
+   when: "'ok' in result.stdout"
+
+2023-11-01 21:03:58,504 p=13621 u=stephenamaki n=ansible | ERROR! conflicting action statements: ios_command, msg
+
+The error appears to be in '/Users/stephenamaki/Dropbox/netdevops/ansible/myscripts_ansible/4_ansible_custom_filters/custom_filter.yml': line 6, column 7, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+  tasks:
+    - name: "TASK 1: Get router configuration"
+      ^ here
+This one looks easy to fix. It seems that there is a value started
+with a quote, and the YAML parser is expecting to see the line ended
+with the same kind of quote. For instance:
+
+    when: "ok" in result.stdout
+
+Could be written as:
+
+   when: '"ok" in result.stdout'
+
+Or equivalently:
+
+   when: "'ok' in result.stdout"
+
+2023-11-01 21:09:02,451 p=15203 u=stephenamaki n=ansible | ERROR! conflicting action statements: ios_command, msg
+
+The error appears to be in '/Users/stephenamaki/Dropbox/netdevops/ansible/myscripts_ansible/4_ansible_custom_filters/custom_filter.yml': line 6, column 7, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+  tasks:
+    - name: "TASK 1: Get router configuration"
+      ^ here
+This one looks easy to fix. It seems that there is a value started
+with a quote, and the YAML parser is expecting to see the line ended
+with the same kind of quote. For instance:
+
+    when: "ok" in result.stdout
+
+Could be written as:
+
+   when: '"ok" in result.stdout'
+
+Or equivalently:
+
+   when: "'ok' in result.stdout"
+
+2023-11-01 21:09:13,416 p=15277 u=stephenamaki n=ansible | PLAY [PLAY 1: Testing our route-target AS getter] ************************************************************************************************************************************************
+2023-11-01 21:09:13,435 p=15277 u=stephenamaki n=ansible | TASK [TASK 1: Get router configuration] **********************************************************************************************************************************************************
+2023-11-01 21:09:14,772 p=15277 u=stephenamaki n=ansible | network_os is set to ios
+2023-11-01 21:09:14,773 p=15277 u=stephenamaki n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2023-11-01 21:09:14,812 p=15291 u=stephenamaki n=p=15291 u=stephenamaki | paramiko [10.255.255.71] | Connected (version 1.99, client Cisco-1.25)
+2023-11-01 21:09:15,198 p=15291 u=stephenamaki n=p=15291 u=stephenamaki | paramiko [10.255.255.71] | Auth banner: b"\r\n**************************************************************************\r\n* IOSv is strictly limited to use for evaluation, demonstration and IOS  *\r\n* education. IOSv is provided as-is and is not supported by Cisco's      *\r\n* Technical Advisory Center. Any use or disclosure, in whole or in part, *\r\n* of the IOSv Software or Documentation to any third party for any       *\r\n* purposes is expressly prohibited except as otherwise authorized by     *\r\n* Cisco in writing.                                                      *\r\n**************************************************************************"
+2023-11-01 21:09:15,201 p=15291 u=stephenamaki n=p=15291 u=stephenamaki | paramiko [10.255.255.71] | Authentication (password) successful!
+2023-11-01 21:09:16,250 p=15277 u=stephenamaki n=ansible | ok: [10.255.255.71]
+2023-11-01 21:09:16,260 p=15277 u=stephenamaki n=ansible | TASK [TASK2: Parse the RT import and export data] ************************************************************************************************************************************************
+2023-11-01 21:09:17,379 p=15277 u=stephenamaki n=ansible | ok: [10.255.255.71]
+2023-11-01 21:09:17,387 p=15277 u=stephenamaki n=ansible | TASK [TASK 3: Print results] *********************************************************************************************************************************************************************
+2023-11-01 21:09:18,480 p=15277 u=stephenamaki n=ansible | ok: [10.255.255.71] => {
+    "msg": {
+        "VRF_1": {
+            "route export": [
+                "65000:1",
+                "713:713",
+                "714:714"
+            ],
+            "route import": [
+                "65000:1",
+                "711:711",
+                "712:712"
+            ]
+        },
+        "VRF_2": {
+            "route export": [
+                "65000:2",
+                "717:717",
+                "718:718"
+            ],
+            "route import": [
+                "65000:2",
+                "715:715",
+                "716:716"
+            ]
+        }
+    }
+}
+2023-11-01 21:09:18,494 p=15277 u=stephenamaki n=ansible | PLAY RECAP ***************************************************************************************************************************************************************************************
+2023-11-01 21:09:18,494 p=15277 u=stephenamaki n=ansible | 10.255.255.71              : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-11-01 21:09:18,595 p=15291 u=stephenamaki n=ansible | shutdown complete
+2023-11-01 21:09:37,061 p=15423 u=stephenamaki n=ansible | [WARNING]: While constructing a mapping from /Users/stephenamaki/Dropbox/netdevops/ansible/myscripts_ansible/4_ansible_custom_filters/custom_filter.yml, line 18, column 9, found a duplicate
+dict key (msg). Using last defined value only.
+
+2023-11-01 21:09:37,112 p=15423 u=stephenamaki n=ansible | PLAY [PLAY 1: Testing our route-target AS getter] ************************************************************************************************************************************************
+2023-11-01 21:09:37,127 p=15423 u=stephenamaki n=ansible | TASK [TASK 1: Get router configuration] **********************************************************************************************************************************************************
+2023-11-01 21:09:38,299 p=15423 u=stephenamaki n=ansible | network_os is set to ios
+2023-11-01 21:09:38,300 p=15423 u=stephenamaki n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2023-11-01 21:09:38,328 p=15436 u=stephenamaki n=p=15436 u=stephenamaki | paramiko [10.255.255.71] | Connected (version 1.99, client Cisco-1.25)
+2023-11-01 21:09:38,713 p=15436 u=stephenamaki n=p=15436 u=stephenamaki | paramiko [10.255.255.71] | Auth banner: b"\r\n**************************************************************************\r\n* IOSv is strictly limited to use for evaluation, demonstration and IOS  *\r\n* education. IOSv is provided as-is and is not supported by Cisco's      *\r\n* Technical Advisory Center. Any use or disclosure, in whole or in part, *\r\n* of the IOSv Software or Documentation to any third party for any       *\r\n* purposes is expressly prohibited except as otherwise authorized by     *\r\n* Cisco in writing.                                                      *\r\n**************************************************************************"
+2023-11-01 21:09:38,723 p=15436 u=stephenamaki n=p=15436 u=stephenamaki | paramiko [10.255.255.71] | Authentication (password) successful!
+2023-11-01 21:09:39,755 p=15423 u=stephenamaki n=ansible | ok: [10.255.255.71]
+2023-11-01 21:09:39,759 p=15423 u=stephenamaki n=ansible | TASK [TASK2: Parse the RT import and export data] ************************************************************************************************************************************************
+2023-11-01 21:09:40,857 p=15423 u=stephenamaki n=ansible | ok: [10.255.255.71]
+2023-11-01 21:09:40,861 p=15423 u=stephenamaki n=ansible | TASK [TASK 3: Print results] *********************************************************************************************************************************************************************
+2023-11-01 21:09:41,954 p=15423 u=stephenamaki n=ansible | ok: [10.255.255.71] => {
+    "msg": {
+        "changed": false,
+        "failed": false,
+        "stdout": [
+            "vrf definition VRF_1\n description VRF_1 EXAMPLE\n rd 65000:1\n route-target export 65000:1\n route-target export 713:713\n route-target export 714:714\n route-target import 65000:1\n route-target import 711:711\n route-target import 712:712\nvrf definition VRF_2\n description VRF_2 EXAMPLE\n rd 65000:2\n route-target export 65000:2\n route-target export 717:717\n route-target export 718:718\n route-target import 65000:2\n route-target import 715:715\n route-target import 716:716"
+        ],
+        "stdout_lines": [
+            [
+                "vrf definition VRF_1",
+                " description VRF_1 EXAMPLE",
+                " rd 65000:1",
+                " route-target export 65000:1",
+                " route-target export 713:713",
+                " route-target export 714:714",
+                " route-target import 65000:1",
+                " route-target import 711:711",
+                " route-target import 712:712",
+                "vrf definition VRF_2",
+                " description VRF_2 EXAMPLE",
+                " rd 65000:2",
+                " route-target export 65000:2",
+                " route-target export 717:717",
+                " route-target export 718:718",
+                " route-target import 65000:2",
+                " route-target import 715:715",
+                " route-target import 716:716"
+            ]
+        ]
+    }
+}
+2023-11-01 21:09:41,967 p=15423 u=stephenamaki n=ansible | PLAY RECAP ***************************************************************************************************************************************************************************************
+2023-11-01 21:09:41,967 p=15423 u=stephenamaki n=ansible | 10.255.255.71              : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-11-01 21:09:42,067 p=15436 u=stephenamaki n=ansible | shutdown complete
+2023-11-01 21:10:22,629 p=15697 u=stephenamaki n=ansible | [WARNING]: While constructing a mapping from /Users/stephenamaki/Dropbox/netdevops/ansible/myscripts_ansible/4_ansible_custom_filters/custom_filter.yml, line 18, column 9, found a duplicate
+dict key (msg). Using last defined value only.
+
+2023-11-01 21:10:22,680 p=15697 u=stephenamaki n=ansible | PLAY [PLAY 1: Testing our route-target AS getter] ************************************************************************************************************************************************
+2023-11-01 21:10:22,695 p=15697 u=stephenamaki n=ansible | TASK [TASK 1: Get router configuration] **********************************************************************************************************************************************************
+2023-11-01 21:10:23,883 p=15697 u=stephenamaki n=ansible | network_os is set to ios
+2023-11-01 21:10:23,884 p=15697 u=stephenamaki n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2023-11-01 21:10:23,909 p=15709 u=stephenamaki n=p=15709 u=stephenamaki | paramiko [10.255.255.71] | Connected (version 1.99, client Cisco-1.25)
+2023-11-01 21:10:24,284 p=15709 u=stephenamaki n=p=15709 u=stephenamaki | paramiko [10.255.255.71] | Auth banner: b"\r\n**************************************************************************\r\n* IOSv is strictly limited to use for evaluation, demonstration and IOS  *\r\n* education. IOSv is provided as-is and is not supported by Cisco's      *\r\n* Technical Advisory Center. Any use or disclosure, in whole or in part, *\r\n* of the IOSv Software or Documentation to any third party for any       *\r\n* purposes is expressly prohibited except as otherwise authorized by     *\r\n* Cisco in writing.                                                      *\r\n**************************************************************************"
+2023-11-01 21:10:24,288 p=15709 u=stephenamaki n=p=15709 u=stephenamaki | paramiko [10.255.255.71] | Authentication (password) successful!
+2023-11-01 21:10:25,365 p=15697 u=stephenamaki n=ansible | ok: [10.255.255.71]
+2023-11-01 21:10:25,369 p=15697 u=stephenamaki n=ansible | TASK [TASK2: Parse the RT import and export data] ************************************************************************************************************************************************
+2023-11-01 21:10:26,457 p=15697 u=stephenamaki n=ansible | ok: [10.255.255.71]
+2023-11-01 21:10:26,462 p=15697 u=stephenamaki n=ansible | TASK [TASK 3: Print results] *********************************************************************************************************************************************************************
+2023-11-01 21:10:27,554 p=15697 u=stephenamaki n=ansible | ok: [10.255.255.71] => {
+    "msg": [
+        "vrf definition VRF_1\n description VRF_1 EXAMPLE\n rd 65000:1\n route-target export 65000:1\n route-target export 713:713\n route-target export 714:714\n route-target import 65000:1\n route-target import 711:711\n route-target import 712:712\nvrf definition VRF_2\n description VRF_2 EXAMPLE\n rd 65000:2\n route-target export 65000:2\n route-target export 717:717\n route-target export 718:718\n route-target import 65000:2\n route-target import 715:715\n route-target import 716:716"
+    ]
+}
+2023-11-01 21:10:27,568 p=15697 u=stephenamaki n=ansible | PLAY RECAP ***************************************************************************************************************************************************************************************
+2023-11-01 21:10:27,568 p=15697 u=stephenamaki n=ansible | 10.255.255.71              : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-11-01 21:10:27,668 p=15709 u=stephenamaki n=ansible | shutdown complete
+2023-11-01 21:10:51,033 p=15870 u=stephenamaki n=ansible | [WARNING]: While constructing a mapping from /Users/stephenamaki/Dropbox/netdevops/ansible/myscripts_ansible/4_ansible_custom_filters/custom_filter.yml, line 18, column 9, found a duplicate
+dict key (msg). Using last defined value only.
+
+2023-11-01 21:10:51,083 p=15870 u=stephenamaki n=ansible | PLAY [PLAY 1: Testing our route-target AS getter] ************************************************************************************************************************************************
+2023-11-01 21:10:51,098 p=15870 u=stephenamaki n=ansible | TASK [TASK 1: Get router configuration] **********************************************************************************************************************************************************
+2023-11-01 21:10:52,262 p=15870 u=stephenamaki n=ansible | network_os is set to ios
+2023-11-01 21:10:52,263 p=15870 u=stephenamaki n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2023-11-01 21:10:52,284 p=15882 u=stephenamaki n=p=15882 u=stephenamaki | paramiko [10.255.255.71] | Connected (version 1.99, client Cisco-1.25)
+2023-11-01 21:10:52,668 p=15882 u=stephenamaki n=p=15882 u=stephenamaki | paramiko [10.255.255.71] | Auth banner: b"\r\n**************************************************************************\r\n* IOSv is strictly limited to use for evaluation, demonstration and IOS  *\r\n* education. IOSv is provided as-is and is not supported by Cisco's      *\r\n* Technical Advisory Center. Any use or disclosure, in whole or in part, *\r\n* of the IOSv Software or Documentation to any third party for any       *\r\n* purposes is expressly prohibited except as otherwise authorized by     *\r\n* Cisco in writing.                                                      *\r\n**************************************************************************"
+2023-11-01 21:10:52,675 p=15882 u=stephenamaki n=p=15882 u=stephenamaki | paramiko [10.255.255.71] | Authentication (password) successful!
+2023-11-01 21:10:53,657 p=15870 u=stephenamaki n=ansible | ok: [10.255.255.71]
+2023-11-01 21:10:53,662 p=15870 u=stephenamaki n=ansible | TASK [TASK2: Parse the RT import and export data] ************************************************************************************************************************************************
+2023-11-01 21:10:54,764 p=15870 u=stephenamaki n=ansible | ok: [10.255.255.71]
+2023-11-01 21:10:54,768 p=15870 u=stephenamaki n=ansible | TASK [TASK 3: Print results] *********************************************************************************************************************************************************************
+2023-11-01 21:10:55,867 p=15870 u=stephenamaki n=ansible | ok: [10.255.255.71] => {
+    "msg": "vrf definition VRF_1\n description VRF_1 EXAMPLE\n rd 65000:1\n route-target export 65000:1\n route-target export 713:713\n route-target export 714:714\n route-target import 65000:1\n route-target import 711:711\n route-target import 712:712\nvrf definition VRF_2\n description VRF_2 EXAMPLE\n rd 65000:2\n route-target export 65000:2\n route-target export 717:717\n route-target export 718:718\n route-target import 65000:2\n route-target import 715:715\n route-target import 716:716"
+}
+2023-11-01 21:10:55,881 p=15870 u=stephenamaki n=ansible | PLAY RECAP ***************************************************************************************************************************************************************************************
+2023-11-01 21:10:55,881 p=15870 u=stephenamaki n=ansible | 10.255.255.71              : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-11-01 21:10:55,981 p=15882 u=stephenamaki n=ansible | shutdown complete
+2023-11-02 06:06:15,007 p=81693 u=stephenamaki n=ansible | PLAY [PLAY 1: Testing our route-target AS getter] ************************************************************************************************************************************************
+2023-11-02 06:06:15,028 p=81693 u=stephenamaki n=ansible | TASK [TASK 1: Get router configuration] **********************************************************************************************************************************************************
+2023-11-02 06:06:16,551 p=81693 u=stephenamaki n=ansible | network_os is set to ios
+2023-11-02 06:06:16,552 p=81693 u=stephenamaki n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2023-11-02 06:06:16,612 p=81712 u=stephenamaki n=p=81712 u=stephenamaki | paramiko [10.255.255.71] | Connected (version 1.99, client Cisco-1.25)
+2023-11-02 06:06:17,026 p=81712 u=stephenamaki n=p=81712 u=stephenamaki | paramiko [10.255.255.71] | Auth banner: b"\r\n**************************************************************************\r\n* IOSv is strictly limited to use for evaluation, demonstration and IOS  *\r\n* education. IOSv is provided as-is and is not supported by Cisco's      *\r\n* Technical Advisory Center. Any use or disclosure, in whole or in part, *\r\n* of the IOSv Software or Documentation to any third party for any       *\r\n* purposes is expressly prohibited except as otherwise authorized by     *\r\n* Cisco in writing.                                                      *\r\n**************************************************************************"
+2023-11-02 06:06:17,031 p=81712 u=stephenamaki n=p=81712 u=stephenamaki | paramiko [10.255.255.71] | Authentication (password) successful!
+2023-11-02 06:06:18,099 p=81693 u=stephenamaki n=ansible | ok: [10.255.255.71]
+2023-11-02 06:06:18,110 p=81693 u=stephenamaki n=ansible | TASK [TASK2: Parse the RT import and export data] ************************************************************************************************************************************************
+2023-11-02 06:06:19,307 p=81693 u=stephenamaki n=ansible | ok: [10.255.255.71]
+2023-11-02 06:06:19,318 p=81693 u=stephenamaki n=ansible | TASK [TASK 3: Print results] *********************************************************************************************************************************************************************
+2023-11-02 06:06:20,429 p=81693 u=stephenamaki n=ansible | ok: [10.255.255.71] => {
+    "msg": {
+        "VRF_1": {
+            "route export": [
+                "65000:1",
+                "713:713",
+                "714:714"
+            ],
+            "route import": [
+                "65000:1",
+                "711:711",
+                "712:712"
+            ]
+        },
+        "VRF_2": {
+            "route export": [
+                "65000:2",
+                "717:717",
+                "718:718"
+            ],
+            "route import": [
+                "65000:2",
+                "715:715",
+                "716:716"
+            ]
+        }
+    }
+}
+2023-11-02 06:06:20,443 p=81693 u=stephenamaki n=ansible | PLAY RECAP ***************************************************************************************************************************************************************************************
+2023-11-02 06:06:20,443 p=81693 u=stephenamaki n=ansible | 10.255.255.71              : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-11-02 06:06:20,543 p=81712 u=stephenamaki n=ansible | shutdown complete

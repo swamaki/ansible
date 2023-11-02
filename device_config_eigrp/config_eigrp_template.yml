@@ -1,0 +1,39 @@
+---
+
+  - name: "First Play: Automate Routing Configs via Jinja2"
+    hosts: routers
+    connection: network_cli
+    gather_facts: false
+    tasks:
+      - name: "First Task: Identify Correct Jinja Template"
+        set_fact:
+          eigrp_path: "./templates/{{ eigrp_os_type }}_eigrp.j2"
+  
+      - name: "Second Task: Source Template & Apply Configs!"
+        cli_config:
+          config: "{{ lookup('template', eigrp_path) }}"
+        notify: config_changed
+        register: response
+    
+      # - name: Generate eigrp config file
+      #   template: src="{{ eigrp_os_type }}_eigrp.j2" dest="configs/{{ inventory_hostname }}_eigrp_gen_config.cfg"
+      #   run_once: true
+      #   tags: build
+  
+      # - name: Deploy eigrp config from Auto Generated file
+      #   ios_config: 
+      #     src: "./configs/_eigrp_gen_config.cfg"
+      #   tags: deploy
+  
+    handlers:
+      - name: "Output Changes..."
+        listen: config_changed
+        debug:
+          msg: "{{ response }}"
+  
+
+# template: src=templates/{{ eigrp_os_type }}_eigrp.j2 dest=configs/{{ inventory_hostname }}_eigrp_gen_config.cfg
+# "ansible-playbook config_eigrp_template.yml" (runs the first option, generates config from template and applies)
+# "ansible-playbook config_eigrp_template.yml --tags=build" (generates the config in second option and saves the config file)
+# "ansible-playbook config_eigrp_template.yml --tags=deploy" (deploys the config generated in the second option)
+# Works as of 07/11/2020 

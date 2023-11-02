@@ -1,0 +1,64 @@
+no service pad
+service tcp-keepalives-in
+service tcp-keepalives-out
+service timestamps debug datetime msec localtime show-timezone
+service timestamps log datetime msec localtime show-timezone
+service password-encryption
+!
+hostname R3
+!
+interface loopback 0
+ ip address 3.3.3.3 255.255.255.255
+!
+enable secret cisco123
+boot-start-marker
+boot-end-marker
+!
+logging buffered 32000
+no logging console
+!
+username admin privilege 15 secret cisco123
+admin2 privilege 15 secret cisco123
+!
+no ip dhcp pool ccp-pool
+no ip dhcp excluded-address 10.10.10.1
+no ip http server
+no ip http access-class 23
+no ip http authentication local
+no ip http secure-server
+no ip http timeout-policy idle 60 life 86400 requests 10000
+no access-list 23 permit 10.10.10.0 0.0.0.7
+!
+!
+no aaa new-model
+clock timezone EST -5 0
+clock summer-time EDT recurring
+!
+!
+no ip domain lookup
+ip domain name domain.local
+!
+!
+archive
+ log config
+  logging enable
+  logging size 1000
+  hidekeys
+!
+logging buffered 32000
+!
+!
+!
+line con 0
+ privilege level 15
+ logging synchronous
+ login local
+!
+line vty 0 15
+ logging synchronous
+ login local
+ transport input ssh
+!
+ntp server 192.5.41.40
+ntp server 192.5.41.41
+!

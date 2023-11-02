@@ -1,0 +1,26 @@
+---
+
+  - name: Deploy snmp configurations
+    hosts: asa_firewalls
+    gather_facts: false
+    connection: local
+
+    tasks: 
+      - name: Deploy snmp commands from jinja2
+        ios_config: 
+          src: "aws_template.j2"
+
+      - name: Generate snmp file
+        template: src=aws_template.j2 dest=configs/aws_generated_config.cfg
+        run_once: true
+        tags: build
+
+      - name: Deploy snmp from Auto Generated file
+        ios_config: 
+          src: "./configs/aws_generated_config.cfg"
+        tags: deploy
+      
+# "ansible-playbook config_aws_template.yml" (runs the first option, generates config from template and applies)
+# "ansible-playbook config_aws_template.yml --tags=build" (generates the config in second option and saves the config file)
+# "ansible-playbook config_aws_template.yml --tags=deploy" (deploys the config generated in the second option)
+# Works as of 07/11/2020 

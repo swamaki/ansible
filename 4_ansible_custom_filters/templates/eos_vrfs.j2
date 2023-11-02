@@ -1,0 +1,18 @@
+{% for item in vrfs %}
+vrf definition {{ item.name }}
+  description {{ item.description }}
+ip routing vrf {{ item.name }}
+{% endfor %}
+{% for item in vrfs %}
+router bgp {{ item.asn_num }} 
+  vrf {{ item.name }}
+    rd {{ item.rd }}
+    {% for rt in item.route_export %}
+    route-target export vpn-ipv4 {{ rt }}
+    route-target export vpn-ipv6 {{ rt }}
+    {% endfor %}
+    {% for rt in item.route_import %}
+    route-target import vpn-ipv4 {{ rt }}
+    route-target import vpn-ipv6 {{ rt }}
+    {% endfor %}
+{% endfor %}
